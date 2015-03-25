@@ -17,6 +17,4 @@ public enum FermentableType {
     {
         return _description;
     }
-
-    public int get() { return 1;}
 }
