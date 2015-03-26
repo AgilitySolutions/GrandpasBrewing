@@ -1,4 +1,4 @@
-package BeerXml;
+package BeerXml.Enums;
 
 public enum YeastType {
     Ale,
@@ -9,6 +9,6 @@ public enum YeastType {
 
     public String getDescription()
     {
-        return this.toString();
+        return toString();
     }
 }
