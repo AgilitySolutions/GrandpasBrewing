@@ -1,4 +1,6 @@
-package BeerXml
+package BeerXml.Enums
+
+import BeerXml.Enums.YeastType
 
 class YeastTypeTest extends GroovyTestCase {
     void testGetDescription() {

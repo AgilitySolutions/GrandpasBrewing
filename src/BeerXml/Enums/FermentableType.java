@@ -1,4 +1,4 @@
-package BeerXml;
+package BeerXml.Enums;
 
 public enum FermentableType {
     Grain("Grain"),

@@ -1,4 +1,6 @@
-package BeerXml
+package BeerXml.Enums
+
+import BeerXml.Enums.FermentableType
 
 class FermentableTypeTest extends GroovyTestCase {
     void testGetDescription() {
