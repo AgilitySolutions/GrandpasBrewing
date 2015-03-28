@@ -1,4 +1,4 @@
-package BeerXml.Enums
+package com.grandpasbrewing.beerxml.enums
 
 class HopTypeTest extends GroovyTestCase {
     void testGetDescription() {

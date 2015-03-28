@@ -1,4 +1,4 @@
-package BeerXml.Enums;
+package com.grandpasbrewing.beerxml.enums;
 
 public enum MiscType {
     Spice("Spice"),

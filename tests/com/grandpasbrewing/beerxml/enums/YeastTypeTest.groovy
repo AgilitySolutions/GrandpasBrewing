@@ -1,6 +1,4 @@
-package BeerXml.Enums
-
-import BeerXml.Enums.YeastType
+package com.grandpasbrewing.beerxml.enums
 
 class YeastTypeTest extends GroovyTestCase {
     void testGetDescription() {

@@ -1,4 +1,4 @@
-package BeerXml.Enums
+package com.grandpasbrewing.beerxml.enums
 
 class StyleTypeTest extends GroovyTestCase {
     void testGetDescription() {

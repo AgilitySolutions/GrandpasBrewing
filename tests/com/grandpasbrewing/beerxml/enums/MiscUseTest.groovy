@@ -1,4 +1,4 @@
-package BeerXml.Enums
+package com.grandpasbrewing.beerxml.enums
 
 class MiscUseTest extends GroovyTestCase {
     void testGetDescription() {
