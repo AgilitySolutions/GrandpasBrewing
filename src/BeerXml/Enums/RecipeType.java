@@ -10,7 +10,7 @@ public enum RecipeType {
         _description = description;
     }
 
-    private String _description;
+    private final String _description;
 
     public String getDescription()
     {

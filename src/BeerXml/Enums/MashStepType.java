@@ -5,7 +5,7 @@ public enum MashStepType {
     Temperature,
     Decoction;
 
-    public String getDesccription() {
+    public String getDescription() {
         return toString();
     }
 }

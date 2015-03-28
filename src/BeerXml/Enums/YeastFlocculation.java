@@ -10,7 +10,7 @@ public enum YeastFlocculation {
         _description = description;
     }
 
-    private String _description;
+    private final String _description;
 
     public String getDescription() { return _description; }
 }
