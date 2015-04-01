@@ -75,19 +75,19 @@ public class Style extends BeerXmlObjectBase {
         _finalGravityMaximum = finalGravityMaximum;
     }
 
-    public double getIbuMinimum() {
+    public double getIBUMinimum() {
         return _ibuMinimum;
     }
 
-    public void setIbuMinimum(double ibuMinimum) {
+    public void setIBUMinimum(double ibuMinimum) {
         _ibuMinimum = ibuMinimum;
     }
 
-    public double getIbuMaximum() {
+    public double getIBUMaximum() {
         return _ibuMaximum;
     }
 
-    public void setIbuMaximum(double ibuMaximum) {
+    public void setIBUMaximum(double ibuMaximum) {
         _ibuMaximum = ibuMaximum;
     }
 
@@ -123,19 +123,19 @@ public class Style extends BeerXmlObjectBase {
         _carbonationMaximum = carbonationMaximum;
     }
 
-    public double getAbvMinimum() {
+    public double getABVMinimum() {
         return _abvMinimum;
     }
 
-    public void setAbvMinimum(double abvMinimum) {
+    public void setABVMinimum(double abvMinimum) {
         _abvMinimum = abvMinimum;
     }
 
-    public double getAbvMaximum() {
+    public double getABVMaximum() {
         return _abvMaximum;
     }
 
-    public void setAbvMaximum(double abvMaximum) {
+    public void setABVMaximum(double abvMaximum) {
         _abvMaximum = abvMaximum;
     }
 
@@ -235,11 +235,11 @@ public class Style extends BeerXmlObjectBase {
         _finalGravityRange = finalGravityRange;
     }
 
-    public String getIbuRange() {
+    public String getIBURange() {
         return _ibuRange;
     }
 
-    public void setIbuRange(String ibuRange) {
+    public void setIBURange(String ibuRange) {
         _ibuRange = ibuRange;
     }
 
@@ -259,11 +259,11 @@ public class Style extends BeerXmlObjectBase {
         _colorRange = colorRange;
     }
 
-    public String getAbvRange() {
+    public String getABVRange() {
         return _abvRange;
     }
 
-    public void setAbvRange(String abvRange) {
+    public void setABVRange(String abvRange) {
         _abvRange = abvRange;
     }
 

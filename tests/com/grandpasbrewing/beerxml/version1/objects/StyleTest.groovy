@@ -56,13 +56,13 @@ class StyleTest extends GroovyTestCase {
     }
 
     void testSetGetIbuMinimum() {
-        _style.setIbuMinimum(5);
-        assertEquals(5, _style.getIbuMinimum())
+        _style.setIBUMinimum(5);
+        assertEquals(5, _style.getIBUMinimum())
     }
 
     void testSetGetIbuMaximum() {
-        _style.setIbuMaximum(6);
-        assertEquals(6, _style.getIbuMaximum())
+        _style.setIBUMaximum(6);
+        assertEquals(6, _style.getIBUMaximum())
     }
 
     void testSetGetColorMinimum() {
@@ -86,13 +86,13 @@ class StyleTest extends GroovyTestCase {
     }
 
     void testSetGetAbvMinimum() {
-        _style.setAbvMinimum(9);
-        assertEquals(9, _style.getAbvMinimum())
+        _style.setABVMinimum(9);
+        assertEquals(9, _style.getABVMinimum())
     }
 
     void testSetGetAbvMaximum() {
-        _style.setAbvMaximum(10);
-        assertEquals(10, _style.getAbvMaximum())
+        _style.setABVMaximum(10);
+        assertEquals(10, _style.getABVMaximum())
     }
 
     void testSetGetNotes() {
@@ -156,8 +156,8 @@ class StyleTest extends GroovyTestCase {
     }
 
     void testSetGetIbuRange() {
-        _style.setIbuRange("Test IBU Range");
-        assertEquals("Test IBU Range", _style.getIbuRange())
+        _style.setIBURange("Test IBU Range");
+        assertEquals("Test IBU Range", _style.getIBURange())
     }
 
     void testSetGetCarbonationRange() {
@@ -171,8 +171,8 @@ class StyleTest extends GroovyTestCase {
     }
 
     void testSetGetAbvRange() {
-        _style.setAbvRange("Test ABV Range");
-        assertEquals("Test ABV Range", _style.getAbvRange())
+        _style.setABVRange("Test ABV Range");
+        assertEquals("Test ABV Range", _style.getABVRange())
     }
 
     void testSetGetName() {
