@@ -5,8 +5,7 @@ import com.grandpasbrewing.beerxml.version1.enums.StyleType
 class StyleTest extends GroovyTestCase {
     private Style _style;
 
-    void setUp()
-    {
+    void setUp() {
         super.setUp();
         _style = new Style();
     }
