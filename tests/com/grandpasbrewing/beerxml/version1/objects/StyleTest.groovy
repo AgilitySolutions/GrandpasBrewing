@@ -1,4 +1,4 @@
-package com.grandpasbrewing.beerxml.version1
+package com.grandpasbrewing.beerxml.version1.objects
 
 import com.grandpasbrewing.beerxml.version1.enums.StyleType
 

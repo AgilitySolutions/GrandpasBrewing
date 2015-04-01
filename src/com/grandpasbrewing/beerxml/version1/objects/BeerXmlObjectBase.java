@@ -1,4 +1,4 @@
-package com.grandpasbrewing.beerxml.version1;
+package com.grandpasbrewing.beerxml.version1.objects;
 
 public abstract class BeerXmlObjectBase {
 
