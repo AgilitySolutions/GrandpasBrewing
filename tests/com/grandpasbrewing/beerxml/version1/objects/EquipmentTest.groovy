@@ -9,122 +9,122 @@ class EquipmentTest extends GroovyTestCase {
         _equipment = new Equipment();
     }
 
-    void testGetBoilSize() {
+    void testSetGetBoilSize() {
         _equipment.setBoilSize(1);
         assertEquals(1, _equipment.getBoilSize());
     }
 
-    void testGetBatchSize() {
+    void testSetGetBatchSize() {
         _equipment.setBatchSize(2);
         assertEquals(2, _equipment.getBatchSize());
     }
 
-    void testGetTunVolume() {
+    void testSetGetTunVolume() {
         _equipment.setTunVolume(3);
         assertEquals(3, _equipment.getTunVolume());
     }
 
-    void testGetTunWeight() {
+    void testSetGetTunWeight() {
         _equipment.setTunWeight(4);
         assertEquals(4, _equipment.getTunWeight());
     }
 
-    void testGetTunSpecificHeat() {
+    void testSetGetTunSpecificHeat() {
         _equipment.setTunSpecificHeat(5);
         assertEquals(5, _equipment.getTunSpecificHeat());
     }
 
-    void testGetTopUpWater() {
+    void testSetGetTopUpWater() {
         _equipment.setTopUpWater(6);
         assertEquals(6, _equipment.getTopUpWater());
     }
 
-    void testGetTrubChillerLoss() {
+    void testSetGetTrubChillerLoss() {
         _equipment.setTrubChillerLoss(7);
         assertEquals(7, _equipment.getTrubChillerLoss());
     }
 
-    void testGetEvaporationRate() {
+    void testSetGetEvaporationRate() {
         _equipment.setEvaporationRate(8);
         assertEquals(8, _equipment.getEvaporationRate());
     }
 
-    void testGetBoilTime() {
+    void testSetGetBoilTime() {
         _equipment.setBoilTime(9);
         assertEquals(9, _equipment.getBoilTime());
     }
 
-    void testGetCalculateBoilVolume() {
+    void testSetGetCalculateBoilVolume() {
         _equipment.setCalculateBoilVolume(true);
         assertTrue(_equipment.getCalculateBoilVolume());
     }
 
-    void testGetLauterDeadspace() {
+    void testSetGetLauterDeadspace() {
         _equipment.setLauterDeadspace(10);
         assertEquals(10, _equipment.getLauterDeadspace());
     }
 
-    void testGetTopUpKettle() {
+    void testSetGetTopUpKettle() {
         _equipment.setTopUpKettle(11);
         assertEquals(11, _equipment.getTopUpKettle());
     }
 
-    void testGetHopUtilization() {
+    void testSetGetHopUtilization() {
         _equipment.setHopUtilization(12);
         assertEquals(12, _equipment.getHopUtilization());
     }
 
-    void testGetNotes() {
+    void testSetGetNotes() {
         _equipment.setNotes("Test Notes");
         assertEquals("Test Notes", _equipment.getNotes());
     }
 
-    void testGetDisplayBoilSize() {
+    void testSetGetDisplayBoilSize() {
         _equipment.setDisplayBoilSize("Test Display Boil Size");
         assertEquals("Test Display Boil Size", _equipment.getDisplayBoilSize());
     }
 
-    void testGetDisplayBatchSize() {
+    void testSetGetDisplayBatchSize() {
         _equipment.setDisplayBatchSize("Test Display Batch Size");
         assertEquals("Test Display Batch Size", _equipment.getDisplayBatchSize());
     }
 
-    void testGetDisplayTunVolume() {
+    void testSetGetDisplayTunVolume() {
         _equipment.setDisplayTunVolume("Test Display Tun Volume");
         assertEquals("Test Display Tun Volume", _equipment.getDisplayTunVolume());
     }
 
-    void testGetDisplayTunWeight() {
+    void testSetGetDisplayTunWeight() {
         _equipment.setDisplayTunWeight("Test Display Tun Weight");
         assertEquals("Test Display Tun Weight", _equipment.getDisplayTunWeight());
     }
 
-    void testGetDisplayTopUpWater() {
+    void testSetGetDisplayTopUpWater() {
         _equipment.setDisplayTopUpWater("Test Display Top Up Water");
         assertEquals("Test Display Top Up Water", _equipment.getDisplayTopUpWater());
     }
 
-    void testGetDisplayTrubChillerLoss() {
+    void testSetGetDisplayTrubChillerLoss() {
         _equipment.setDisplayTrubChillerLoss("Test Display Trub Chiller Loss");
         assertEquals("Test Display Trub Chiller Loss", _equipment.getDisplayTrubChillerLoss());
     }
 
-    void testGetDisplayLauterDeadspace() {
+    void testSetGetDisplayLauterDeadspace() {
         _equipment.setDisplayLauterDeadspace("Test Display Lauter Deadspace");
         assertEquals("Test Display Lauter Deadspace", _equipment.getDisplayLauterDeadspace());
     }
 
-    void testGetDisplayTopUpKettle() {
+    void testSetGetDisplayTopUpKettle() {
         _equipment.setDisplayTopUpKettle("Test Display Top Up Kettle");
         assertEquals("Test Display Top Up Kettle", _equipment.getDisplayTopUpKettle());
     }
 
-    void testGetName() {
+    void testSetGetName() {
         _equipment.setName("Test Name");
         assertEquals("Test Name", _equipment.getName());
     }
 
-    void testGetVersion() {
+    void testSetGetVersion() {
         _equipment.setVersion(13);
         assertEquals(13, _equipment.getVersion());
     }
