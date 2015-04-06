@@ -13,112 +13,112 @@ class YeastTest extends GroovyTestCase {
         _yeast = new Yeast();
     }
 
-    void testGetType() {
+    void testSetGetType() {
         _yeast.setType(YeastType.Champagne);
         assertEquals(YeastType.Champagne, _yeast.getType());
     }
 
-    void testGetForm() {
+    void testSetGetForm() {
         _yeast.setForm(YeastForm.Liquid);
         assertEquals(YeastForm.Liquid, _yeast.getForm());
     }
 
-    void testGetAmount() {
+    void testSetGetAmount() {
         _yeast.setAmount(1);
         assertEquals(1, _yeast.getAmount());
     }
 
-    void testGetAmountIsWeight() {
+    void testSetGetAmountIsWeight() {
         _yeast.setAmountIsWeight(true);
         assertEquals(true, _yeast.getAmountIsWeight());
     }
 
-    void testGetLaboratory() {
+    void testSetGetLaboratory() {
         _yeast.setLaboratory("Test Laboratory");
         assertEquals("Test Laboratory", _yeast.getLaboratory());
     }
 
-    void testGetManufacturerProductId() {
+    void testSetGetManufacturerProductId() {
         _yeast.setManufacturerProductId("Test Manufacturer Product Id");
         assertEquals("Test Manufacturer Product Id", _yeast.getManufacturerProductId());
     }
 
-    void testGetMinimumTemperature() {
+    void testSetGetMinimumTemperature() {
         _yeast.setMinimumTemperature(2);
         assertEquals(2, _yeast.getMinimumTemperature());
     }
 
-    void testGetMaximumTemperature() {
+    void testSetGetMaximumTemperature() {
         _yeast.setMaximumTemperature(3);
         assertEquals(3, _yeast.getMaximumTemperature());
     }
 
-    void testGetFlocculation() {
+    void testSetGetFlocculation() {
         _yeast.setFlocculation(YeastFlocculation.Medium);
         assertEquals(YeastFlocculation.Medium, _yeast.getFlocculation());
     }
 
-    void testGetAttenuation() {
+    void testSetGetAttenuation() {
         _yeast.setAttenuation(4);
         assertEquals(4, _yeast.getAttenuation());
     }
 
-    void testGetNotes() {
+    void testSetGetNotes() {
         _yeast.setNotes("Test Notes");
         assertEquals("Test Notes", _yeast.getNotes());
     }
 
-    void testGetBestFor() {
+    void testSetGetBestFor() {
         _yeast.setBestFor("Test Best For");
         assertEquals("Test Best For", _yeast.getBestFor());
     }
 
-    void testGetTimesCultured() {
+    void testSetGetTimesCultured() {
         _yeast.setTimesCultured(5);
         assertEquals(5, _yeast.getTimesCultured());
     }
 
-    void testGetMaximumReuse() {
+    void testSetGetMaximumReuse() {
         _yeast.setMaximumReuse(6);
         assertEquals(6, _yeast.getMaximumReuse());
     }
 
-    void testGetAddToSecondary() {
+    void testSetGetAddToSecondary() {
         _yeast.setAddToSecondary(true);
         assertEquals(true, _yeast.getAddToSecondary());
     }
 
-    void testGetDisplayAmount() {
+    void testSetGetDisplayAmount() {
         _yeast.setDisplayAmount("Test Display Amount");
         assertEquals("Test Display Amount", _yeast.getDisplayAmount());
     }
 
-    void testGetDisplayMinimumTemperature() {
+    void testSetGetDisplayMinimumTemperature() {
         _yeast.setDisplayMinimumTemperature("Test Display Minimum Temperature");
         assertEquals("Test Display Minimum Temperature", _yeast.getDisplayMinimumTemperature());
     }
 
-    void testGetDisplayMaximumTemperature() {
+    void testSetGetDisplayMaximumTemperature() {
         _yeast.setDisplayMaximumTemperature("Test Display Maximum Temperature");
         assertEquals("Test Display Maximum Temperature", _yeast.getDisplayMaximumTemperature());
     }
 
-    void testGetInventory() {
+    void testSetGetInventory() {
         _yeast.setInventory("Test Inventory");
         assertEquals("Test Inventory", _yeast.getInventory());
     }
 
-    void testGetCultureDate() {
+    void testSetGetCultureDate() {
         _yeast.setCultureDate("Test Culture Date");
         assertEquals("Test Culture Date", _yeast.getCultureDate());
     }
 
-    void testGetName() {
+    void testSetGetName() {
         _yeast.setName("Test Name");
         assertEquals("Test Name", _yeast.getName());
     }
 
-    void testGetVersion() {
+    void testSetGetVersion() {
         _yeast.setVersion(7);
         assertEquals(7, _yeast.getVersion());
     }
