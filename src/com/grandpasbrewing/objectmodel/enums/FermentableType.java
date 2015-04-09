@@ -7,7 +7,7 @@ public enum FermentableType {
     DryExtract("Dry Extract"),
     Adjunct("Adjunct");
 
-    private String _description;
+    private final String _description;
 
     FermentableType(String description) {
         _description = description;
