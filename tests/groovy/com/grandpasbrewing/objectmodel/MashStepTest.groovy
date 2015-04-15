@@ -11,67 +11,67 @@ class MashStepTest extends GroovyTestCase {
         _mashStep = new MashStep();
     }
 
-    void testGetType() {
+    void testSetGetType() {
         _mashStep.setType(MashStepType.Temperature);
         assertEquals(MashStepType.Temperature, _mashStep.getType());
     }
 
-    void testGetInfuseAmount() {
+    void testSetGetInfuseAmount() {
         _mashStep.setInfuseAmount(1);
         assertEquals(1, _mashStep.getInfuseAmount());
     }
 
-    void testGetStepTemperature() {
+    void testSetGetStepTemperature() {
         _mashStep.setStepTemperature(2);
         assertEquals(2, _mashStep.getStepTemperature());
     }
 
-    void testGetStepTime() {
+    void testSetGetStepTime() {
         _mashStep.setStepTime(3);
         assertEquals(3, _mashStep.getStepTime());
     }
 
-    void testGetRampTime() {
+    void testSetGetRampTime() {
         _mashStep.setRampTime(4);
         assertEquals(4, _mashStep.getRampTime());
     }
 
-    void testGetEndTemperature() {
+    void testSetGetEndTemperature() {
         _mashStep.setEndTemperature(5);
         assertEquals(5, _mashStep.getEndTemperature());
     }
 
-    void testGetDescription() {
+    void testSetGetDescription() {
         _mashStep.setDescription("Test Description");
         assertEquals("Test Description", _mashStep.getDescription());
     }
 
-    void testGetWaterGrainRatio() {
+    void testSetGetWaterGrainRatio() {
         _mashStep.setWaterGrainRatio("Test Water Grain Ratio");
         assertEquals("Test Water Grain Ratio", _mashStep.getWaterGrainRatio());
     }
 
-    void testGetDecoctionAmount() {
+    void testSetGetDecoctionAmount() {
         _mashStep.setDecoctionAmount("Test Decoction Amount");
         assertEquals("Test Decoction Amount", _mashStep.getDecoctionAmount());
     }
 
-    void testGetInfuseTemperature() {
+    void testSetGetInfuseTemperature() {
         _mashStep.setInfuseTemperature("Test Infuse Temperature");
         assertEquals("Test Infuse Temperature", _mashStep.getInfuseTemperature());
     }
 
-    void testGetDisplayStepTemperature() {
+    void testSetGetDisplayStepTemperature() {
         _mashStep.setDisplayStepTemperature("Test Display Step Temperature");
         assertEquals("Test Display Step Temperature", _mashStep.getDisplayStepTemperature());
     }
 
-    void testGetDisplayInfuseAmount() {
+    void testSetGetDisplayInfuseAmount() {
         _mashStep.setDisplayInfuseAmount("Test Display Infuse Amount");
         assertEquals("Test Display Infuse Amount", _mashStep.getDisplayInfuseAmount());
     }
 
-    void testGetId() {
+    void testSetGetId() {
         _mashStep.setId(6);
         assertEquals(6, _mashStep.getId());
     }
