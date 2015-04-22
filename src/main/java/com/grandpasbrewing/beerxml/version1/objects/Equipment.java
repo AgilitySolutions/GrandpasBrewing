@@ -1,10 +1,18 @@
 package com.grandpasbrewing.beerxml.version1.objects;
 
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.BooleanAdapter;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlRootElement(name = "EQUIPMENT")
 public class Equipment extends BeerXmlObjectBase {
-      public double getBoilSize() {
+    public double getBoilSize() {
         return _boilSize;
     }
 
+    @XmlElement(name = "BOIL_SIZE")
     public void setBoilSize(double boilSize) {
         _boilSize = boilSize;
     }
@@ -13,6 +21,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _batchSize;
     }
 
+    @XmlElement(name = "BATCH_SIZE")
     public void setBatchSize(double batchSize) {
         _batchSize = batchSize;
     }
@@ -21,6 +30,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _tunVolume;
     }
 
+    @XmlElement(name = "TUN_VOLUME")
     public void setTunVolume(double tunVolume) {
         _tunVolume = tunVolume;
     }
@@ -29,6 +39,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _tunWeight;
     }
 
+    @XmlElement(name = "TUN_WEIGHT")
     public void setTunWeight(double tunWeight) {
         _tunWeight = tunWeight;
     }
@@ -37,6 +48,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _tunSpecificHeat;
     }
 
+    @XmlElement(name = "TUN_SPECIFIC_HEAT")
     public void setTunSpecificHeat(double tunSpecificHeat) {
         _tunSpecificHeat = tunSpecificHeat;
     }
@@ -45,6 +57,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _topUpWater;
     }
 
+    @XmlElement(name = "TOP_UP_WATER")
     public void setTopUpWater(double topUpWater) {
         _topUpWater = topUpWater;
     }
@@ -53,6 +66,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _trubChillerLoss;
     }
 
+    @XmlElement(name = "TRUB_CHILLER_LOSS")
     public void setTrubChillerLoss(double trubChillerLoss) {
         _trubChillerLoss = trubChillerLoss;
     }
@@ -61,6 +75,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _evaporationRate;
     }
 
+    @XmlElement(name = "EVAP_RATE")
     public void setEvaporationRate(double evaporationRate) {
         _evaporationRate = evaporationRate;
     }
@@ -69,15 +84,18 @@ public class Equipment extends BeerXmlObjectBase {
         return _boilTime;
     }
 
+    @XmlElement(name = "BOIL_TIME")
     public void setBoilTime(double boilTime) {
         _boilTime = boilTime;
     }
 
-    public boolean getCalculateBoilVolume() {
+    public Boolean getCalculateBoilVolume() {
         return _calculateBoilVolume;
     }
 
-    public void setCalculateBoilVolume(boolean calculateBoilVolume) {
+    @XmlElement(name = "CALC_BOIL_VOLUME")
+    @XmlJavaTypeAdapter( BooleanAdapter.class )
+    public void setCalculateBoilVolume(Boolean calculateBoilVolume) {
         _calculateBoilVolume = calculateBoilVolume;
     }
 
@@ -85,6 +103,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _lauterDeadspace;
     }
 
+    @XmlElement(name = "LAUTER_DEADSPACE")
     public void setLauterDeadspace(double lauterDeadspace) {
         _lauterDeadspace = lauterDeadspace;
     }
@@ -93,6 +112,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _topUpKettle;
     }
 
+    @XmlElement(name = "TOP_UP_KETTLE")
     public void setTopUpKettle(double topUpKettle) {
         _topUpKettle = topUpKettle;
     }
@@ -101,6 +121,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _hopUtilization;
     }
 
+    @XmlElement(name = "HOP_UTILIZATION")
     public void setHopUtilization(double hopUtilization) {
         _hopUtilization = hopUtilization;
     }
@@ -109,6 +130,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _notes;
     }
 
+    @XmlElement(name = "NOTES")
     public void setNotes(String notes) {
         _notes = notes;
     }
@@ -117,6 +139,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayBoilSize;
     }
 
+    @XmlElement(name = "DISPLAY_BOIL_SIZE")
     public void setDisplayBoilSize(String displayBoilSize) {
         _displayBoilSize = displayBoilSize;
     }
@@ -125,6 +148,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayBatchSize;
     }
 
+    @XmlElement(name = "DISPLAY_BATCH_SIZE")
     public void setDisplayBatchSize(String displayBatchSize) {
         _displayBatchSize = displayBatchSize;
     }
@@ -133,6 +157,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayTunVolume;
     }
 
+    @XmlElement(name = "DISPLAY_TUN_VOLUME")
     public void setDisplayTunVolume(String displayTunVolume) {
         _displayTunVolume = displayTunVolume;
     }
@@ -141,6 +166,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayTunWeight;
     }
 
+    @XmlElement(name = "DISPLAY_TUN_WEIGHT")
     public void setDisplayTunWeight(String displayTunWeight) {
         _displayTunWeight = displayTunWeight;
     }
@@ -149,6 +175,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayTopUpWater;
     }
 
+    @XmlElement(name = "DISPLAY_TOP_UP_WATER")
     public void setDisplayTopUpWater(String displayTopUpWater) {
         _displayTopUpWater = displayTopUpWater;
     }
@@ -157,6 +184,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayTrubChillerLoss;
     }
 
+    @XmlElement(name = "DISPLAY_TRUB_CHILLER_LOSS")
     public void setDisplayTrubChillerLoss(String displayTrubChillerLoss) {
         _displayTrubChillerLoss = displayTrubChillerLoss;
     }
@@ -165,6 +193,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayLauterDeadspace;
     }
 
+    @XmlElement(name = "DISPLAY_LAUTER_DEADSPACE")
     public void setDisplayLauterDeadspace(String displayLauterDeadspace) {
         _displayLauterDeadspace = displayLauterDeadspace;
     }
@@ -173,6 +202,7 @@ public class Equipment extends BeerXmlObjectBase {
         return _displayTopUpKettle;
     }
 
+    @XmlElement(name = "DISPLAY_TOP_UP_KETTLE")
     public void setDisplayTopUpKettle(String displayTopUpKettle) {
         _displayTopUpKettle = displayTopUpKettle;
     }
