@@ -9,7 +9,7 @@ class EquipmentDeserializerTest extends GroovyTestCase {
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer();
+        _deserializer = new Deserializer<Equipment>();
 
         _equipmentXml = "<EQUIPMENT>" +
                 "<NAME>8 Gal pot with 5 gal Igloo Cooler</NAME>" +
@@ -32,7 +32,7 @@ class EquipmentDeserializerTest extends GroovyTestCase {
     }
 
     void testToBeerXml() {
-        Equipment equipment = (Equipment) _deserializer.toBeerXml(_equipmentXml);
+        Equipment equipment = (Equipment) _deserializer.toBeerXml(_equipmentXml, Equipment.class);
 
         assertEquals("8 Gal pot with 5 gal Igloo Cooler", equipment.getName());
         assertEquals(1, equipment.getVersion());
