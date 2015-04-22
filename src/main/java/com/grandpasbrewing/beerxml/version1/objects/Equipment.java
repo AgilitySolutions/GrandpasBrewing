@@ -8,84 +8,84 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "EQUIPMENT")
 public class Equipment extends BeerXmlObjectBase {
-    public double getBoilSize() {
+    public Double getBoilSize() {
         return _boilSize;
     }
 
     @XmlElement(name = "BOIL_SIZE")
-    public void setBoilSize(double boilSize) {
+    public void setBoilSize(Double boilSize) {
         _boilSize = boilSize;
     }
 
-    public double getBatchSize() {
+    public Double getBatchSize() {
         return _batchSize;
     }
 
     @XmlElement(name = "BATCH_SIZE")
-    public void setBatchSize(double batchSize) {
+    public void setBatchSize(Double batchSize) {
         _batchSize = batchSize;
     }
 
-    public double getTunVolume() {
+    public Double getTunVolume() {
         return _tunVolume;
     }
 
     @XmlElement(name = "TUN_VOLUME")
-    public void setTunVolume(double tunVolume) {
+    public void setTunVolume(Double tunVolume) {
         _tunVolume = tunVolume;
     }
 
-    public double getTunWeight() {
+    public Double getTunWeight() {
         return _tunWeight;
     }
 
     @XmlElement(name = "TUN_WEIGHT")
-    public void setTunWeight(double tunWeight) {
+    public void setTunWeight(Double tunWeight) {
         _tunWeight = tunWeight;
     }
 
-    public double getTunSpecificHeat() {
+    public Double getTunSpecificHeat() {
         return _tunSpecificHeat;
     }
 
     @XmlElement(name = "TUN_SPECIFIC_HEAT")
-    public void setTunSpecificHeat(double tunSpecificHeat) {
+    public void setTunSpecificHeat(Double tunSpecificHeat) {
         _tunSpecificHeat = tunSpecificHeat;
     }
 
-    public double getTopUpWater() {
+    public Double getTopUpWater() {
         return _topUpWater;
     }
 
     @XmlElement(name = "TOP_UP_WATER")
-    public void setTopUpWater(double topUpWater) {
+    public void setTopUpWater(Double topUpWater) {
         _topUpWater = topUpWater;
     }
 
-    public double getTrubChillerLoss() {
+    public Double getTrubChillerLoss() {
         return _trubChillerLoss;
     }
 
     @XmlElement(name = "TRUB_CHILLER_LOSS")
-    public void setTrubChillerLoss(double trubChillerLoss) {
+    public void setTrubChillerLoss(Double trubChillerLoss) {
         _trubChillerLoss = trubChillerLoss;
     }
 
-    public double getEvaporationRate() {
+    public Double getEvaporationRate() {
         return _evaporationRate;
     }
 
     @XmlElement(name = "EVAP_RATE")
-    public void setEvaporationRate(double evaporationRate) {
+    public void setEvaporationRate(Double evaporationRate) {
         _evaporationRate = evaporationRate;
     }
 
-    public double getBoilTime() {
+    public Double getBoilTime() {
         return _boilTime;
     }
 
     @XmlElement(name = "BOIL_TIME")
-    public void setBoilTime(double boilTime) {
+    public void setBoilTime(Double boilTime) {
         _boilTime = boilTime;
     }
 
@@ -99,30 +99,30 @@ public class Equipment extends BeerXmlObjectBase {
         _calculateBoilVolume = calculateBoilVolume;
     }
 
-    public double getLauterDeadspace() {
+    public Double getLauterDeadspace() {
         return _lauterDeadspace;
     }
 
     @XmlElement(name = "LAUTER_DEADSPACE")
-    public void setLauterDeadspace(double lauterDeadspace) {
+    public void setLauterDeadspace(Double lauterDeadspace) {
         _lauterDeadspace = lauterDeadspace;
     }
 
-    public double getTopUpKettle() {
+    public Double getTopUpKettle() {
         return _topUpKettle;
     }
 
     @XmlElement(name = "TOP_UP_KETTLE")
-    public void setTopUpKettle(double topUpKettle) {
+    public void setTopUpKettle(Double topUpKettle) {
         _topUpKettle = topUpKettle;
     }
 
-    public double getHopUtilization() {
+    public Double getHopUtilization() {
         return _hopUtilization;
     }
 
     @XmlElement(name = "HOP_UTILIZATION")
-    public void setHopUtilization(double hopUtilization) {
+    public void setHopUtilization(Double hopUtilization) {
         _hopUtilization = hopUtilization;
     }
 
@@ -207,19 +207,19 @@ public class Equipment extends BeerXmlObjectBase {
         _displayTopUpKettle = displayTopUpKettle;
     }
 
-    private double _boilSize;
-    private double _batchSize;
-    private double _tunVolume;
-    private double _tunWeight;
-    private double _tunSpecificHeat;
-    private double _topUpWater;
-    private double _trubChillerLoss;
-    private double _evaporationRate;
-    private double _boilTime;
-    private boolean _calculateBoilVolume;
-    private double _lauterDeadspace;
-    private double _topUpKettle;
-    private double _hopUtilization;
+    private Double _boilSize;
+    private Double _batchSize;
+    private Double _tunVolume;
+    private Double _tunWeight;
+    private Double _tunSpecificHeat;
+    private Double _topUpWater;
+    private Double _trubChillerLoss;
+    private Double _evaporationRate;
+    private Double _boilTime;
+    private Boolean _calculateBoilVolume;
+    private Double _lauterDeadspace;
+    private Double _topUpKettle;
+    private Double _hopUtilization;
     private String _notes;
     private String _displayBoilSize;
     private String _displayBatchSize;
