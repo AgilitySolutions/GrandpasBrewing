@@ -3,7 +3,7 @@ package com.grandpasbrewing.beerxml.version1.serialization
 import com.grandpasbrewing.beerxml.version1.objects.Style
 import com.grandpasbrewing.beerxml.version1.objects.Water
 
-class WaterDeserializerTests extends GroovyTestCase {
+class WaterDeserializerTest extends GroovyTestCase {
     private Deserializer _deserializer;
     private String _waterXml;
 

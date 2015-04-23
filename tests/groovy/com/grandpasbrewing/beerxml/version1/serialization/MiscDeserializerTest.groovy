@@ -4,7 +4,7 @@ import com.grandpasbrewing.beerxml.version1.enums.MiscType
 import com.grandpasbrewing.beerxml.version1.enums.MiscUse
 import com.grandpasbrewing.beerxml.version1.objects.Misc
 
-class MiscDeserializerTests extends GroovyTestCase {
+class MiscDeserializerTest extends GroovyTestCase {
     private Deserializer _deserializer;
 
     void setUp() {

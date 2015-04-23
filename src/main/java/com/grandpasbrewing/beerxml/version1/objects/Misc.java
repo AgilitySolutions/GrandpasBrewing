@@ -2,9 +2,11 @@ package com.grandpasbrewing.beerxml.version1.objects;
 
 import com.grandpasbrewing.beerxml.version1.enums.MiscType;
 import com.grandpasbrewing.beerxml.version1.enums.MiscUse;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.BooleanAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "MISC")
 public class Misc extends BeerXmlObjectBase {
@@ -49,6 +51,7 @@ public class Misc extends BeerXmlObjectBase {
     }
 
     @XmlElement(name = "AMOUNT_IS_WEIGHT")
+    @XmlJavaTypeAdapter( BooleanAdapter.class )
     public void setAmountIsWeight(Boolean amountIsWeight) {
         _amountIsWeight = amountIsWeight;
     }
