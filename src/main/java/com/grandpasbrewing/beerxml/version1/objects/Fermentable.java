@@ -1,45 +1,57 @@
 package com.grandpasbrewing.beerxml.version1.objects;
 
 import com.grandpasbrewing.beerxml.version1.enums.FermentableType;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.BooleanAdapter;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlRootElement(name = "FERMENTABLE")
 public class Fermentable extends BeerXmlObjectBase {
     public FermentableType getType() {
         return _type;
     }
 
+    @XmlElement(name = "TYPE")
     public void setType(FermentableType type) {
         _type = type;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return _amount;
     }
 
-    public void setAmount(double amount) {
+    @XmlElement(name = "AMOUNT")
+    public void setAmount(Double amount) {
         _amount = amount;
     }
 
-    public double getYield() {
+    public Double getYield() {
         return _yield;
     }
 
-    public void setYield(double yield) {
+    @XmlElement(name = "YIELD")
+    public void setYield(Double yield) {
         _yield = yield;
     }
 
-    public double getColor() {
+    public Double getColor() {
         return _color;
     }
 
-    public void setColor(double color) {
+    @XmlElement(name = "COLOR")
+    public void setColor(Double color) {
         _color = color;
     }
 
-    public boolean getAddAfterBoil() {
+    public Boolean getAddAfterBoil() {
         return _addAfterBoil;
     }
 
-    public void setAddAfterBoil(boolean addAfterBoil) {
+    @XmlElement(name = "ADD_AFTER_BOIL")
+    @XmlJavaTypeAdapter( BooleanAdapter.class )
+    public void setAddAfterBoil(Boolean addAfterBoil) {
         _addAfterBoil = addAfterBoil;
     }
 
@@ -47,6 +59,7 @@ public class Fermentable extends BeerXmlObjectBase {
         return _placeOfOrigin;
     }
 
+    @XmlElement(name = "ORIGIN")
     public void setPlaceOfOrigin(String placeOfOrigin) {
         _placeOfOrigin = placeOfOrigin;
     }
@@ -55,6 +68,7 @@ public class Fermentable extends BeerXmlObjectBase {
         return _supplier;
     }
 
+    @XmlElement(name = "SUPPLIER")
     public void setSupplier(String supplier) {
         _supplier = supplier;
     }
@@ -63,63 +77,72 @@ public class Fermentable extends BeerXmlObjectBase {
         return _notes;
     }
 
+    @XmlElement(name = "NOTES")
     public void setNotes(String notes) {
         _notes = notes;
     }
 
-    public double getCoarseFineDiff() {
+    public Double getCoarseFineDiff() {
         return _coarseFineDiff;
     }
 
-    public void setCoarseFineDiff(double coarseFineDiff) {
+    @XmlElement(name = "COARSE_FINE_DIFF")
+    public void setCoarseFineDiff(Double coarseFineDiff) {
         _coarseFineDiff = coarseFineDiff;
     }
 
-    public double getMoisture() {
+    public Double getMoisture() {
         return _moisture;
     }
 
-    public void setMoisture(double moisture) {
+    @XmlElement(name = "MOISTURE")
+    public void setMoisture(Double moisture) {
         _moisture = moisture;
     }
 
-    public double getDiastaticPower() {
+    public Double getDiastaticPower() {
         return _diastaticPower;
     }
 
-    public void setDiastaticPower(double diastaticPower) {
+    @XmlElement(name = "DIASTATIC_POWER")
+    public void setDiastaticPower(Double diastaticPower) {
         _diastaticPower = diastaticPower;
     }
 
-    public double getProtein() {
+    public Double getProtein() {
         return _protein;
     }
 
-    public void setProtein(double protein) {
+    @XmlElement(name = "PROTEIN")
+    public void setProtein(Double protein) {
         _protein = protein;
     }
 
-    public double getMaximumInBatch() {
+    public Double getMaximumInBatch() {
         return _maximumInBatch;
     }
 
-    public void setMaximumInBatch(double maximumInBatch) {
+    @XmlElement(name = "MAX_IN_BATCH")
+    public void setMaximumInBatch(Double maximumInBatch) {
         _maximumInBatch = maximumInBatch;
     }
 
-    public boolean getRecommendMash() {
+    public Boolean getRecommendMash() {
         return _recommendMash;
     }
 
-    public void setRecommendMash(boolean recommendMash) {
+    @XmlElement(name = "RECOMMEND_MASH")
+    @XmlJavaTypeAdapter( BooleanAdapter.class )
+    public void setRecommendMash(Boolean recommendMash) {
         _recommendMash = recommendMash;
     }
 
-    public double getIBUGallonsPerPound() {
+    public Double getIBUGallonsPerPound() {
         return _ibuGallonsPerPound;
     }
 
-    public void setIBUGallonsPerPound(double ibuGallonsPerPound) {
+    @XmlElement(name = "IBU_GAL_PER_LB")
+    public void setIBUGallonsPerPound(Double ibuGallonsPerPound) {
         _ibuGallonsPerPound = ibuGallonsPerPound;
     }
 
@@ -127,15 +150,17 @@ public class Fermentable extends BeerXmlObjectBase {
         return _displayAmount;
     }
 
+    @XmlElement(name = "DISPLAY_AMOUNT")
     public void setDisplayAmount(String displayAmount) {
         _displayAmount = displayAmount;
     }
 
-    public double getPotential() {
+    public Double getPotential() {
         return _potential;
     }
 
-    public void setPotential(double potential) {
+    @XmlElement(name = "POTENTIAL")
+    public void setPotential(Double potential) {
         _potential = potential;
     }
 
@@ -143,6 +168,7 @@ public class Fermentable extends BeerXmlObjectBase {
         return _inventory;
     }
 
+    @XmlElement(name = "INVENTORY")
     public void setInventory(String inventory) {
         _inventory = inventory;
     }
@@ -151,27 +177,28 @@ public class Fermentable extends BeerXmlObjectBase {
         return _displayColor;
     }
 
+    @XmlElement(name = "DISPLAY_COLOR")
     public void setDisplayColor(String displayColor) {
         _displayColor = displayColor;
     }
 
     private FermentableType _type;
-    private double _amount;
-    private double _yield;
-    private double _color;
-    private boolean _addAfterBoil;
+    private Double _amount;
+    private Double _yield;
+    private Double _color;
+    private Boolean _addAfterBoil;
     private String _placeOfOrigin;
     private String _supplier;
     private String _notes;
-    private double _coarseFineDiff;
-    private double _moisture;
-    private double _diastaticPower;
-    private double _protein;
-    private double _maximumInBatch;
-    private boolean _recommendMash;
-    private double _ibuGallonsPerPound;
+    private Double _coarseFineDiff;
+    private Double _moisture;
+    private Double _diastaticPower;
+    private Double _protein;
+    private Double _maximumInBatch;
+    private Boolean _recommendMash;
+    private Double _ibuGallonsPerPound;
     private String _displayAmount;
-    private double _potential;
+    private Double _potential;
     private String _inventory;
     private String _displayColor;
 }
