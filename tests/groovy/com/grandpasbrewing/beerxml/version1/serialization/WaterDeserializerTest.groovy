@@ -1,6 +1,5 @@
 package com.grandpasbrewing.beerxml.version1.serialization
 
-import com.grandpasbrewing.beerxml.version1.objects.Style
 import com.grandpasbrewing.beerxml.version1.objects.Water
 
 class WaterDeserializerTest extends GroovyTestCase {
@@ -10,7 +9,7 @@ class WaterDeserializerTest extends GroovyTestCase {
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Style>();
+        _deserializer = new Deserializer<Water>();
 
         _waterXml = "<WATER>" +
                 "<NAME> Burton on Trent, UK </NAME>" +

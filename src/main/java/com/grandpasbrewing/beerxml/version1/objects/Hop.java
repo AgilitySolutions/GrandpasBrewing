@@ -3,21 +3,29 @@ package com.grandpasbrewing.beerxml.version1.objects;
 import com.grandpasbrewing.beerxml.version1.enums.HopForm;
 import com.grandpasbrewing.beerxml.version1.enums.HopType;
 import com.grandpasbrewing.beerxml.version1.enums.HopUse;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.HopUseAdapter;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlRootElement(name = "HOP")
 public class Hop extends BeerXmlObjectBase {
-    public double getAlphaPercentage() {
+    public Double getAlphaPercentage() {
         return _alphaPercentage;
     }
 
-    public void setAlphaPercentage(double alphaPercentage) {
+    @XmlElement(name = "ALPHA")
+    public void setAlphaPercentage(Double alphaPercentage) {
         _alphaPercentage = alphaPercentage;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return _amount;
     }
 
-    public void setAmount(double amount) {
+    @XmlElement(name = "AMOUNT")
+    public void setAmount(Double amount) {
         _amount = amount;
     }
 
@@ -25,15 +33,18 @@ public class Hop extends BeerXmlObjectBase {
         return _use;
     }
 
+    @XmlElement(name = "USE")
+    @XmlJavaTypeAdapter( HopUseAdapter.class )
     public void setUse(HopUse use) {
         _use = use;
     }
 
-    public double getTime() {
+    public Double getTime() {
         return _time;
     }
 
-    public void setTime(double time) {
+    @XmlElement(name = "TIME")
+    public void setTime(Double time) {
         _time = time;
     }
 
@@ -41,6 +52,7 @@ public class Hop extends BeerXmlObjectBase {
         return _notes;
     }
 
+    @XmlElement(name = "NOTES")
     public void setNotes(String notes) {
         _notes = notes;
     }
@@ -49,6 +61,7 @@ public class Hop extends BeerXmlObjectBase {
         return _type;
     }
 
+    @XmlElement(name = "TYPE")
     public void setType(HopType type) {
         _type = type;
     }
@@ -57,23 +70,26 @@ public class Hop extends BeerXmlObjectBase {
         return _form;
     }
 
+    @XmlElement(name = "FORM")
     public void setForm(HopForm form) {
         _form = form;
     }
 
-    public double getBetaPercentage() {
+    public Double getBetaPercentage() {
         return _betaPercentage;
     }
 
-    public void setBetaPercentage(double betaPercentage) {
+    @XmlElement(name = "BETA")
+    public void setBetaPercentage(Double betaPercentage) {
         _betaPercentage = betaPercentage;
     }
 
-    public double getHopStabilityIndex() {
+    public Double getHopStabilityIndex() {
         return _hopStabilityIndex;
     }
 
-    public void setHopStabilityIndex(double hopStabilityIndex) {
+    @XmlElement(name = "HSI")
+    public void setHopStabilityIndex(Double hopStabilityIndex) {
         _hopStabilityIndex = hopStabilityIndex;
     }
 
@@ -81,6 +97,7 @@ public class Hop extends BeerXmlObjectBase {
         return _placeOfOrigin;
     }
 
+    @XmlElement(name = "ORIGIN")
     public void setPlaceOfOrigin(String placeOfOrigin) {
         _placeOfOrigin = placeOfOrigin;
     }
@@ -89,39 +106,44 @@ public class Hop extends BeerXmlObjectBase {
         return _substitutes;
     }
 
+    @XmlElement(name = "SUBSTITUTES")
     public void setSubstitutes(String substitutes) {
         _substitutes = substitutes;
     }
 
-    public double getHumuleneLevel() {
+    public Double getHumuleneLevel() {
         return _humuleneLevel;
     }
 
-    public void setHumuleneLevel(double humuleneLevel) {
+    @XmlElement(name = "HUMULENE")
+    public void setHumuleneLevel(Double humuleneLevel) {
         _humuleneLevel = humuleneLevel;
     }
 
-    public double getCaryophylleneLevel() {
+    public Double getCaryophylleneLevel() {
         return _caryophylleneLevel;
     }
 
-    public void setCaryophylleneLevel(double caryophylleneLevel) {
+    @XmlElement(name = "CARYOPHYLLENE")
+    public void setCaryophylleneLevel(Double caryophylleneLevel) {
         _caryophylleneLevel = caryophylleneLevel;
     }
 
-    public double getCohumuloneLevel() {
+    public Double getCohumuloneLevel() {
         return _cohumuloneLevel;
     }
 
-    public void setCohumuloneLevel(double cohumuloneLevel) {
+    @XmlElement(name = "COHUMULONE")
+    public void setCohumuloneLevel(Double cohumuloneLevel) {
         _cohumuloneLevel = cohumuloneLevel;
     }
 
-    public double getMyrceneLevel() {
+    public Double getMyrceneLevel() {
         return _myrceneLevel;
     }
 
-    public void setMyrceneLevel(double myrceneLevel) {
+    @XmlElement(name = "MYRCENE")
+    public void setMyrceneLevel(Double myrceneLevel) {
         _myrceneLevel = myrceneLevel;
     }
 
@@ -129,6 +151,7 @@ public class Hop extends BeerXmlObjectBase {
         return _displayAmount;
     }
 
+    @XmlElement(name = "DISPLAY_AMOUNT")
     public void setDisplayAmount(String displayAmount) {
         _displayAmount = displayAmount;
     }
@@ -137,6 +160,7 @@ public class Hop extends BeerXmlObjectBase {
         return _inventory;
     }
 
+    @XmlElement(name = "INVENTORY")
     public void setInventory(String inventory) {
         _inventory = inventory;
     }
@@ -145,25 +169,26 @@ public class Hop extends BeerXmlObjectBase {
         return _displayTime;
     }
 
+    @XmlElement(name = "DISPLAY_TIME")
     public void setDisplayTime(String displayTime) {
         _displayTime = displayTime;
     }
 
-    private double _alphaPercentage;
-    private double _amount;
+    private Double _alphaPercentage;
+    private Double _amount;
     private HopUse _use;
-    private double _time;
+    private Double _time;
     private String _notes;
     private HopType _type;
     private HopForm _form;
-    private double _betaPercentage;
-    private double _hopStabilityIndex;
+    private Double _betaPercentage;
+    private Double _hopStabilityIndex;
     private String _placeOfOrigin;
     private String _substitutes;
-    private double _humuleneLevel;
-    private double _caryophylleneLevel;
-    private double _cohumuloneLevel;
-    private double _myrceneLevel;
+    private Double _humuleneLevel;
+    private Double _caryophylleneLevel;
+    private Double _cohumuloneLevel;
+    private Double _myrceneLevel;
     private String _displayAmount;
     private String _inventory;
     private String _displayTime;
