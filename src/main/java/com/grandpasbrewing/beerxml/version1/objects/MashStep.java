@@ -2,52 +2,62 @@ package com.grandpasbrewing.beerxml.version1.objects;
 
 import com.grandpasbrewing.beerxml.version1.enums.MashStepType;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "MASH_STEP")
 public class MashStep extends BeerXmlObjectBase {
     public MashStepType getType() {
         return _type;
     }
 
+    @XmlElement(name = "TYPE")
     public void setType(MashStepType type) {
         _type = type;
     }
 
-    public double getInfuseAmount() {
+    public Double getInfuseAmount() {
         return _infuseAmount;
     }
 
-    public void setInfuseAmount(double infuseAmount) {
+    @XmlElement(name = "INFUSE_AMOUNT")
+    public void setInfuseAmount(Double infuseAmount) {
         _infuseAmount = infuseAmount;
     }
 
-    public double getStepTemperature() {
+    public Double getStepTemperature() {
         return _stepTemperature;
     }
 
-    public void setStepTemperature(double stepTemperature) {
+    @XmlElement(name = "STEP_TEMP")
+    public void setStepTemperature(Double stepTemperature) {
         _stepTemperature = stepTemperature;
     }
 
-    public double getStepTime() {
+    public Double getStepTime() {
         return _stepTime;
     }
 
-    public void setStepTime(double stepTime) {
+    @XmlElement(name = "STEP_TIME")
+    public void setStepTime(Double stepTime) {
         _stepTime = stepTime;
     }
 
-    public double getRampTime() {
+    public Double getRampTime() {
         return _rampTime;
     }
 
-    public void setRampTime(double rampTime) {
+    @XmlElement(name = "RAMP_TIME")
+    public void setRampTime(Double rampTime) {
         _rampTime = rampTime;
     }
 
-    public double getEndTemperature() {
+    public Double getEndTemperature() {
         return _endTemperature;
     }
 
-    public void setEndTemperature(double endTemperature) {
+    @XmlElement(name = "END_TEMP")
+    public void setEndTemperature(Double endTemperature) {
         _endTemperature = endTemperature;
     }
 
@@ -55,6 +65,7 @@ public class MashStep extends BeerXmlObjectBase {
         return _description;
     }
 
+    @XmlElement(name = "DESCRIPTION")
     public void setDescription(String description) {
         _description = description;
     }
@@ -63,6 +74,7 @@ public class MashStep extends BeerXmlObjectBase {
         return _waterGrainRatio;
     }
 
+    @XmlElement(name = "WATER_GRAIN_RATIO")
     public void setWaterGrainRatio(String waterGrainRatio) {
         _waterGrainRatio = waterGrainRatio;
     }
@@ -71,6 +83,7 @@ public class MashStep extends BeerXmlObjectBase {
         return _decoctionAmount;
     }
 
+    @XmlElement(name = "DECOCTION_AMT")
     public void setDecoctionAmount(String decoctionAmount) {
         _decoctionAmount = decoctionAmount;
     }
@@ -79,6 +92,7 @@ public class MashStep extends BeerXmlObjectBase {
         return _infuseTemperature;
     }
 
+    @XmlElement(name = "INFUSE_TEMP")
     public void setInfuseTemperature(String infuseTemperature) {
         _infuseTemperature = infuseTemperature;
     }
@@ -87,6 +101,7 @@ public class MashStep extends BeerXmlObjectBase {
         return _displayStepTemperature;
     }
 
+    @XmlElement(name = "DISPLAY_STEP_TEMP")
     public void setDisplayStepTemperature(String displayStepTemperature) {
         _displayStepTemperature = displayStepTemperature;
     }
@@ -95,16 +110,17 @@ public class MashStep extends BeerXmlObjectBase {
         return _displayInfuseAmount;
     }
 
+    @XmlElement(name = "DISPLAY_INFUSE_AMT")
     public void setDisplayInfuseAmount(String displayInfuseAmount) {
         _displayInfuseAmount = displayInfuseAmount;
     }
 
     private MashStepType _type;
-    private double _infuseAmount;
-    private double _stepTemperature;
-    private double _stepTime;
-    private double _rampTime;
-    private double _endTemperature;
+    private Double _infuseAmount;
+    private Double _stepTemperature;
+    private Double _stepTime;
+    private Double _rampTime;
+    private Double _endTemperature;
     private String _description;
     private String _waterGrainRatio;
     private String _decoctionAmount;
