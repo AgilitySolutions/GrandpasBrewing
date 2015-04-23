@@ -8,4 +8,13 @@ class HopUseTest extends GroovyTestCase {
         assertEquals("First Wort", HopUse.FirstWort.getDescription());
         assertEquals("Aroma", HopUse.Aroma.getDescription());
     }
+
+    void testFromDescription() {
+        assertEquals(HopUse.Boil, HopUse.fromDescription("Boil"));
+        assertEquals(HopUse.DryHop,  HopUse.fromDescription("Dry Hop"));
+        assertEquals(HopUse.Mash,  HopUse.fromDescription("Mash"));
+        assertEquals(HopUse.FirstWort,  HopUse.fromDescription("First Wort"));
+        assertEquals(HopUse.Aroma,  HopUse.fromDescription("Aroma"));
+        assertEquals(null,  HopUse.fromDescription("unknown"));
+    }
 }

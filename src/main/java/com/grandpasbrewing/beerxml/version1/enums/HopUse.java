@@ -16,5 +16,15 @@ public enum HopUse {
     public String getDescription() {
         return _description;
     }
+
+    public static HopUse fromDescription(String description) {
+        for (HopUse hopUse : HopUse.values()) {
+            if (hopUse.getDescription().equals(description)) {
+                return hopUse;
+            }
+        }
+
+        return null;
+    }
 }
 

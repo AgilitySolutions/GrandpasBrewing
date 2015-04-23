@@ -1,8 +1,6 @@
 package com.grandpasbrewing.beerxml.version1.serialization
-
 import com.grandpasbrewing.beerxml.version1.enums.MashStepType
 import com.grandpasbrewing.beerxml.version1.objects.MashStep
-import com.grandpasbrewing.beerxml.version1.objects.Style
 
 class MashStepDeserializerTest extends GroovyTestCase {
     private Deserializer _deserializer;
@@ -10,7 +8,7 @@ class MashStepDeserializerTest extends GroovyTestCase {
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Style>();
+        _deserializer = new Deserializer<MashStep>();
     }
 
     void testToBeerXmlMashStepInfusionStep() {
