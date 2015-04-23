@@ -3,7 +3,7 @@ package com.grandpasbrewing.beerxml.version1.serialization
 import com.grandpasbrewing.beerxml.version1.enums.StyleType
 import com.grandpasbrewing.beerxml.version1.objects.Style
 
-class StyleDeserializerTests  extends GroovyTestCase {
+class StyleDeserializerTests extends GroovyTestCase {
     private Deserializer _deserializer;
 
     void setUp() {
