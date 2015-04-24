@@ -8,5 +8,14 @@ class MiscUseTest extends GroovyTestCase {
         assertEquals("Secondary", MiscUse.Secondary.getDescription());
         assertEquals("Bottle", MiscUse.Bottle.getDescription());
     }
+
+    void testFromDescription() {
+        assertEquals(MiscUse.Boil, MiscUse.fromDescription("Boil"));
+        assertEquals(MiscUse.Mash,  MiscUse.fromDescription("Mash"));
+        assertEquals(MiscUse.Primary,  MiscUse.fromDescription("Primary"));
+        assertEquals(MiscUse.Secondary,  MiscUse.fromDescription("Secondary"));
+        assertEquals(MiscUse.Bottle,  MiscUse.fromDescription("Bottle"));
+        assertEquals(null,  MiscUse.fromDescription("unknown"));
+    }
 }
 
