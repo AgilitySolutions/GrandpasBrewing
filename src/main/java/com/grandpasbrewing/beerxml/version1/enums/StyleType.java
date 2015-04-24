@@ -9,5 +9,15 @@ public enum StyleType {
     Cider;
 
     public String getDescription() { return toString(); }
+
+    public static StyleType fromDescription(String description) {
+        for (StyleType styleType : StyleType.values()) {
+            if (styleType.getDescription().equals(description)) {
+                return styleType;
+            }
+        }
+
+        return null;
+    }
 }
 
