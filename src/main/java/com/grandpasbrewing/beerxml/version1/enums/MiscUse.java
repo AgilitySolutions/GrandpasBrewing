@@ -10,5 +10,15 @@ public enum MiscUse {
     public String getDescription() {
         return toString();
     }
+
+    public static MiscUse fromDescription(String description) {
+        for (MiscUse miscUse : MiscUse.values()) {
+            if (miscUse.getDescription().equals(description)) {
+                return miscUse;
+            }
+        }
+
+        return null;
+    }
 }
 
