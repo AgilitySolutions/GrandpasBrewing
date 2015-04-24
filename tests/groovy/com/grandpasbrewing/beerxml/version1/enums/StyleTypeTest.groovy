@@ -9,5 +9,15 @@ class StyleTypeTest extends GroovyTestCase {
         assertEquals("Mixed", StyleType.Mixed.getDescription());
         assertEquals("Cider", StyleType.Cider.getDescription());
     }
+
+    void testFromDescription() {
+        assertEquals(StyleType.Lager, StyleType.fromDescription("Lager"));
+        assertEquals(StyleType.Ale,  StyleType.fromDescription("Ale"));
+        assertEquals(StyleType.Mead,  StyleType.fromDescription("Mead"));
+        assertEquals(StyleType.Wheat,  StyleType.fromDescription("Wheat"));
+        assertEquals(StyleType.Mixed,  StyleType.fromDescription("Mixed"));
+        assertEquals(StyleType.Cider,  StyleType.fromDescription("Cider"));
+        assertEquals(null,  StyleType.fromDescription("unknown"));
+    }
 }
 
