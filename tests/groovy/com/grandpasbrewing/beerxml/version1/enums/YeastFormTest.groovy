@@ -7,5 +7,12 @@ class YeastFormTest extends GroovyTestCase {
         assertEquals("Slant", YeastForm.Slant.getDescription());
         assertEquals("Culture", YeastForm.Culture.getDescription());
     }
-}
 
+    void testFromDescription() {
+        assertEquals(YeastForm.Liquid, YeastForm.fromDescription("Liquid"));
+        assertEquals(YeastForm.Dry,  YeastForm.fromDescription("Dry"));
+        assertEquals(YeastForm.Slant,  YeastForm.fromDescription("Slant"));
+        assertEquals(YeastForm.Culture,  YeastForm.fromDescription("Culture"));
+        assertEquals(null,  YeastForm.fromDescription("unknown"));
+    }
+}
