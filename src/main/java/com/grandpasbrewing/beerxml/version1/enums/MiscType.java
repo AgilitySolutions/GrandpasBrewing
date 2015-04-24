@@ -17,5 +17,15 @@ public enum MiscType {
     public String getDescription() {
         return _description;
     }
+
+    public static MiscType fromDescription(String description) {
+        for (MiscType miscType : MiscType.values()) {
+            if (miscType.getDescription().equals(description)) {
+                return miscType;
+            }
+        }
+
+        return null;
+    }
 }
 
