@@ -15,5 +15,15 @@ public enum RecipeType {
     public String getDescription() {
         return _description;
     }
+
+    public static RecipeType fromDescription(String description) {
+        for (RecipeType recipeType : RecipeType.values()) {
+            if (recipeType.getDescription().equals(description)) {
+                return recipeType;
+            }
+        }
+
+        return null;
+    }
 }
 
