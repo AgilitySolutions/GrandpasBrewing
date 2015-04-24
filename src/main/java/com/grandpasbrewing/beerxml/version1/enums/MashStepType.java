@@ -8,5 +8,15 @@ public enum MashStepType {
     public String getDescription() {
         return toString();
     }
+
+    public static MashStepType fromDescription(String description) {
+        for (MashStepType mashStepType : MashStepType.values()) {
+            if (mashStepType.getDescription().equals(description)) {
+                return mashStepType;
+            }
+        }
+
+        return null;
+    }
 }
 
