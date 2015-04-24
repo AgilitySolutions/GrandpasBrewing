@@ -6,4 +6,11 @@ class HopTypeTest extends GroovyTestCase {
         assertEquals("Aroma", HopType.Aroma.getDescription());
         assertEquals("Both", HopType.Both.getDescription());
     }
+
+    void testFromDescription() {
+        assertEquals(HopType.Bittering, HopType.fromDescription("Bittering"));
+        assertEquals(HopType.Aroma,  HopType.fromDescription("Aroma"));
+        assertEquals(HopType.Both,  HopType.fromDescription("Both"));
+        assertEquals(null,  HopType.fromDescription("unknown"));
+    }
 }

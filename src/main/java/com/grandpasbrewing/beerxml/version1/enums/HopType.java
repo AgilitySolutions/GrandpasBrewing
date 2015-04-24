@@ -8,5 +8,15 @@ public enum HopType {
     public String getDescription() {
         return toString();
     }
+
+    public static HopType fromDescription(String description) {
+        for (HopType hopType : HopType.values()) {
+            if (hopType.getDescription().equals(description)) {
+                return hopType;
+            }
+        }
+
+        return null;
+    }
 }
 
