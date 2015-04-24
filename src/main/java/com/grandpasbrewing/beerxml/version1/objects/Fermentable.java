@@ -2,6 +2,7 @@ package com.grandpasbrewing.beerxml.version1.objects;
 
 import com.grandpasbrewing.beerxml.version1.enums.FermentableType;
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.BooleanAdapter;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.FermentableTypeAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -14,6 +15,7 @@ public class Fermentable extends BeerXmlObjectBase {
     }
 
     @XmlElement(name = "TYPE")
+    @XmlJavaTypeAdapter( FermentableTypeAdapter.class )
     public void setType(FermentableType type) {
         _type = type;
     }
