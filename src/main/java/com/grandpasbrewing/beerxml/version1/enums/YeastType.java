@@ -10,5 +10,15 @@ public enum YeastType {
     public String getDescription() {
         return toString();
     }
+
+    public static YeastType fromDescription(String description) {
+        for (YeastType yeastType : YeastType.values()) {
+            if (yeastType.getDescription().equals(description)) {
+                return yeastType;
+            }
+        }
+
+        return null;
+    }
 }
 
