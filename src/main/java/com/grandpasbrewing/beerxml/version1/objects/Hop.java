@@ -3,6 +3,7 @@ package com.grandpasbrewing.beerxml.version1.objects;
 import com.grandpasbrewing.beerxml.version1.enums.HopForm;
 import com.grandpasbrewing.beerxml.version1.enums.HopType;
 import com.grandpasbrewing.beerxml.version1.enums.HopUse;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.HopFormAdapter;
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.HopUseAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -71,6 +72,7 @@ public class Hop extends BeerXmlObjectBase {
     }
 
     @XmlElement(name = "FORM")
+    @XmlJavaTypeAdapter( HopFormAdapter.class )
     public void setForm(HopForm form) {
         _form = form;
     }
