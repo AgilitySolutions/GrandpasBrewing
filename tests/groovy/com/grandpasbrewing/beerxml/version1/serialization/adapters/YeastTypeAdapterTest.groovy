@@ -1,6 +1,5 @@
 package com.grandpasbrewing.beerxml.version1.serialization.adapters
 
-import com.grandpasbrewing.beerxml.version1.enums.YeastFlocculation
 import com.grandpasbrewing.beerxml.version1.enums.YeastType
 
 class YeastTypeAdapterTest extends GroovyTestCase {
@@ -10,7 +9,7 @@ class YeastTypeAdapterTest extends GroovyTestCase {
         super.setUp()
 
         _yeastTypeAdapter = new YeastTypeAdapter();
-    }
+    };
 
     void testUnmarshal() {
         assertEquals(YeastType.Ale, _yeastTypeAdapter.unmarshal("Ale"));
