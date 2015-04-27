@@ -3,8 +3,9 @@ package com.grandpasbrewing.beerxml.version1.objects;
 import com.grandpasbrewing.beerxml.version1.enums.YeastFlocculation;
 import com.grandpasbrewing.beerxml.version1.enums.YeastForm;
 import com.grandpasbrewing.beerxml.version1.enums.YeastType;
-import com.grandpasbrewing.beerxml.version1.serialization.adapters.FermentableTypeAdapter;
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.YeastFlocculationAdapter;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.YeastFormAdapter;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.YeastTypeAdapter;
 
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -13,6 +14,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _type;
     }
 
+    @XmlJavaTypeAdapter( YeastTypeAdapter.class )
     public void setType(YeastType type) {
         _type = type;
     }
@@ -21,6 +23,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _form;
     }
 
+    @XmlJavaTypeAdapter( YeastFormAdapter.class )
     public void setForm(YeastForm form) {
         _form = form;
     }
