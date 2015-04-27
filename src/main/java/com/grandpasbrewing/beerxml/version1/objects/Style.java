@@ -1,9 +1,11 @@
 package com.grandpasbrewing.beerxml.version1.objects;
 
 import com.grandpasbrewing.beerxml.version1.enums.StyleType;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.StyleTypeAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "STYLE")
 public class Style extends BeerXmlObjectBase {
@@ -48,6 +50,7 @@ public class Style extends BeerXmlObjectBase {
     }
 
     @XmlElement(name = "TYPE")
+    @XmlJavaTypeAdapter( StyleTypeAdapter.class )
     public void setType(StyleType type) {
         _type = type;
     }
