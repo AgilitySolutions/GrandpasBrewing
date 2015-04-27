@@ -2,7 +2,7 @@ package com.grandpasbrewing.beerxml.version1.serialization.adapters
 
 import com.grandpasbrewing.beerxml.version1.enums.YeastFlocculation
 
-class YeastFlocculationAdapterTestextends extends GroovyTestCase {
+class YeastFlocculationAdapterTest extends GroovyTestCase {
     private  YeastFlocculationAdapter _yeastFlocculationAdapter;
 
     void setUp() {
