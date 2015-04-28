@@ -1,7 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.objects;
 
 import com.grandpasbrewing.beerxml.version1.enums.RecipeType;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.RecipeTypeAdapter;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 
 public class Recipe extends BeerXmlObjectBase {
@@ -9,6 +11,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _type;
     }
 
+    @XmlJavaTypeAdapter( RecipeTypeAdapter.class )
     public void setType(RecipeType type) {
         _type = type;
     }
