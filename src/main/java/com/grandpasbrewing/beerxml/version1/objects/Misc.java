@@ -3,6 +3,7 @@ package com.grandpasbrewing.beerxml.version1.objects;
 import com.grandpasbrewing.beerxml.version1.enums.MiscType;
 import com.grandpasbrewing.beerxml.version1.enums.MiscUse;
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.BooleanAdapter;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.MiscUseAdapter;
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.MiscTypeAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -26,6 +27,7 @@ public class Misc extends BeerXmlObjectBase {
     }
 
     @XmlElement(name = "USE")
+    @XmlJavaTypeAdapter( MiscUseAdapter.class )
     public void setUse(MiscUse use) {
         _use = use;
     }
