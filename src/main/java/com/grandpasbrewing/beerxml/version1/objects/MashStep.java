@@ -1,9 +1,11 @@
 package com.grandpasbrewing.beerxml.version1.objects;
 
 import com.grandpasbrewing.beerxml.version1.enums.MashStepType;
+import com.grandpasbrewing.beerxml.version1.serialization.adapters.MashStepTypeAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "MASH_STEP")
 public class MashStep extends BeerXmlObjectBase {
@@ -12,6 +14,7 @@ public class MashStep extends BeerXmlObjectBase {
     }
 
     @XmlElement(name = "TYPE")
+    @XmlJavaTypeAdapter( MashStepTypeAdapter.class )
     public void setType(MashStepType type) {
         _type = type;
     }
