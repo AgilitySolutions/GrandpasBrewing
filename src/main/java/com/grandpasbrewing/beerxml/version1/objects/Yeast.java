@@ -7,13 +7,17 @@ import com.grandpasbrewing.beerxml.version1.serialization.adapters.YeastFloccula
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.YeastFormAdapter;
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.YeastTypeAdapter;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+@XmlRootElement(name = "YEAST")
 public class Yeast extends BeerXmlObjectBase {
     public YeastType getType() {
         return _type;
     }
 
+    @XmlElement(name = "TYPE")
     @XmlJavaTypeAdapter( YeastTypeAdapter.class )
     public void setType(YeastType type) {
         _type = type;
@@ -23,24 +27,27 @@ public class Yeast extends BeerXmlObjectBase {
         return _form;
     }
 
+    @XmlElement(name = "FORM")
     @XmlJavaTypeAdapter( YeastFormAdapter.class )
     public void setForm(YeastForm form) {
         _form = form;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return _amount;
     }
 
-    public void setAmount(double amount) {
+    @XmlElement(name = "AMOUNT")
+    public void setAmount(Double amount) {
         _amount = amount;
     }
 
-    public boolean getAmountIsWeight() {
+    public Boolean getAmountIsWeight() {
         return _amountIsWeight;
     }
 
-    public void setAmountIsWeight(boolean amountIsWeight) {
+    @XmlElement(name = "AMOUNT_IS_WEIGHT")
+    public void setAmountIsWeight(Boolean amountIsWeight) {
         _amountIsWeight = amountIsWeight;
     }
 
@@ -48,6 +55,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _laboratory;
     }
 
+    @XmlElement(name = "LABORATORY")
     public void setLaboratory(String laboratory) {
         _laboratory = laboratory;
     }
@@ -56,23 +64,26 @@ public class Yeast extends BeerXmlObjectBase {
         return _manufacturerProductId;
     }
 
+    @XmlElement(name = "PRODUCT_ID")
     public void setManufacturerProductId(String manufacturerProductId) {
         _manufacturerProductId = manufacturerProductId;
     }
 
-    public double getMinimumTemperature() {
+    public Double getMinimumTemperature() {
         return _minimumTemperature;
     }
 
-    public void setMinimumTemperature(double minimumTemperature) {
+    @XmlElement(name = "MIN_TEMPERATURE")
+    public void setMinimumTemperature(Double minimumTemperature) {
         _minimumTemperature = minimumTemperature;
     }
 
-    public double getMaximumTemperature() {
+    public Double getMaximumTemperature() {
         return _maximumTemperature;
     }
 
-    public void setMaximumTemperature(double maximumTemperature) {
+    @XmlElement(name = "MAX_TEMPERATURE")
+    public void setMaximumTemperature(Double maximumTemperature) {
         _maximumTemperature = maximumTemperature;
     }
 
@@ -80,16 +91,18 @@ public class Yeast extends BeerXmlObjectBase {
         return _flocculation;
     }
 
+    @XmlElement(name = "FLOCCULATION")
     @XmlJavaTypeAdapter( YeastFlocculationAdapter.class )
     public void setFlocculation(YeastFlocculation flocculation) {
         _flocculation = flocculation;
     }
 
-    public double getAttenuation() {
+    public Double getAttenuation() {
         return _attenuation;
     }
 
-    public void setAttenuation(double attenuation) {
+    @XmlElement(name = "ATTENUATION")
+    public void setAttenuation(Double attenuation) {
         _attenuation = attenuation;
     }
 
@@ -97,6 +110,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _notes;
     }
 
+    @XmlElement(name = "NOTES")
     public void setNotes(String notes) {
         _notes = notes;
     }
@@ -105,31 +119,35 @@ public class Yeast extends BeerXmlObjectBase {
         return _bestFor;
     }
 
+    @XmlElement(name = "BEST_FOR")
     public void setBestFor(String bestFor) {
         _bestFor = bestFor;
     }
 
-    public int getTimesCultured() {
+    public Integer getTimesCultured() {
         return _timesCultured;
     }
 
-    public void setTimesCultured(int timesCultured) {
+    @XmlElement(name = "TIMES_CULTURED")
+    public void setTimesCultured(Integer timesCultured) {
         _timesCultured = timesCultured;
     }
 
-    public int getMaximumReuse() {
+    public Integer getMaximumReuse() {
         return _maximumReuse;
     }
 
-    public void setMaximumReuse(int maximumReuse) {
+    @XmlElement(name = "MAX_REUSE")
+    public void setMaximumReuse(Integer maximumReuse) {
         _maximumReuse = maximumReuse;
     }
 
-    public boolean getAddToSecondary() {
+    public Boolean getAddToSecondary() {
         return _addToSecondary;
     }
 
-    public void setAddToSecondary(boolean addToSecondary) {
+    @XmlElement(name = "ADD_TO_SECONDARY")
+    public void setAddToSecondary(Boolean addToSecondary) {
         _addToSecondary = addToSecondary;
     }
 
@@ -137,6 +155,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _displayAmount;
     }
 
+    @XmlElement(name = "DISPLAY_AMOUNT")
     public void setDisplayAmount(String displayAmount) {
         _displayAmount = displayAmount;
     }
@@ -145,6 +164,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _displayMinimumTemperature;
     }
 
+    @XmlElement(name = "DISP_MIN_TEMP")
     public void setDisplayMinimumTemperature(String displayMinimumTemperature) {
         _displayMinimumTemperature = displayMinimumTemperature;
     }
@@ -153,6 +173,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _displayMaximumTemperature;
     }
 
+    @XmlElement(name = "DISP_MAX_TEMP")
     public void setDisplayMaximumTemperature(String displayMaximumTemperature) {
         _displayMaximumTemperature = displayMaximumTemperature;
     }
@@ -161,6 +182,7 @@ public class Yeast extends BeerXmlObjectBase {
         return _inventory;
     }
 
+    @XmlElement(name = "INVENTORY")
     public void setInventory(String inventory) {
         _inventory = inventory;
     }
@@ -169,25 +191,26 @@ public class Yeast extends BeerXmlObjectBase {
         return _cultureDate;
     }
 
+    @XmlElement(name = "CULTURE_DATE")
     public void setCultureDate(String cultureDate) {
         _cultureDate = cultureDate;
     }
 
     private YeastType _type;
     private YeastForm _form;
-    private double _amount;
-    private boolean _amountIsWeight;
+    private Double _amount;
+    private Boolean _amountIsWeight;
     private String _laboratory;
     private String _manufacturerProductId;
-    private double _minimumTemperature;
-    private double _maximumTemperature;
+    private Double _minimumTemperature;
+    private Double _maximumTemperature;
     private YeastFlocculation _flocculation;
-    private double _attenuation;
+    private Double _attenuation;
     private String _notes;
     private String _bestFor;
-    private int _timesCultured;
-    private int _maximumReuse;
-    private boolean _addToSecondary;
+    private Integer _timesCultured;
+    private Integer _maximumReuse;
+    private Boolean _addToSecondary;
     private String _displayAmount;
     private String _displayMinimumTemperature;
     private String _displayMaximumTemperature;
