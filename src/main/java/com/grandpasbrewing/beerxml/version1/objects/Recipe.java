@@ -3,32 +3,39 @@ package com.grandpasbrewing.beerxml.version1.objects;
 import com.grandpasbrewing.beerxml.version1.enums.RecipeType;
 import com.grandpasbrewing.beerxml.version1.serialization.adapters.RecipeTypeAdapter;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 
+@XmlRootElement(name = "RECIPE")
 public class Recipe extends BeerXmlObjectBase {
     public RecipeType getType() {
         return _type;
     }
 
+    @XmlElement(name = "TYPE")
     @XmlJavaTypeAdapter( RecipeTypeAdapter.class )
     public void setType(RecipeType type) {
         _type = type;
     }
 
-    public com.grandpasbrewing.beerxml.version1.objects.Style getStyle() {
+    public Style getStyle() {
         return _style;
     }
 
-    public void setStyle(com.grandpasbrewing.beerxml.version1.objects.Style style) {
+    @XmlElement(name = "STYLE")
+    public void setStyle(Style style) {
         _style = style;
     }
 
-    public com.grandpasbrewing.beerxml.version1.objects.Equipment getEquipment() {
+    public Equipment getEquipment() {
         return _equipment;
     }
 
-    public void setEquipment(com.grandpasbrewing.beerxml.version1.objects.Equipment equipment) {
+    @XmlElement(name = "EQUIPMENT")
+    public void setEquipment(Equipment equipment) {
         _equipment = equipment;
     }
 
@@ -36,6 +43,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _brewer;
     }
 
+    @XmlElement(name = "BREWER")
     public void setBrewer(String brewer) {
         _brewer = brewer;
     }
@@ -44,39 +52,44 @@ public class Recipe extends BeerXmlObjectBase {
         return _assistantBrewer;
     }
 
+    @XmlElement(name = "ASST_BREWER")
     public void setAssistantBrewer(String assistantBrewer) {
         _assistantBrewer = assistantBrewer;
     }
 
-    public double getBatchSize() {
+    public Double getBatchSize() {
         return _batchSize;
     }
 
-    public void setBatchSize(double batchSize) {
+    @XmlElement(name = "BATCH_SIZE")
+    public void setBatchSize(Double batchSize) {
         _batchSize = batchSize;
     }
 
-    public double getBoilSize() {
+    public Double getBoilSize() {
         return _boilSize;
     }
 
-    public void setBoilSize(double boilSize) {
+    @XmlElement(name = "BOIL_SIZE")
+    public void setBoilSize(Double boilSize) {
         _boilSize = boilSize;
     }
 
-    public double getBoilTime() {
+    public Double getBoilTime() {
         return _boilTime;
     }
 
-    public void setBoilTime(double boilTime) {
+    @XmlElement(name = "BOIL_TIME")
+    public void setBoilTime(Double boilTime) {
         _boilTime = boilTime;
     }
 
-    public double getEfficiency() {
+    public Double getEfficiency() {
         return _efficiency;
     }
 
-    public void setEfficiency(double efficiency) {
+    @XmlElement(name = "EFFICIENCY")
+    public void setEfficiency(Double efficiency) {
         _efficiency = efficiency;
     }
 
@@ -84,6 +97,8 @@ public class Recipe extends BeerXmlObjectBase {
         return _hops;
     }
 
+    @XmlElementWrapper(name = "HOPS")
+    @XmlElement(name = "HOP")
     public void setHops(ArrayList<Hop> hops) {
         _hops = hops;
     }
@@ -92,6 +107,8 @@ public class Recipe extends BeerXmlObjectBase {
         return _fermentables;
     }
 
+    @XmlElementWrapper(name = "FERMENTABLES")
+    @XmlElement(name = "FERMENTABLE")
     public void setFermentables(ArrayList<Fermentable> fermentables) {
         _fermentables = fermentables;
     }
@@ -100,6 +117,8 @@ public class Recipe extends BeerXmlObjectBase {
         return _miscs;
     }
 
+    @XmlElementWrapper(name = "MISCS")
+    @XmlElement(name = "MISC")
     public void setMiscs(ArrayList<Misc> miscs) {
         _miscs = miscs;
     }
@@ -108,6 +127,8 @@ public class Recipe extends BeerXmlObjectBase {
         return _yeasts;
     }
 
+    @XmlElementWrapper(name = "YEASTS")
+    @XmlElement(name = "YEAST")
     public void setYeasts(ArrayList<Yeast> yeasts) {
         _yeasts = yeasts;
     }
@@ -116,15 +137,18 @@ public class Recipe extends BeerXmlObjectBase {
         return _waters;
     }
 
+    @XmlElementWrapper(name = "WATERS")
+    @XmlElement(name = "WATER")
     public void setWaters(ArrayList<Water> waters) {
         _waters = waters;
     }
 
-    public com.grandpasbrewing.beerxml.version1.objects.Mash getMash() {
+    public Mash getMash() {
         return _mash;
     }
 
-    public void setMash(com.grandpasbrewing.beerxml.version1.objects.Mash mash) {
+    @XmlElement(name = "MASH")
+    public void setMash(Mash mash) {
         _mash = mash;
     }
 
@@ -132,6 +156,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _notes;
     }
 
+    @XmlElement(name = "NOTES")
     public void setNotes(String notes) {
         _notes = notes;
     }
@@ -140,31 +165,35 @@ public class Recipe extends BeerXmlObjectBase {
         return _tasteNotes;
     }
 
+    @XmlElement(name = "TASTE_NOTES")
     public void setTasteNotes(String tasteNotes) {
         _tasteNotes = tasteNotes;
     }
 
-    public double getRating() {
+    public Double getRating() {
         return _rating;
     }
 
-    public void setRating(double rating) {
+    @XmlElement(name = "RATING")
+    public void setRating(Double rating) {
         _rating = rating;
     }
 
-    public double getOriginalGravity() {
+    public Double getOriginalGravity() {
         return _originalGravity;
     }
 
-    public void setOriginalGravity(double originalGravity) {
+    @XmlElement(name = "OG")
+    public void setOriginalGravity(Double originalGravity) {
         _originalGravity = originalGravity;
     }
 
-    public double getFinalGravity() {
+    public Double getFinalGravity() {
         return _finalGravity;
     }
 
-    public void setFinalGravity(double finalGravity) {
+    @XmlElement(name = "FG")
+    public void setFinalGravity(Double finalGravity) {
         _finalGravity = finalGravity;
     }
 
@@ -172,71 +201,80 @@ public class Recipe extends BeerXmlObjectBase {
         return _fermentationStages;
     }
 
+    @XmlElement(name = "FERMENTATION_STAGES")
     public void setFermentationStages(int fermentationStages) {
         _fermentationStages = fermentationStages;
     }
 
-    public double getPrimaryAge() {
+    public Double getPrimaryAge() {
         return _primaryAge;
     }
 
-    public void setPrimaryAge(double primaryAge) {
+    @XmlElement(name = "PRIMARY_AGE")
+    public void setPrimaryAge(Double primaryAge) {
         _primaryAge = primaryAge;
     }
 
-    public double getPrimaryTemperature() {
+    public Double getPrimaryTemperature() {
         return _primaryTemperature;
     }
 
-    public void setPrimaryTemperature(double primaryTemperature) {
+    @XmlElement(name = "PRIMARY_TEMP")
+    public void setPrimaryTemperature(Double primaryTemperature) {
         _primaryTemperature = primaryTemperature;
     }
 
-    public double getSecondaryAge() {
+    public Double getSecondaryAge() {
         return _secondaryAge;
     }
 
-    public void setSecondaryAge(double secondaryAge) {
+    @XmlElement(name = "SECONDARY_AGE")
+    public void setSecondaryAge(Double secondaryAge) {
         _secondaryAge = secondaryAge;
     }
 
-    public double getSecondaryTemperature() {
+    public Double getSecondaryTemperature() {
         return _secondaryTemperature;
     }
 
-    public void setSecondaryTemperature(double secondaryTemperature) {
+    @XmlElement(name = "SECONDARY_TEMP")
+    public void setSecondaryTemperature(Double secondaryTemperature) {
         _secondaryTemperature = secondaryTemperature;
     }
 
-    public double getTertiaryAge() {
+    public Double getTertiaryAge() {
         return _tertiaryAge;
     }
 
-    public void setTertiaryAge(double tertiaryAge) {
+    @XmlElement(name = "TERTIARY_AGE")
+    public void setTertiaryAge(Double tertiaryAge) {
         _tertiaryAge = tertiaryAge;
     }
 
-    public double getTertiaryTemperature() {
+    public Double getTertiaryTemperature() {
         return _tertiaryTemperature;
     }
 
-    public void setTertiaryTemperature(double tertiaryTemperature) {
+    @XmlElement(name = "TERTIARY_TEMP")
+    public void setTertiaryTemperature(Double tertiaryTemperature) {
         _tertiaryTemperature = tertiaryTemperature;
     }
 
-    public double getAge() {
+    public Double getAge() {
         return _age;
     }
 
-    public void setAge(double age) {
+    @XmlElement(name = "AGE")
+    public void setAge(Double age) {
         _age = age;
     }
 
-    public double getAgeTemperature() {
+    public Double getAgeTemperature() {
         return _ageTemperature;
     }
 
-    public void setAgeTemperature(double ageTemperature) {
+    @XmlElement(name = "AGE_TEMP")
+    public void setAgeTemperature(Double ageTemperature) {
         _ageTemperature = ageTemperature;
     }
 
@@ -244,23 +282,26 @@ public class Recipe extends BeerXmlObjectBase {
         return _date;
     }
 
+    @XmlElement(name = "DATE")
     public void setDate(String date) {
         _date = date;
     }
 
-    public double getCarbonation() {
+    public Double getCarbonation() {
         return _carbonation;
     }
 
-    public void setCarbonation(double carbonation) {
+    @XmlElement(name = "CARBONATION")
+    public void setCarbonation(Double carbonation) {
         _carbonation = carbonation;
     }
 
-    public boolean getForcedCarbonation() {
+    public Boolean getForcedCarbonation() {
         return _forcedCarbonation;
     }
 
-    public void setForcedCarbonation(boolean forcedCarbonation) {
+    @XmlElement(name = "FORCED_CARBONATION")
+    public void setForcedCarbonation(Boolean forcedCarbonation) {
         _forcedCarbonation = forcedCarbonation;
     }
 
@@ -268,31 +309,35 @@ public class Recipe extends BeerXmlObjectBase {
         return _primingSugarName;
     }
 
+    @XmlElement(name = "PRIMING_SUGAR_NAME")
     public void setPrimingSugarName(String primingSugarName) {
         _primingSugarName = primingSugarName;
     }
 
-    public double getCarbonationTemperature() {
+    public Double getCarbonationTemperature() {
         return _carbonationTemperature;
     }
 
-    public void setCarbonationTemperature(double carbonationTemperature) {
+    @XmlElement(name = "CARBONATION_TEMP")
+    public void setCarbonationTemperature(Double carbonationTemperature) {
         _carbonationTemperature = carbonationTemperature;
     }
 
-    public double getPrimingSugarEquivalent() {
+    public Double getPrimingSugarEquivalent() {
         return _primingSugarEquivalent;
     }
 
-    public void setPrimingSugarEquivalent(double primingSugarEquivalent) {
+    @XmlElement(name = "PRIMING_SUGAR_EQUIV")
+    public void setPrimingSugarEquivalent(Double primingSugarEquivalent) {
         _primingSugarEquivalent = primingSugarEquivalent;
     }
 
-    public double getKegPrimingFactor() {
+    public Double getKegPrimingFactor() {
         return _kegPrimingFactor;
     }
 
-    public void setKegPrimingFactor(double kegPrimingFactor) {
+    @XmlElement(name = "KEG_PRIMING_FACTOR")
+    public void setKegPrimingFactor(Double kegPrimingFactor) {
         _kegPrimingFactor = kegPrimingFactor;
     }
 
@@ -300,6 +345,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _estimatedOriginalGravity;
     }
 
+    @XmlElement(name = "EST_OG")
     public void setEstimatedOriginalGravity(String estimatedOriginalGravity) {
         _estimatedOriginalGravity = estimatedOriginalGravity;
     }
@@ -308,6 +354,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _estimatedFinalGravity;
     }
 
+    @XmlElement(name = "EST_FG")
     public void setEstimatedFinalGravity(String estimatedFinalGravity) {
         _estimatedFinalGravity = estimatedFinalGravity;
     }
@@ -316,15 +363,17 @@ public class Recipe extends BeerXmlObjectBase {
         return _estimatedColor;
     }
 
+    @XmlElement(name = "EST_COLOR")
     public void setEstimatedColor(String estimatedColor) {
         _estimatedColor = estimatedColor;
     }
 
-    public double getIBU() {
+    public Double getIBU() {
         return _ibu;
     }
 
-    public void setIBU(double ibu) {
+    @XmlElement(name = "IBU")
+    public void setIBU(Double ibu) {
         _ibu = ibu;
     }
 
@@ -332,31 +381,35 @@ public class Recipe extends BeerXmlObjectBase {
         return _ibuMethod;
     }
 
+    @XmlElement(name = "IBU_METHOD")
     public void setIBUMethod(String ibuMethod) {
         _ibuMethod = ibuMethod;
     }
 
-    public double getEstimatedABV() {
+    public Double getEstimatedABV() {
         return _estimatedABV;
     }
 
-    public void setEstimatedABV(double estimatedABV) {
+    @XmlElement(name = "EST_ABV")
+    public void setEstimatedABV(Double estimatedABV) {
         _estimatedABV = estimatedABV;
     }
 
-    public double getABV() {
+    public Double getABV() {
         return _abv;
     }
 
-    public void setABV(double abv) {
+    @XmlElement(name = "ABV")
+    public void setABV(Double abv) {
         _abv = abv;
     }
 
-    public double getActualEfficiency() {
+    public Double getActualEfficiency() {
         return _actualEfficiency;
     }
 
-    public void setActualEfficiency(double actualEfficiency) {
+    @XmlElement(name = "ACTUAL_EFFICIENCY")
+    public void setActualEfficiency(Double actualEfficiency) {
         _actualEfficiency = actualEfficiency;
     }
 
@@ -364,6 +417,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _calories;
     }
 
+    @XmlElement(name = "CALORIES")
     public void setCalories(String calories) {
         _calories = calories;
     }
@@ -372,6 +426,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayBatchSize;
     }
 
+    @XmlElement(name = "DISPLAY_BATCH_SIZE")
     public void setDisplayBatchSize(String displayBatchSize) {
         _displayBatchSize = displayBatchSize;
     }
@@ -380,6 +435,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayBoilSize;
     }
 
+    @XmlElement(name = "DISPLAY_BOIL_SIZE")
     public void setDisplayBoilSize(String displayBoilSize) {
         _displayBoilSize = displayBoilSize;
     }
@@ -388,6 +444,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayOriginalGravity;
     }
 
+    @XmlElement(name = "DISPLAY_OG")
     public void setDisplayOriginalGravity(String displayOriginalGravity) {
         _displayOriginalGravity = displayOriginalGravity;
     }
@@ -396,6 +453,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayFinalGravity;
     }
 
+    @XmlElement(name = "DISPLAY_FG")
     public void setDisplayFinalGravity(String displayFinalGravity) {
         _displayFinalGravity = displayFinalGravity;
     }
@@ -404,6 +462,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayPrimaryTemperature;
     }
 
+    @XmlElement(name = "DISPLAY_PRIMARY_TEMP")
     public void setDisplayPrimaryTemperature(String displayPrimaryTemperature) {
         _displayPrimaryTemperature = displayPrimaryTemperature;
     }
@@ -412,6 +471,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displaySecondaryTemperature;
     }
 
+    @XmlElement(name = "DISPLAY_SECONDARY_TEMP")
     public void setDisplaySecondaryTemperature(String displaySecondaryTemperature) {
         _displaySecondaryTemperature = displaySecondaryTemperature;
     }
@@ -420,6 +480,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayTertiaryTemperature;
     }
 
+    @XmlElement(name = "DISPLAY_TERTIARY_TEMP")
     public void setDisplayTertiaryTemperature(String displayTertiaryTemperature) {
         _displayTertiaryTemperature = displayTertiaryTemperature;
     }
@@ -428,6 +489,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayAgeTemperature;
     }
 
+    @XmlElement(name = "DISPLAY_AGE_TEMP")
     public void setDisplayAgeTemperature(String displayAgeTemperature) {
         _displayAgeTemperature = displayAgeTemperature;
     }
@@ -436,6 +498,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _carbonationUsed;
     }
 
+    @XmlElement(name = "CARBONATION_USED")
     public void setCarbonationUsed(String carbonationUsed) {
         _carbonationUsed = carbonationUsed;
     }
@@ -444,6 +507,7 @@ public class Recipe extends BeerXmlObjectBase {
         return _displayCarbTemperature;
     }
 
+    @XmlElement(name = "DISPLAY_CARB_TEMP")
     public void setDisplayCarbTemperature(String displayCarbTemperature) {
         _displayCarbTemperature = displayCarbTemperature;
     }
@@ -453,10 +517,10 @@ public class Recipe extends BeerXmlObjectBase {
     private Equipment _equipment;
     private String _brewer;
     private String _assistantBrewer;
-    private double _batchSize;
-    private double _boilSize;
-    private double _boilTime;
-    private double _efficiency;
+    private Double _batchSize;
+    private Double _boilSize;
+    private Double _boilTime;
+    private Double _efficiency;
     private ArrayList<Hop> _hops;
     private ArrayList<Fermentable> _fermentables;
     private ArrayList<Misc> _miscs;
@@ -465,33 +529,33 @@ public class Recipe extends BeerXmlObjectBase {
     private Mash _mash;
     private String _notes;
     private String _tasteNotes;
-    private double _rating;
-    private double _originalGravity;
-    private double _finalGravity;
-    private int _fermentationStages;
-    private double _primaryAge;
-    private double _primaryTemperature;
-    private double _secondaryAge;
-    private double _secondaryTemperature;
-    private double _tertiaryAge;
-    private double _tertiaryTemperature;
-    private double _age;
-    private double _ageTemperature;
+    private Double _rating;
+    private Double _originalGravity;
+    private Double _finalGravity;
+    private Integer _fermentationStages;
+    private Double _primaryAge;
+    private Double _primaryTemperature;
+    private Double _secondaryAge;
+    private Double _secondaryTemperature;
+    private Double _tertiaryAge;
+    private Double _tertiaryTemperature;
+    private Double _age;
+    private Double _ageTemperature;
     private String _date;
-    private double _carbonation;
-    private boolean _forcedCarbonation;
+    private Double _carbonation;
+    private Boolean _forcedCarbonation;
     private String _primingSugarName;
-    private double _carbonationTemperature;
-    private double _primingSugarEquivalent;
-    private double _kegPrimingFactor;
+    private Double _carbonationTemperature;
+    private Double _primingSugarEquivalent;
+    private Double _kegPrimingFactor;
     private String _estimatedOriginalGravity;
     private String _estimatedFinalGravity;
     private String _estimatedColor;
-    private double _ibu;
+    private Double _ibu;
     private String _ibuMethod ;
-    private double _estimatedABV;
-    private double _abv;
-    private double _actualEfficiency;
+    private Double _estimatedABV;
+    private Double _abv;
+    private Double _actualEfficiency;
     private String _calories;
     private String _displayBatchSize;
     private String _displayBoilSize;
