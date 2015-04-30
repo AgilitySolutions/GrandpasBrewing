@@ -17,7 +17,7 @@ class BooleanAdapterTest extends GroovyTestCase {
         assertEquals(false, _booleanAdapter.unmarshal("False"));
         assertEquals(false, _booleanAdapter.unmarshal("FALSE"));
         assertEquals(false, _booleanAdapter.unmarshal("invalid"));
-        assertEquals(false, _booleanAdapter.unmarshal(null));
+        assertEquals(null, _booleanAdapter.unmarshal(null));
     }
 
     void testMarshal() {

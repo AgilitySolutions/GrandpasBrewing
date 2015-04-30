@@ -197,12 +197,12 @@ public class Recipe extends BeerXmlObjectBase {
         _finalGravity = finalGravity;
     }
 
-    public int getFermentationStages() {
+    public Integer getFermentationStages() {
         return _fermentationStages;
     }
 
     @XmlElement(name = "FERMENTATION_STAGES")
-    public void setFermentationStages(int fermentationStages) {
+    public void setFermentationStages(Integer fermentationStages) {
         _fermentationStages = fermentationStages;
     }
 

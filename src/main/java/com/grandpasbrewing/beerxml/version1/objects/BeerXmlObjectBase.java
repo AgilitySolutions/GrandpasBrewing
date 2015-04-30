@@ -15,15 +15,15 @@ public abstract class BeerXmlObjectBase implements IBeerXmlSerialization {
         this._name = _name;
     }
 
-    public int getVersion() {
+    public Integer getVersion() {
         return _version;
     }
 
     @XmlElement(name = "VERSION")
-    public void setVersion(int _version) {
+    public void setVersion(Integer _version) {
         this._version = _version;
     }
 
     private String _name;
-    private int _version;
+    private Integer _version;
 }
