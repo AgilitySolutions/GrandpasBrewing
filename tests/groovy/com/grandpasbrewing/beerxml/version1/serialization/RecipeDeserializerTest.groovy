@@ -12,7 +12,7 @@ import com.grandpasbrewing.beerxml.version1.enums.YeastForm
 import com.grandpasbrewing.beerxml.version1.enums.YeastType
 import com.grandpasbrewing.beerxml.version1.objects.Recipe
 
-class RecipeDeserializerTest  extends GroovyTestCase {
+class RecipeDeserializerTest extends GroovyTestCase {
     private Deserializer _deserializer;
     private String _equipmentXml;
 

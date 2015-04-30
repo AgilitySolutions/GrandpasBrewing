@@ -1,13 +1,20 @@
 package com.grandpasbrewing.beerxml.version1.objects;
 
+import com.grandpasbrewing.beerxml.version1.interfaces.serialization.IBeerXmlSerialization;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
-public class RecipeCollection {
+@XmlRootElement(name = "RECIPES")
+public class RecipeCollection implements IBeerXmlSerialization {
 
     public ArrayList<Recipe> getRecipes() {
         return _recipes;
     }
 
+    @XmlElement(name = "RECIPE")
     public void setRecipes(ArrayList<Recipe> _recipes) {
         this._recipes = _recipes;
     }

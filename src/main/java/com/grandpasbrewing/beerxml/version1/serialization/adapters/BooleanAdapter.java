@@ -6,7 +6,10 @@ public class BooleanAdapter extends XmlAdapter<String, Boolean> {
 
     @Override
     public Boolean unmarshal(String v) throws Exception {
-        return v != null && Boolean.parseBoolean(v.toLowerCase());
+        if (v == null || v.equals(""))
+            return null;
+
+        return Boolean.parseBoolean(v.toLowerCase());
     }
 
     @Override
