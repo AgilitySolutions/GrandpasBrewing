@@ -7,7 +7,7 @@ import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathFactory
 
-class StyleSerializerTest  extends GroovyTestCase {
+class StyleSerializerTest extends GroovyTestCase {
     private Serializer _serializer;
 
     void setUp() {
