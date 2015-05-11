@@ -8,15 +8,15 @@ import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathFactory
 
 class StyleSerializerTest extends GroovyTestCase {
-    private Serializer _serializer;
+        private Serializer _serializer;
 
-    void setUp() {
-        super.setUp()
+        void setUp() {
+            super.setUp()
 
-        _serializer = new Serializer<Style>();
-    }
+            _serializer = new Serializer<Style>();
+        }
 
-    void testStyleFromBeerXml() {
+        void testStyleFromBeerXml() {
         Style style = new Style();
         style.setName("Bohemian Pilsner");
         style.setCategory("European Pale Ale");
