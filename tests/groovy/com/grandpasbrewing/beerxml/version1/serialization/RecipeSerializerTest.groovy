@@ -417,7 +417,7 @@ class RecipeSerializerTest extends GroovyTestCase {
 
         def yeastNode = yeastNodes.item(0);
 
-        assertNotNull(waterNode);
+        assertNotNull(yeastNode);
         assertEquals(13, yeastNode.getChildNodes().getLength());
 
         assertEquals("Irish Ale", xpath.evaluate("NAME", yeastNode));
