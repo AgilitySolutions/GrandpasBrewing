@@ -16,7 +16,7 @@ class MigratorTest extends GroovyTestCase {
 
     void testConstructor() {
         def exception = expectThrown(IllegalArgumentException) {
-            Migrator migrator = new Migrator(null);
+            new Migrator(null);
         }
 
         assert exception;
