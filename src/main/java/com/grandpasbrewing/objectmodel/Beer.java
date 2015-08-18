@@ -1,6 +1,6 @@
 package com.grandpasbrewing.objectmodel;
 
-import agilitysolutions.objectmodel.ObjectModelBase;
+import com.agilitysolutions.objectmodel.ObjectModelBase;
 
 public class Beer extends ObjectModelBase {
     public Brewer getBrewer() {

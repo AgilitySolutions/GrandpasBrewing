@@ -1,6 +1,6 @@
 package com.grandpasbrewing.data.migrations
 
-import agilitysolutions.testing.TestHelper
+import com.agilitysolutions.testing.TestHelper
 import org.flywaydb.core.Flyway
 import static org.mockito.Mockito.*;
 

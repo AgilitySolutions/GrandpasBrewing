@@ -1,4 +1,4 @@
-package agilitysolutions.testing
+package com.agilitysolutions.testing
 
 class TestHelper {
     static def expectThrown(Class expectedThrowable = Throwable, Closure closure) {

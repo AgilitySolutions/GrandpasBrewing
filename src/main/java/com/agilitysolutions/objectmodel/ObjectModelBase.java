@@ -1,4 +1,4 @@
-package agilitysolutions.objectmodel;
+package com.agilitysolutions.objectmodel;
 
 public class ObjectModelBase {
     private int _id;
