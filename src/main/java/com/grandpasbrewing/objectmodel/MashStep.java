@@ -1,5 +1,6 @@
 package com.grandpasbrewing.objectmodel;
 
+import agilitysolutions.objectmodel.ObjectModelBase;
 import com.grandpasbrewing.objectmodel.enums.MashStepType;
 
 public class MashStep extends ObjectModelBase {

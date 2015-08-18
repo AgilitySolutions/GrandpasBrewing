@@ -1,5 +1,7 @@
 package com.grandpasbrewing.objectmodel;
 
+import agilitysolutions.objectmodel.ObjectModelBase;
+
 import java.util.ArrayList;
 
 public class Mash extends ObjectModelBase {

@@ -1,5 +1,7 @@
 package com.grandpasbrewing.objectmodel;
 
+import agilitysolutions.objectmodel.ObjectModelBase;
+
 public class Ingredient extends ObjectModelBase {
     public String getName() {
         return _name;

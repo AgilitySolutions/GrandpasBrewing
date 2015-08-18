@@ -1,6 +1,6 @@
-package com.grandpasbrewing.objectmodel;
+package agilitysolutions.objectmodel;
 
-public abstract class ObjectModelBase {
+public class ObjectModelBase {
     private int _id;
 
     public int getId() {
