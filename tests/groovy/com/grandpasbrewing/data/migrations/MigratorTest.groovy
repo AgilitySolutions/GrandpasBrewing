@@ -1,5 +1,6 @@
 package com.grandpasbrewing.data.migrations
 
+import agilitysolutions.testing.TestHelper
 import org.flywaydb.core.Flyway
 import static org.mockito.Mockito.*;
 
@@ -15,7 +16,7 @@ class MigratorTest extends GroovyTestCase {
     }
 
     void testConstructor() {
-        def exception = expectThrown(IllegalArgumentException) {
+        def exception = TestHelper.expectThrown(IllegalArgumentException) {
             new Migrator(null);
         }
 
@@ -29,16 +30,5 @@ class MigratorTest extends GroovyTestCase {
         verify(mockedFlyway).migrate();
     }
 
-    static def expectThrown(Class expectedThrowable = Throwable, Closure closure) {
-        try {
-            closure()
-        } catch(Throwable t) {
-            if (!expectedThrowable.isInstance(t)) {
-                throw t
-            }
-            return t
-        }
-        throw new AssertionError("Expected Throwable $expectedThrowable not thrown")
-    }
 
 }
