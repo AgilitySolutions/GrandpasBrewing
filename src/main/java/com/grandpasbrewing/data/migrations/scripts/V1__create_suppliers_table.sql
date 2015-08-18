@@ -1,17 +1,3 @@
-CREATE TABLE Addresses (
-    ID INT NOT NULL AUTO_INCREMENT,
-    Line1 VARCHAR(255),
-    Line2 VARCHAR(255),
-    City VARCHAR(255),
-    State INT NOT NULL,
-    Zipcode VARCHAR(255),
-    Latitude FLOAT,
-    Longitude FLOAT,
-    CreatedUtc DATE NOT NULL,
-    ChangedUtc DATE,
-
-    PRIMARY KEY(ID)
-);
 
 CREATE TABLE Suppliers
     ID INT NOT NULL AUTO_INCREMENT,
@@ -23,8 +9,8 @@ CREATE TABLE Suppliers
     Fax VARCHAR(255,
     Contact VARCHAR(255),
     CustomerNumber VARCHAR(255),
-    CreatedUtc DATE NOT NULL,
-    ChangedUtc DATE,
+    CreatedUtc DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ChangedUtc DATETIME NULL ON UPDATE CURRENT_TIMESTAMP,
     MailingAddressId INT,
 
     PRIMARY KEY(ID),
