@@ -29,7 +29,6 @@ class MigratorTest extends GroovyTestCase {
         verify(mockedFlyway).migrate();
     }
 
-
     static def expectThrown(Class expectedThrowable = Throwable, Closure closure) {
         try {
             closure()
