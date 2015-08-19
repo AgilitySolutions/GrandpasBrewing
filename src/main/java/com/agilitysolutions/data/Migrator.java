@@ -1,6 +1,6 @@
-package com.grandpasbrewing.data.migrations;
+package com.agilitysolutions.data;
 
-import com.grandpasbrewing.data.migrations.interfaces.IMigrator;
+import com.agilitysolutions.data.interfaces.IMigrator;
 import org.flywaydb.core.Flyway;
 
 public class Migrator implements IMigrator {

@@ -1,4 +1,4 @@
-package com.grandpasbrewing.data.migrations
+package com.agilitysolutions.data
 
 import com.agilitysolutions.testing.TestHelper
 import org.flywaydb.core.Flyway
