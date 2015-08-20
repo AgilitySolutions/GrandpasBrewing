@@ -19,4 +19,12 @@ class MiscellaneousItemUseEnumConverterTest extends GroovyTestCase {
         assertEquals(MiscellaneousItemUse.Secondary, _miscellaneousItemUseEnumConverter.toObjectModel(MiscUse.Secondary));
         assertEquals(MiscellaneousItemUse.Bottle, _miscellaneousItemUseEnumConverter.toObjectModel(MiscUse.Bottle));
     }
+
+    void testFromObjectModel() {
+        assertEquals(MiscUse.Boil, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Boil));
+        assertEquals(MiscUse.Mash, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Mash));
+        assertEquals(MiscUse.Primary, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Primary));
+        assertEquals(MiscUse.Secondary, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Secondary));
+        assertEquals(MiscUse.Bottle, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Bottle));
+    }
 }
