@@ -23,6 +23,20 @@ public class YeastTypeEnumConverter implements IEnumConverter<YeastType, com.gra
     }
 
     public YeastType fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastType enumValue) {
-        return null;
+        switch (enumValue)
+        {
+            case Ale:
+                return YeastType.Ale;
+            case Lager:
+                return YeastType.Lager;
+            case Wheat:
+                return YeastType.Wheat;
+            case Wine:
+                return YeastType.Wine;
+            case Champagne:
+                return YeastType.Champagne;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 }
