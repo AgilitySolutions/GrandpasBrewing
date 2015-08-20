@@ -20,4 +20,13 @@ class MiscellaneousItemTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(MiscellaneousItemType.Flavor, _miscellaneousItemTypeEnumConverter.toObjectModel(MiscType.Flavor));
         assertEquals(MiscellaneousItemType.Other, _miscellaneousItemTypeEnumConverter.toObjectModel(MiscType.Other));
     }
+
+    void testFromObjectModel() {
+        assertEquals(MiscType.Spice, _miscellaneousItemTypeEnumConverter.fromObjectModel(MiscellaneousItemType.Spice));
+        assertEquals(MiscType.Fining, _miscellaneousItemTypeEnumConverter.fromObjectModel(MiscellaneousItemType.Fining));
+        assertEquals(MiscType.WaterAgent, _miscellaneousItemTypeEnumConverter.fromObjectModel(MiscellaneousItemType.WaterAgent));
+        assertEquals(MiscType.Herb, _miscellaneousItemTypeEnumConverter.fromObjectModel(MiscellaneousItemType.Herb));
+        assertEquals(MiscType.Flavor, _miscellaneousItemTypeEnumConverter.fromObjectModel(MiscellaneousItemType.Flavor));
+        assertEquals(MiscType.Other, _miscellaneousItemTypeEnumConverter.fromObjectModel(MiscellaneousItemType.Other));
+    }
 }
