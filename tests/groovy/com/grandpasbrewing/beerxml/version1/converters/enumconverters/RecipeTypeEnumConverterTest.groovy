@@ -16,4 +16,10 @@ class RecipeTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.RecipeType.Extract, _recipeTypeEnumConverter.toObjectModel(RecipeType.Extract));
         assertEquals(com.grandpasbrewing.objectmodel.enums.RecipeType.PartialMash, _recipeTypeEnumConverter.toObjectModel(RecipeType.PartialMash));
     }
+
+    void testFromObjectModel() {
+        assertEquals(RecipeType.AllGrain, _recipeTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.RecipeType.AllGrain));
+        assertEquals(RecipeType.Extract, _recipeTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.RecipeType.Extract));
+        assertEquals(RecipeType.PartialMash, _recipeTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.RecipeType.PartialMash));
+    }
 }
