@@ -18,4 +18,12 @@ class HopUseEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.HopUse.FirstWort, _hopUseEnumConverter.toObjectModel(HopUse.FirstWort));
         assertEquals(com.grandpasbrewing.objectmodel.enums.HopUse.Mash, _hopUseEnumConverter.toObjectModel(HopUse.Mash));
     }
+
+    void testFromObjectModel() {
+        assertEquals(HopUse.Aroma, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.Aroma));
+        assertEquals(HopUse.Boil, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.Boil));
+        assertEquals(HopUse.DryHop, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.DryHop));
+        assertEquals(HopUse.FirstWort, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.FirstWort));
+        assertEquals(HopUse.Mash, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.Mash));
+    }
 }

@@ -23,6 +23,20 @@ public class HopUseEnumConverter implements IEnumConverter<HopUse, com.grandpasb
     }
 
     public HopUse fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse enumValue) {
-        return null;
+        switch (enumValue)
+        {
+            case Boil:
+                return HopUse.Boil;
+            case DryHop:
+                return HopUse.DryHop;
+            case Mash:
+                return HopUse.Mash;
+            case FirstWort:
+                return HopUse.FirstWort;
+            case Aroma:
+                return HopUse.Aroma;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 }
