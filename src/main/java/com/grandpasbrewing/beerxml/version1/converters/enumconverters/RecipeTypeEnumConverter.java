@@ -19,6 +19,16 @@ public class RecipeTypeEnumConverter implements IEnumConverter<RecipeType, com.g
     }
 
     public RecipeType fromObjectModel(com.grandpasbrewing.objectmodel.enums.RecipeType enumValue) {
-        return null;
+        switch (enumValue)
+        {
+            case Extract:
+                return RecipeType.Extract;
+            case PartialMash:
+                return RecipeType.PartialMash;
+            case AllGrain:
+                return RecipeType.AllGrain;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 }
