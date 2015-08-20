@@ -1,5 +1,7 @@
 package com.grandpasbrewing.objectmodel;
 
+import com.agilitysolutions.objectmodel.ObjectModelBase;
+
 public class Water extends ObjectModelBase {
     public double getAmount() {
         return _amount;

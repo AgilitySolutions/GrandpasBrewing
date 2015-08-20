@@ -1,5 +1,6 @@
 package com.grandpasbrewing.objectmodel;
 
+import com.agilitysolutions.objectmodel.ObjectModelBase;
 import com.grandpasbrewing.objectmodel.enums.FermentableType;
 
 public class Fermentable extends ObjectModelBase {

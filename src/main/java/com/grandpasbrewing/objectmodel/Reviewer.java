@@ -1,5 +1,7 @@
 package com.grandpasbrewing.objectmodel;
 
+import com.agilitysolutions.objectmodel.ObjectModelBase;
+
 public class Reviewer extends ObjectModelBase {
     public String getName() {
         return _name;

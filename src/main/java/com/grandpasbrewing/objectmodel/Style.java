@@ -1,5 +1,6 @@
 package com.grandpasbrewing.objectmodel;
 
+import com.agilitysolutions.objectmodel.ObjectModelBase;
 import com.grandpasbrewing.objectmodel.enums.StyleType;
 
 public class Style extends ObjectModelBase {
