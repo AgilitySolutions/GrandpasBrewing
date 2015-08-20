@@ -19,6 +19,15 @@ public class MashStepTypeEnumConverter implements IEnumConverter<MashStepType, c
     }
 
     public MashStepType fromObjectModel(com.grandpasbrewing.objectmodel.enums.MashStepType enumValue) {
-        return null;
-    }
+        switch (enumValue)
+        {
+            case Infusion:
+                return MashStepType.Infusion;
+            case Temperature:
+                return MashStepType.Temperature;
+            case Decoction:
+                return MashStepType.Decoction;
+            default:
+                throw new IllegalArgumentException();
+        }    }
 }
