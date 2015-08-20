@@ -22,4 +22,8 @@ public class MiscellaneousItemUseEnumConverter implements IEnumConverter<MiscUse
                 throw new IllegalArgumentException();
         }
     }
+
+    public MiscUse fromObjectModel(MiscellaneousItemUse enumValue) {
+        return null;
+    }
 }

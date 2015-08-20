@@ -21,4 +21,8 @@ public class YeastTypeEnumConverter implements IEnumConverter<YeastType, com.gra
                 throw new IllegalArgumentException();
         }
     }
+
+    public YeastType fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastType enumValue) {
+        return null;
+    }
 }

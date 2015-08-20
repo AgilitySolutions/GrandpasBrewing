@@ -17,4 +17,8 @@ public class HopFormEnumConverter implements IEnumConverter<HopForm, com.grandpa
                 throw new IllegalArgumentException();
         }
     }
+
+    public HopForm fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopForm enumValue) {
+        return null;
+    }
 }

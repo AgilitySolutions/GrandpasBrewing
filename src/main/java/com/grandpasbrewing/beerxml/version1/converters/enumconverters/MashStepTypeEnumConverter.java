@@ -17,4 +17,8 @@ public class MashStepTypeEnumConverter implements IEnumConverter<MashStepType, c
                 throw new IllegalArgumentException();
         }
     }
+
+    public MashStepType fromObjectModel(com.grandpasbrewing.objectmodel.enums.MashStepType enumValue) {
+        return null;
+    }
 }
