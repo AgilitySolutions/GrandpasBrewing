@@ -24,6 +24,20 @@ public class MiscellaneousItemUseEnumConverter implements IEnumConverter<MiscUse
     }
 
     public MiscUse fromObjectModel(MiscellaneousItemUse enumValue) {
-        return null;
+        switch (enumValue)
+        {
+            case Boil:
+                return MiscUse.Boil;
+            case Mash:
+                return MiscUse.Mash;
+            case Primary:
+                return MiscUse.Primary;
+            case Secondary:
+                return MiscUse.Secondary;
+            case Bottle:
+                return MiscUse.Bottle;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 }
