@@ -16,4 +16,10 @@ class MashStepTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.MashStepType.Infusion, _mashStepTypeEnumConverter.toObjectModel(MashStepType.Infusion));
         assertEquals(com.grandpasbrewing.objectmodel.enums.MashStepType.Temperature, _mashStepTypeEnumConverter.toObjectModel(MashStepType.Temperature));
     }
+
+    void testFromObjectModel() {
+        assertEquals(MashStepType.Decoction, _mashStepTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.MashStepType.Decoction));
+        assertEquals(MashStepType.Infusion, _mashStepTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.MashStepType.Infusion));
+        assertEquals(MashStepType.Temperature, _mashStepTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.MashStepType.Temperature));
+    }
 }
