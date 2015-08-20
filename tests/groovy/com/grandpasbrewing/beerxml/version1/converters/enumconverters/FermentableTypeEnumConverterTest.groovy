@@ -18,4 +18,12 @@ class FermentableTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.FermentableType.Grain, _fermentableTypeEnumConverter.toObjectModel(FermentableType.Grain));
         assertEquals(com.grandpasbrewing.objectmodel.enums.FermentableType.Sugar, _fermentableTypeEnumConverter.toObjectModel(FermentableType.Sugar));
     }
+
+    void testFromObjectModel() {
+        assertEquals(FermentableType.Adjunct, _fermentableTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.FermentableType.Adjunct));
+        assertEquals(FermentableType.DryExtract, _fermentableTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.FermentableType.DryExtract));
+        assertEquals(FermentableType.Extract, _fermentableTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.FermentableType.Extract));
+        assertEquals(FermentableType.Grain, _fermentableTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.FermentableType.Grain));
+        assertEquals(FermentableType.Sugar, _fermentableTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.FermentableType.Sugar));
+    }
 }
