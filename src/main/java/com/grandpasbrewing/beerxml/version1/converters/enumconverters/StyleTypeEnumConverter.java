@@ -23,4 +23,8 @@ public class StyleTypeEnumConverter implements IEnumConverter<StyleType, com.gra
                 throw new IllegalArgumentException();
         }
     }
+
+    public StyleType fromObjectModel(com.grandpasbrewing.objectmodel.enums.StyleType enumValue) {
+        return null;
+    }
 }

@@ -19,4 +19,8 @@ public class YeastFormEnumConverter implements IEnumConverter<YeastForm, com.gra
                 throw new IllegalArgumentException();
         }
     }
+
+    public YeastForm fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastForm enumValue) {
+        return null;
+    }
 }

@@ -2,4 +2,5 @@ package com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverter
 
 public interface IEnumConverter<TBeerXmlEnum, TObjectModelEnum> {
     TObjectModelEnum toObjectModel(TBeerXmlEnum enumValue);
+    TBeerXmlEnum fromObjectModel(TObjectModelEnum enumValue);
 }

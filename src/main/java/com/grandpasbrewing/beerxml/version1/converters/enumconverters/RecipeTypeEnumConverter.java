@@ -17,4 +17,8 @@ public class RecipeTypeEnumConverter implements IEnumConverter<RecipeType, com.g
                 throw new IllegalArgumentException();
         }
     }
+
+    public RecipeType fromObjectModel(com.grandpasbrewing.objectmodel.enums.RecipeType enumValue) {
+        return null;
+    }
 }

@@ -21,4 +21,8 @@ public class FermentableTypeEnumConverter implements IEnumConverter<FermentableT
                  throw new IllegalArgumentException();
          }
     }
+
+    public FermentableType fromObjectModel(com.grandpasbrewing.objectmodel.enums.FermentableType enumValue) {
+        return null;
+    }
 }

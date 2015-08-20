@@ -19,4 +19,8 @@ public class YeastFlocculationEnumConverter implements IEnumConverter<YeastFlocc
                 throw new IllegalArgumentException();
         }
     }
+
+    public YeastFlocculation fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastFlocculation enumValue) {
+        return null;
+    }
 }

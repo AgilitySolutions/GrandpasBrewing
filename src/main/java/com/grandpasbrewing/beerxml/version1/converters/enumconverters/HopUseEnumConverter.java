@@ -21,4 +21,8 @@ public class HopUseEnumConverter implements IEnumConverter<HopUse, com.grandpasb
                 throw new IllegalArgumentException();
         }
     }
+
+    public HopUse fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse enumValue) {
+        return null;
+    }
 }
