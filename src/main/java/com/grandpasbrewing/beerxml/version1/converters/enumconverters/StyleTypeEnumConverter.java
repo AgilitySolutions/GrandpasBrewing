@@ -25,6 +25,22 @@ public class StyleTypeEnumConverter implements IEnumConverter<StyleType, com.gra
     }
 
     public StyleType fromObjectModel(com.grandpasbrewing.objectmodel.enums.StyleType enumValue) {
-        return null;
+        switch (enumValue)
+        {
+            case Lager:
+                return StyleType.Lager;
+            case Ale:
+                return StyleType.Ale;
+            case Mead:
+                return StyleType.Mead;
+            case Wheat:
+                return StyleType.Wheat;
+            case Mixed:
+                return StyleType.Mixed;
+            case Cider:
+                return StyleType.Cider;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 }
