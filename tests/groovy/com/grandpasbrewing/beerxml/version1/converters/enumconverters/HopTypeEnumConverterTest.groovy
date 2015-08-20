@@ -16,4 +16,10 @@ class HopTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.HopType.Bittering, _hopTypeEnumConverter.toObjectModel(HopType.Bittering));
         assertEquals(com.grandpasbrewing.objectmodel.enums.HopType.Both, _hopTypeEnumConverter.toObjectModel(HopType.Both));
     }
+
+    void testFromObjectModel() {
+        assertEquals(HopType.Aroma, _hopTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopType.Aroma));
+        assertEquals(HopType.Bittering, _hopTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopType.Bittering));
+        assertEquals(HopType.Both, _hopTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopType.Both));
+    }
 }

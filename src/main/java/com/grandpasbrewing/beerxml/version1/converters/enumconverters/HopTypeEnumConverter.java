@@ -19,6 +19,16 @@ public class HopTypeEnumConverter implements IEnumConverter<HopType, com.grandpa
     }
 
     public HopType fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopType enumValue) {
-        return null;
+        switch (enumValue)
+        {
+            case Bittering:
+                return HopType.Bittering;
+            case Aroma:
+                return HopType.Aroma;
+            case Both:
+                return HopType.Both;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 }
