@@ -18,6 +18,7 @@ class StyleTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.StyleType.Mead, _styleTypeEnumConverter.toObjectModel(StyleType.Mead));
         assertEquals(com.grandpasbrewing.objectmodel.enums.StyleType.Mixed, _styleTypeEnumConverter.toObjectModel(StyleType.Mixed));
         assertEquals(com.grandpasbrewing.objectmodel.enums.StyleType.Wheat, _styleTypeEnumConverter.toObjectModel(StyleType.Wheat));
+        assertEquals(null, _styleTypeEnumConverter.toObjectModel(null));
     }
 
     void testFromObjectModel() {
@@ -27,5 +28,6 @@ class StyleTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(StyleType.Mead, _styleTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.StyleType.Mead));
         assertEquals(StyleType.Mixed, _styleTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.StyleType.Mixed));
         assertEquals(StyleType.Wheat, _styleTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.StyleType.Wheat));
+        assertEquals(null, _styleTypeEnumConverter.fromObjectModel(null));
     }
 }

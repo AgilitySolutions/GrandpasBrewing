@@ -5,30 +5,26 @@ import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters
 
 public class RecipeTypeEnumConverter implements IEnumConverter<RecipeType, com.grandpasbrewing.objectmodel.enums.RecipeType> {
     public com.grandpasbrewing.objectmodel.enums.RecipeType toObjectModel(RecipeType enumValue) {
-        switch (enumValue)
-        {
-            case Extract:
-                return com.grandpasbrewing.objectmodel.enums.RecipeType.Extract;
-            case PartialMash:
-                return com.grandpasbrewing.objectmodel.enums.RecipeType.PartialMash;
-            case AllGrain:
-                return com.grandpasbrewing.objectmodel.enums.RecipeType.AllGrain;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == RecipeType.Extract) {
+            return com.grandpasbrewing.objectmodel.enums.RecipeType.Extract;
+        } else if (enumValue == RecipeType.PartialMash) {
+            return com.grandpasbrewing.objectmodel.enums.RecipeType.PartialMash;
+        } else if (enumValue == RecipeType.AllGrain) {
+            return com.grandpasbrewing.objectmodel.enums.RecipeType.AllGrain;
+        } else {
+            return null;
         }
     }
 
     public RecipeType fromObjectModel(com.grandpasbrewing.objectmodel.enums.RecipeType enumValue) {
-        switch (enumValue)
-        {
-            case Extract:
-                return RecipeType.Extract;
-            case PartialMash:
-                return RecipeType.PartialMash;
-            case AllGrain:
-                return RecipeType.AllGrain;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == com.grandpasbrewing.objectmodel.enums.RecipeType.Extract) {
+            return RecipeType.Extract;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.RecipeType.PartialMash) {
+            return RecipeType.PartialMash;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.RecipeType.AllGrain) {
+            return RecipeType.AllGrain;
+        } else {
+            return null;
         }
     }
 }

@@ -5,30 +5,26 @@ import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters
 
 public class HopFormEnumConverter implements IEnumConverter<HopForm, com.grandpasbrewing.objectmodel.enums.HopForm> {
     public com.grandpasbrewing.objectmodel.enums.HopForm toObjectModel(HopForm enumValue) {
-        switch (enumValue)
-        {
-            case Pellet:
-                return com.grandpasbrewing.objectmodel.enums.HopForm.Pellet;
-            case Plug:
-                return com.grandpasbrewing.objectmodel.enums.HopForm.Plug;
-            case Leaf:
-                return com.grandpasbrewing.objectmodel.enums.HopForm.Leaf;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == HopForm.Pellet) {
+            return com.grandpasbrewing.objectmodel.enums.HopForm.Pellet;
+        } else if (enumValue == HopForm.Plug) {
+            return com.grandpasbrewing.objectmodel.enums.HopForm.Plug;
+        } else if (enumValue == HopForm.Leaf) {
+            return com.grandpasbrewing.objectmodel.enums.HopForm.Leaf;
+        } else {
+            return null;
         }
     }
 
     public HopForm fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopForm enumValue) {
-        switch (enumValue)
-        {
-            case Pellet:
-                return HopForm.Pellet;
-            case Plug:
-                return HopForm.Plug;
-            case Leaf:
-                return HopForm.Leaf;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == com.grandpasbrewing.objectmodel.enums.HopForm.Pellet) {
+            return HopForm.Pellet;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.HopForm.Plug) {
+            return HopForm.Plug;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.HopForm.Leaf) {
+            return HopForm.Leaf;
+        } else {
+            return null;
         }
     }
 }

@@ -7,37 +7,34 @@ import static com.grandpasbrewing.objectmodel.enums.FermentableType.*;
 
 public class FermentableTypeEnumConverter implements IEnumConverter<FermentableType, com.grandpasbrewing.objectmodel.enums.FermentableType> {
      public com.grandpasbrewing.objectmodel.enums.FermentableType toObjectModel(FermentableType enumValue) {
-         switch (enumValue)
-         {
-             case Grain:
-                 return Grain;
-             case Sugar:
-                 return Sugar;
-             case Extract:
-                 return Extract;
-             case DryExtract:
-                 return DryExtract;
-             case Adjunct:
-                 return Adjunct;
-             default:
-                 throw new IllegalArgumentException();
+         if (enumValue == FermentableType.Grain) {
+             return Grain;
+         } else if (enumValue == FermentableType.Sugar) {
+             return Sugar;
+         } else if (enumValue == FermentableType.Extract) {
+             return Extract;
+         } else if (enumValue == FermentableType.DryExtract) {
+             return DryExtract;
+         } else if (enumValue == FermentableType.Adjunct) {
+             return Adjunct;
+         } else {
+             return null;
          }
     }
 
     public FermentableType fromObjectModel(com.grandpasbrewing.objectmodel.enums.FermentableType enumValue) {
-        switch (enumValue) {
-            case Grain:
-                return FermentableType.Grain;
-            case Sugar:
-                return FermentableType.Sugar;
-            case Extract:
-                return FermentableType.Extract;
-            case DryExtract:
-                return FermentableType.DryExtract;
-            case Adjunct:
-                return FermentableType.Adjunct;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == com.grandpasbrewing.objectmodel.enums.FermentableType.Grain) {
+            return FermentableType.Grain;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.FermentableType.Sugar) {
+            return FermentableType.Sugar;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.FermentableType.Extract) {
+            return FermentableType.Extract;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.FermentableType.DryExtract) {
+            return FermentableType.DryExtract;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.FermentableType.Adjunct) {
+            return FermentableType.Adjunct;
         }
+
+        return null;
     }
 }

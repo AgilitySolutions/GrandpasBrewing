@@ -17,6 +17,7 @@ class HopUseEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.HopUse.DryHop, _hopUseEnumConverter.toObjectModel(HopUse.DryHop));
         assertEquals(com.grandpasbrewing.objectmodel.enums.HopUse.FirstWort, _hopUseEnumConverter.toObjectModel(HopUse.FirstWort));
         assertEquals(com.grandpasbrewing.objectmodel.enums.HopUse.Mash, _hopUseEnumConverter.toObjectModel(HopUse.Mash));
+        assertEquals(null, _hopUseEnumConverter.toObjectModel(null));
     }
 
     void testFromObjectModel() {
@@ -25,5 +26,6 @@ class HopUseEnumConverterTest extends GroovyTestCase {
         assertEquals(HopUse.DryHop, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.DryHop));
         assertEquals(HopUse.FirstWort, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.FirstWort));
         assertEquals(HopUse.Mash, _hopUseEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopUse.Mash));
+        assertEquals(null, _hopUseEnumConverter.fromObjectModel(null));
     }
 }

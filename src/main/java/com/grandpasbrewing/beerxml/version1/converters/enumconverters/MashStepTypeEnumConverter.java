@@ -5,29 +5,26 @@ import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters
 
 public class MashStepTypeEnumConverter implements IEnumConverter<MashStepType, com.grandpasbrewing.objectmodel.enums.MashStepType> {
     public com.grandpasbrewing.objectmodel.enums.MashStepType toObjectModel(MashStepType enumValue) {
-        switch (enumValue)
-        {
-            case Infusion:
-                return com.grandpasbrewing.objectmodel.enums.MashStepType.Infusion;
-            case Temperature:
-                return com.grandpasbrewing.objectmodel.enums.MashStepType.Temperature;
-            case Decoction:
-                return com.grandpasbrewing.objectmodel.enums.MashStepType.Decoction;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == MashStepType.Infusion) {
+            return com.grandpasbrewing.objectmodel.enums.MashStepType.Infusion;
+        } else if (enumValue == MashStepType.Temperature) {
+            return com.grandpasbrewing.objectmodel.enums.MashStepType.Temperature;
+        } else if (enumValue == MashStepType.Decoction) {
+            return com.grandpasbrewing.objectmodel.enums.MashStepType.Decoction;
+        } else {
+            return null;
         }
     }
 
     public MashStepType fromObjectModel(com.grandpasbrewing.objectmodel.enums.MashStepType enumValue) {
-        switch (enumValue)
-        {
-            case Infusion:
-                return MashStepType.Infusion;
-            case Temperature:
-                return MashStepType.Temperature;
-            case Decoction:
-                return MashStepType.Decoction;
-            default:
-                throw new IllegalArgumentException();
-        }    }
+        if (enumValue == com.grandpasbrewing.objectmodel.enums.MashStepType.Infusion) {
+            return MashStepType.Infusion;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.MashStepType.Temperature) {
+            return MashStepType.Temperature;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.MashStepType.Decoction) {
+            return MashStepType.Decoction;
+        } else {
+            return null;
+        }
+    }
 }
