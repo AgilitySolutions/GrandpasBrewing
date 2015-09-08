@@ -1,0 +1,5 @@
+    insert into MiscellaneousItemUses (ID, Name, Description) values (1, 'Boil', 'Boil')
+    insert into MiscellaneousItemUses (ID, Name, Description) values (2, 'Mash', 'Mash')
+    insert into MiscellaneousItemUses (ID, Name, Description) values (3, 'Primary', 'Primary')
+    insert into MiscellaneousItemUses (ID, Name, Description) values (4, 'Secondary', 'Secondary')
+    insert into MiscellaneousItemUses (ID, Name, Description) values (5, 'Bottle', 'Bottle')
