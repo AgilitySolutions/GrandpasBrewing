@@ -6,38 +6,34 @@ import com.grandpasbrewing.objectmodel.enums.MiscellaneousItemUse;
 
 public class MiscellaneousItemUseEnumConverter implements IEnumConverter<MiscUse, MiscellaneousItemUse> {
     public MiscellaneousItemUse toObjectModel(MiscUse enumValue) {
-        switch (enumValue)
-        {
-            case Boil:
-                return MiscellaneousItemUse.Boil;
-            case Mash:
-                return MiscellaneousItemUse.Mash;
-            case Primary:
-                return MiscellaneousItemUse.Primary;
-            case Secondary:
-                return MiscellaneousItemUse.Secondary;
-            case Bottle:
-                return MiscellaneousItemUse.Bottle;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == MiscUse.Boil) {
+            return MiscellaneousItemUse.Boil;
+        } else if (enumValue == MiscUse.Mash) {
+            return MiscellaneousItemUse.Mash;
+        } else if (enumValue == MiscUse.Primary) {
+            return MiscellaneousItemUse.Primary;
+        } else if (enumValue == MiscUse.Secondary) {
+            return MiscellaneousItemUse.Secondary;
+        } else if (enumValue == MiscUse.Bottle) {
+            return MiscellaneousItemUse.Bottle;
+        } else {
+            return null;
         }
     }
 
     public MiscUse fromObjectModel(MiscellaneousItemUse enumValue) {
-        switch (enumValue)
-        {
-            case Boil:
-                return MiscUse.Boil;
-            case Mash:
-                return MiscUse.Mash;
-            case Primary:
-                return MiscUse.Primary;
-            case Secondary:
-                return MiscUse.Secondary;
-            case Bottle:
-                return MiscUse.Bottle;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == MiscellaneousItemUse.Boil) {
+            return MiscUse.Boil;
+        } else if (enumValue == MiscellaneousItemUse.Mash) {
+            return MiscUse.Mash;
+        } else if (enumValue == MiscellaneousItemUse.Primary) {
+            return MiscUse.Primary;
+        } else if (enumValue == MiscellaneousItemUse.Secondary) {
+            return MiscUse.Secondary;
+        } else if (enumValue == MiscellaneousItemUse.Bottle) {
+            return MiscUse.Bottle;
+        } else {
+            return null;
         }
     }
 }

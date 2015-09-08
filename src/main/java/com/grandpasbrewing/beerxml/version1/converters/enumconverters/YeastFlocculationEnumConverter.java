@@ -5,34 +5,30 @@ import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters
 
 public class YeastFlocculationEnumConverter implements IEnumConverter<YeastFlocculation, com.grandpasbrewing.objectmodel.enums.YeastFlocculation> {
     public com.grandpasbrewing.objectmodel.enums.YeastFlocculation toObjectModel(YeastFlocculation enumValue) {
-        switch (enumValue)
-        {
-            case Low:
-                return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Low;
-            case Medium:
-                return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Medium;
-            case High:
-                return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.High;
-            case VeryHigh:
-                return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.VeryHigh;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == YeastFlocculation.Low) {
+            return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Low;
+        } else if (enumValue == YeastFlocculation.Medium) {
+            return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Medium;
+        } else if (enumValue == YeastFlocculation.High) {
+            return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.High;
+        } else if (enumValue == YeastFlocculation.VeryHigh) {
+            return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.VeryHigh;
+        } else {
+            return null;
         }
     }
 
     public YeastFlocculation fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastFlocculation enumValue) {
-        switch (enumValue)
-        {
-            case Low:
-                return YeastFlocculation.Low;
-            case Medium:
-                return YeastFlocculation.Medium;
-            case High:
-                return YeastFlocculation.High;
-            case VeryHigh:
-                return YeastFlocculation.VeryHigh;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Low) {
+            return YeastFlocculation.Low;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Medium) {
+            return YeastFlocculation.Medium;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastFlocculation.High) {
+            return YeastFlocculation.High;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastFlocculation.VeryHigh) {
+            return YeastFlocculation.VeryHigh;
+        } else {
+            return null;
         }
     }
 }

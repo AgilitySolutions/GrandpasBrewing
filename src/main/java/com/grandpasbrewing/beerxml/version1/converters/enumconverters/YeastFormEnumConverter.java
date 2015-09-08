@@ -5,34 +5,30 @@ import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters
 
 public class YeastFormEnumConverter implements IEnumConverter<YeastForm, com.grandpasbrewing.objectmodel.enums.YeastForm> {
     public com.grandpasbrewing.objectmodel.enums.YeastForm toObjectModel(YeastForm enumValue) {
-        switch (enumValue)
-        {
-            case Liquid:
-                return com.grandpasbrewing.objectmodel.enums.YeastForm.Liquid;
-            case Dry:
-                return com.grandpasbrewing.objectmodel.enums.YeastForm.Dry;
-            case Slant:
-                return com.grandpasbrewing.objectmodel.enums.YeastForm.Slant;
-            case Culture:
-                return com.grandpasbrewing.objectmodel.enums.YeastForm.Culture;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == YeastForm.Liquid) {
+            return com.grandpasbrewing.objectmodel.enums.YeastForm.Liquid;
+        } else if (enumValue == YeastForm.Dry) {
+            return com.grandpasbrewing.objectmodel.enums.YeastForm.Dry;
+        } else if (enumValue == YeastForm.Slant) {
+            return com.grandpasbrewing.objectmodel.enums.YeastForm.Slant;
+        } else if (enumValue == YeastForm.Culture) {
+            return com.grandpasbrewing.objectmodel.enums.YeastForm.Culture;
+        } else {
+            return null;
         }
     }
 
     public YeastForm fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastForm enumValue) {
-        switch (enumValue)
-        {
-            case Liquid:
-                return YeastForm.Liquid;
-            case Dry:
-                return YeastForm.Dry;
-            case Slant:
-                return YeastForm.Slant;
-            case Culture:
-                return YeastForm.Culture;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastForm.Liquid) {
+            return YeastForm.Liquid;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastForm.Dry) {
+            return YeastForm.Dry;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastForm.Slant) {
+            return YeastForm.Slant;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.YeastForm.Culture) {
+            return YeastForm.Culture;
+        } else {
+            return null;
         }
     }
 }

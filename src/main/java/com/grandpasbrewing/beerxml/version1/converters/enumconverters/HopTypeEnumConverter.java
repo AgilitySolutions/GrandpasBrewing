@@ -5,30 +5,26 @@ import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters
 
 public class HopTypeEnumConverter implements IEnumConverter<HopType, com.grandpasbrewing.objectmodel.enums.HopType> {
     public com.grandpasbrewing.objectmodel.enums.HopType toObjectModel(HopType enumValue) {
-        switch (enumValue)
-        {
-            case Bittering:
-                return com.grandpasbrewing.objectmodel.enums.HopType.Bittering;
-            case Aroma:
-                return com.grandpasbrewing.objectmodel.enums.HopType.Aroma;
-            case Both:
-                return com.grandpasbrewing.objectmodel.enums.HopType.Both;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == HopType.Bittering) {
+            return com.grandpasbrewing.objectmodel.enums.HopType.Bittering;
+        } else if (enumValue == HopType.Aroma) {
+            return com.grandpasbrewing.objectmodel.enums.HopType.Aroma;
+        } else if (enumValue == HopType.Both) {
+            return com.grandpasbrewing.objectmodel.enums.HopType.Both;
+        } else {
+            return null;
         }
     }
 
     public HopType fromObjectModel(com.grandpasbrewing.objectmodel.enums.HopType enumValue) {
-        switch (enumValue)
-        {
-            case Bittering:
-                return HopType.Bittering;
-            case Aroma:
-                return HopType.Aroma;
-            case Both:
-                return HopType.Both;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == com.grandpasbrewing.objectmodel.enums.HopType.Bittering) {
+            return HopType.Bittering;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.HopType.Aroma) {
+            return HopType.Aroma;
+        } else if (enumValue == com.grandpasbrewing.objectmodel.enums.HopType.Both) {
+            return HopType.Both;
+        } else {
+            return null;
         }
     }
 }

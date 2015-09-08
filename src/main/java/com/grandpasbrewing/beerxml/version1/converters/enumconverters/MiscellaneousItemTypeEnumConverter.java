@@ -6,42 +6,38 @@ import com.grandpasbrewing.objectmodel.enums.MiscellaneousItemType;
 
 public class MiscellaneousItemTypeEnumConverter implements IEnumConverter<MiscType, MiscellaneousItemType> {
     public MiscellaneousItemType toObjectModel(MiscType enumValue) {
-        switch (enumValue)
-        {
-            case Spice:
-                return MiscellaneousItemType.Spice;
-            case Fining:
-                return MiscellaneousItemType.Fining;
-            case WaterAgent:
-                return MiscellaneousItemType.WaterAgent;
-            case Herb:
-                return MiscellaneousItemType.Herb;
-            case Flavor:
-                return MiscellaneousItemType.Flavor;
-            case Other:
-                return MiscellaneousItemType.Other;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == MiscType.Spice) {
+            return MiscellaneousItemType.Spice;
+        } else if (enumValue == MiscType.Fining) {
+            return MiscellaneousItemType.Fining;
+        } else if (enumValue == MiscType.WaterAgent) {
+            return MiscellaneousItemType.WaterAgent;
+        } else if (enumValue == MiscType.Herb) {
+            return MiscellaneousItemType.Herb;
+        } else if (enumValue == MiscType.Flavor) {
+            return MiscellaneousItemType.Flavor;
+        } else if (enumValue == MiscType.Other) {
+            return MiscellaneousItemType.Other;
+        } else {
+            return null;
         }
     }
 
     public MiscType fromObjectModel(MiscellaneousItemType enumValue) {
-        switch (enumValue)
-        {
-            case Spice:
-                return MiscType.Spice;
-            case Fining:
-                return MiscType.Fining;
-            case WaterAgent:
-                return MiscType.WaterAgent;
-            case Herb:
-                return MiscType.Herb;
-            case Flavor:
-                return MiscType.Flavor;
-            case Other:
-                return MiscType.Other;
-            default:
-                throw new IllegalArgumentException();
+        if (enumValue == MiscellaneousItemType.Spice) {
+            return MiscType.Spice;
+        } else if (enumValue == MiscellaneousItemType.Fining) {
+            return MiscType.Fining;
+        } else if (enumValue == MiscellaneousItemType.WaterAgent) {
+            return MiscType.WaterAgent;
+        } else if (enumValue == MiscellaneousItemType.Herb) {
+            return MiscType.Herb;
+        } else if (enumValue == MiscellaneousItemType.Flavor) {
+            return MiscType.Flavor;
+        } else if (enumValue == MiscellaneousItemType.Other) {
+            return MiscType.Other;
+        } else {
+            return null;
         }
     }
 }

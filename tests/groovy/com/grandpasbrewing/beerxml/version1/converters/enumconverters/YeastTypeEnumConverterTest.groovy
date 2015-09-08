@@ -17,6 +17,7 @@ class YeastTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(com.grandpasbrewing.objectmodel.enums.YeastType.Lager, _yeastTypeEnumConverter.toObjectModel(YeastType.Lager));
         assertEquals(com.grandpasbrewing.objectmodel.enums.YeastType.Wheat, _yeastTypeEnumConverter.toObjectModel(YeastType.Wheat));
         assertEquals(com.grandpasbrewing.objectmodel.enums.YeastType.Wine, _yeastTypeEnumConverter.toObjectModel(YeastType.Wine));
+        assertEquals(null, _yeastTypeEnumConverter.toObjectModel(null));
     }
 
     void testFromObjectModel() {
@@ -25,5 +26,6 @@ class YeastTypeEnumConverterTest extends GroovyTestCase {
         assertEquals(YeastType.Lager, _yeastTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastType.Lager));
         assertEquals(YeastType.Wheat, _yeastTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastType.Wheat));
         assertEquals(YeastType.Wine, _yeastTypeEnumConverter.fromObjectModel(com.grandpasbrewing.objectmodel.enums.YeastType.Wine));
+        assertEquals(null, _yeastTypeEnumConverter.fromObjectModel(null));
     }
 }

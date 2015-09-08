@@ -18,6 +18,7 @@ class MiscellaneousItemUseEnumConverterTest extends GroovyTestCase {
         assertEquals(MiscellaneousItemUse.Primary, _miscellaneousItemUseEnumConverter.toObjectModel(MiscUse.Primary));
         assertEquals(MiscellaneousItemUse.Secondary, _miscellaneousItemUseEnumConverter.toObjectModel(MiscUse.Secondary));
         assertEquals(MiscellaneousItemUse.Bottle, _miscellaneousItemUseEnumConverter.toObjectModel(MiscUse.Bottle));
+        assertEquals(null, _miscellaneousItemUseEnumConverter.toObjectModel(null));
     }
 
     void testFromObjectModel() {
@@ -26,5 +27,6 @@ class MiscellaneousItemUseEnumConverterTest extends GroovyTestCase {
         assertEquals(MiscUse.Primary, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Primary));
         assertEquals(MiscUse.Secondary, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Secondary));
         assertEquals(MiscUse.Bottle, _miscellaneousItemUseEnumConverter.fromObjectModel(MiscellaneousItemUse.Bottle));
+        assertEquals(null, _miscellaneousItemUseEnumConverter.fromObjectModel(null));
     }
 }
