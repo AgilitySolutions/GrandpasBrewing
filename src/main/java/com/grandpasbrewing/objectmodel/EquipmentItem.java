@@ -1,7 +1,5 @@
 package com.grandpasbrewing.objectmodel;
 
-import com.agilitysolutions.objectmodel.ObjectModelBase;
-
 public class EquipmentItem extends ObjectModelBase {
     public double getBoilSize() {
         return _boilSize;

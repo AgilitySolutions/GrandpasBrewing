@@ -1,6 +1,5 @@
 package com.grandpasbrewing.objectmodel;
 
-import com.agilitysolutions.objectmodel.ObjectModelBase;
 import com.grandpasbrewing.objectmodel.enums.RatingScore;
 import com.grandpasbrewing.objectmodel.enums.ServingType;
 

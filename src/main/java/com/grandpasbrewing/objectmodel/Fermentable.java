@@ -1,6 +1,5 @@
 package com.grandpasbrewing.objectmodel;
 
-import com.agilitysolutions.objectmodel.ObjectModelBase;
 import com.grandpasbrewing.objectmodel.enums.FermentableType;
 
 public class Fermentable extends ObjectModelBase {
@@ -12,35 +11,35 @@ public class Fermentable extends ObjectModelBase {
         _type = type;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return _amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         _amount = amount;
     }
 
-    public double getYield() {
+    public Double getYield() {
         return _yield;
     }
 
-    public void setYield(double yield) {
+    public void setYield(Double yield) {
         _yield = yield;
     }
 
-    public double getColor() {
+    public Double getColor() {
         return _color;
     }
 
-    public void setColor(double color) {
+    public void setColor(Double color) {
         _color = color;
     }
 
-    public boolean getAddAfterBoil() {
+    public Boolean getAddAfterBoil() {
         return _addAfterBoil;
     }
 
-    public void setAddAfterBoil(boolean addAfterBoil) {
+    public void setAddAfterBoil(Boolean addAfterBoil) {
         _addAfterBoil = addAfterBoil;
     }
 
@@ -68,59 +67,59 @@ public class Fermentable extends ObjectModelBase {
         _notes = notes;
     }
 
-    public double getCoarseFineDiff() {
+    public Double getCoarseFineDiff() {
         return _coarseFineDiff;
     }
 
-    public void setCoarseFineDiff(double coarseFineDiff) {
+    public void setCoarseFineDiff(Double coarseFineDiff) {
         _coarseFineDiff = coarseFineDiff;
     }
 
-    public double getMoisture() {
+    public Double getMoisture() {
         return _moisture;
     }
 
-    public void setMoisture(double moisture) {
+    public void setMoisture(Double moisture) {
         _moisture = moisture;
     }
 
-    public double getDiastaticPower() {
+    public Double getDiastaticPower() {
         return _diastaticPower;
     }
 
-    public void setDiastaticPower(double diastaticPower) {
+    public void setDiastaticPower(Double diastaticPower) {
         _diastaticPower = diastaticPower;
     }
 
-    public double getProtein() {
+    public Double getProtein() {
         return _protein;
     }
 
-    public void setProtein(double protein) {
+    public void setProtein(Double protein) {
         _protein = protein;
     }
 
-    public double getMaximumInBatch() {
+    public Double getMaximumInBatch() {
         return _maximumInBatch;
     }
 
-    public void setMaximumInBatch(double maximumInBatch) {
+    public void setMaximumInBatch(Double maximumInBatch) {
         _maximumInBatch = maximumInBatch;
     }
 
-    public boolean getRecommendMash() {
+    public Boolean getRecommendMash() {
         return _recommendMash;
     }
 
-    public void setRecommendMash(boolean recommendMash) {
+    public void setRecommendMash(Boolean recommendMash) {
         _recommendMash = recommendMash;
     }
 
-    public double getIBUGallonsPerPound() {
+    public Double getIBUGallonsPerPound() {
         return _ibuGallonsPerPound;
     }
 
-    public void setIBUGallonsPerPound(double ibuGallonsPerPound) {
+    public void setIBUGallonsPerPound(Double ibuGallonsPerPound) {
         _ibuGallonsPerPound = ibuGallonsPerPound;
     }
 
@@ -132,11 +131,11 @@ public class Fermentable extends ObjectModelBase {
         _displayAmount = displayAmount;
     }
 
-    public double getPotential() {
+    public Double getPotential() {
         return _potential;
     }
 
-    public void setPotential(double potential) {
+    public void setPotential(Double potential) {
         _potential = potential;
     }
 
@@ -157,22 +156,22 @@ public class Fermentable extends ObjectModelBase {
     }
 
     private FermentableType _type;
-    private double _amount;
-    private double _yield;
-    private double _color;
-    private boolean _addAfterBoil;
+    private Double _amount;
+    private Double _yield;
+    private Double _color;
+    private Boolean _addAfterBoil;
     private String _placeOfOrigin;
     private String _supplier;
     private String _notes;
-    private double _coarseFineDiff;
-    private double _moisture;
-    private double _diastaticPower;
-    private double _protein;
-    private double _maximumInBatch;
-    private boolean _recommendMash;
-    private double _ibuGallonsPerPound;
+    private Double _coarseFineDiff;
+    private Double _moisture;
+    private Double _diastaticPower;
+    private Double _protein;
+    private Double _maximumInBatch;
+    private Boolean _recommendMash;
+    private Double _ibuGallonsPerPound;
     private String _displayAmount;
-    private double _potential;
+    private Double _potential;
     private String _inventory;
     private String _displayColor;
 }

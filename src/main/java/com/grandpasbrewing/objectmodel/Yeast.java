@@ -1,6 +1,5 @@
 package com.grandpasbrewing.objectmodel;
 
-import com.agilitysolutions.objectmodel.ObjectModelBase;
 import com.grandpasbrewing.objectmodel.enums.YeastFlocculation;
 import com.grandpasbrewing.objectmodel.enums.YeastForm;
 import com.grandpasbrewing.objectmodel.enums.YeastType;

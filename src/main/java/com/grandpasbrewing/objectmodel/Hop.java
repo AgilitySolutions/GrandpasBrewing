@@ -1,6 +1,5 @@
 package com.grandpasbrewing.objectmodel;
 
-import com.agilitysolutions.objectmodel.ObjectModelBase;
 import com.grandpasbrewing.objectmodel.enums.HopForm;
 import com.grandpasbrewing.objectmodel.enums.HopType;
 import com.grandpasbrewing.objectmodel.enums.HopUse;
