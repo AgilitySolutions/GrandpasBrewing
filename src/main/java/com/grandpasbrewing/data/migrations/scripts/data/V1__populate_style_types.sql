@@ -1,0 +1,6 @@
+    insert into StyleTypes (ID, Name, Description) values (1, 'Lager', 'Lager')
+    insert into StyleTypes (ID, Name, Description) values (2, 'Ale', 'Ale')
+    insert into StyleTypes (ID, Name, Description) values (3, 'Mead', 'Mead')
+    insert into StyleTypes (ID, Name, Description) values (4, 'Wheat', 'Wheat')
+    insert into StyleTypes (ID, Name, Description) values (5, 'Mixed', 'Mixed')
+    insert into StyleTypes (ID, Name, Description) values (6, 'Cider', 'Cider')
