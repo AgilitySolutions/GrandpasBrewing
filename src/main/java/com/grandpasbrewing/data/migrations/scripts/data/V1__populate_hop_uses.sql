@@ -1,0 +1,5 @@
+    insert into HopUses (ID, Name, Description) values (1, 'Boil', 'Boil')
+    insert into HopUses (ID, Name, Description) values (2, 'DryHop', 'Dry Hop')
+    insert into HopUses (ID, Name, Description) values (3, 'Mash', 'Mash')
+    insert into HopUses (ID, Name, Description) values (4, 'FirstWort', 'First Wort')
+    insert into HopUses (ID, Name, Description) values (5, 'Aroma', 'Aroma')
