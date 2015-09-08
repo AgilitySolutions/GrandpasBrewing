@@ -1,0 +1,5 @@
+    insert into YeastTypes (ID, Name, Description) values (1, 'Ale', 'Ale')
+    insert into YeastTypes (ID, Name, Description) values (2, 'Lager', 'Lager')
+    insert into YeastTypes (ID, Name, Description) values (3, 'Wheat', 'Wheat')
+    insert into YeastTypes (ID, Name, Description) values (4, 'Wine', 'Wine')
+    insert into YeastTypes (ID, Name, Description) values (5, 'Champagne', 'Champagne')
