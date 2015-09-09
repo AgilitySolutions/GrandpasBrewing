@@ -66,4 +66,58 @@ class EquipmentConverterTest extends GroovyTestCase {
         assertNull(equipmentItem.getDisplayLauterDeadspace());
         assertNull(equipmentItem.getDisplayTopUpKettle());
     }
+
+    void testFromObjectModelNull() {
+        Equipment equipment = _equipmentConverter.fromObjectModel(null);
+
+        assertNull(equipment);
+    }
+
+    void testFrombjectModelEquipment() {
+        EquipmentItem objectModelEquipmentItem = new EquipmentItem();
+
+        objectModelEquipmentItem.setName("8 Gal pot with 5 gal Igloo Cooler");
+        objectModelEquipmentItem.setVersion(1);
+        objectModelEquipmentItem.setTunVolume(18.93);
+        objectModelEquipmentItem.setTunWeight(2.0);
+        objectModelEquipmentItem.setTunSpecificHeat(0.3);
+        objectModelEquipmentItem.setBatchSize(18.93);
+        objectModelEquipmentItem.setBoilSize(22.71);
+        objectModelEquipmentItem.setTopUpWater(0.0);
+        objectModelEquipmentItem.setTrubChillerLoss(0.95);
+        objectModelEquipmentItem.setEvaporationRate(9.0);
+        objectModelEquipmentItem.setBoilTime(60.0);
+        objectModelEquipmentItem.setCalculateBoilVolume(true);
+        objectModelEquipmentItem.setLauterDeadspace(0.95);
+        objectModelEquipmentItem.setTopUpKettle(0.0);
+        objectModelEquipmentItem.setHopUtilization(100.0);
+        objectModelEquipmentItem.setNotes("Popular all grain setup. 5 Gallon Gott or Igloo cooler as mash tun with false bottom, and 7-9 gallon brewpot capable of boiling at least 6 gallons of wort. Primarily used for single infusion mashes.");
+
+        Equipment equipment = _equipmentConverter.fromObjectModel(objectModelEquipmentItem);
+
+        assertEquals("8 Gal pot with 5 gal Igloo Cooler", equipment.getName());
+        assertEquals(1,  equipment.getVersion());
+        assertEquals(22.71, equipment.getBoilSize());
+        assertEquals(18.93, equipment.getBatchSize());
+        assertEquals(18.93, equipment.getTunVolume());
+        assertEquals(2.0, equipment.getTunWeight());
+        assertEquals(0.3, equipment.getTunSpecificHeat());
+        assertEquals(0.0, equipment.getTopUpWater());
+        assertEquals(0.95, equipment.getTrubChillerLoss());
+        assertEquals(9.0, equipment.getEvaporationRate());
+        assertEquals(60.0, equipment.getBoilTime());
+        assertEquals(true, equipment.getCalculateBoilVolume());
+        assertEquals(0.95, equipment.getLauterDeadspace());
+        assertEquals(0.0, equipment.getTopUpKettle());
+        assertEquals(100.0, equipment.getHopUtilization());
+        assertEquals("Popular all grain setup. 5 Gallon Gott or Igloo cooler as mash tun with false bottom, and 7-9 gallon brewpot capable of boiling at least 6 gallons of wort. Primarily used for single infusion mashes.", equipment.getNotes());
+        assertNull(equipment.getDisplayBoilSize());
+        assertNull(equipment.getDisplayBatchSize());
+        assertNull(equipment.getDisplayTunVolume());
+        assertNull(equipment.getDisplayTunWeight());
+        assertNull(equipment.getDisplayTopUpWater());
+        assertNull(equipment.getDisplayTrubChillerLoss());
+        assertNull(equipment.getDisplayLauterDeadspace());
+        assertNull(equipment.getDisplayTopUpKettle());
+    }
 }
