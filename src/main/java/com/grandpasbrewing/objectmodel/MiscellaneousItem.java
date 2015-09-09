@@ -20,27 +20,27 @@ public class MiscellaneousItem extends ObjectModelBase {
         _use = use;
     }
 
-    public double getTime() {
+    public Double getTime() {
         return _time;
     }
 
-    public void setTime(double time) {
+    public void setTime(Double time) {
         _time = time;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return _amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         _amount = amount;
     }
 
-    public boolean getAmountIsWeight() {
+    public Boolean getAmountIsWeight() {
         return _amountIsWeight;
     }
 
-    public void setAmountIsWeight(boolean amountIsWeight) {
+    public void setAmountIsWeight(Boolean amountIsWeight) {
         _amountIsWeight = amountIsWeight;
     }
 
@@ -86,9 +86,9 @@ public class MiscellaneousItem extends ObjectModelBase {
 
     private MiscellaneousItemType _type;
     private MiscellaneousItemUse _use;
-    private double _time;
-    private double _amount;
-    private boolean _amountIsWeight;
+    private Double _time;
+    private Double _amount;
+    private Boolean _amountIsWeight;
     private String _useFor;
     private String _notes;
     private String _displayAmount;
