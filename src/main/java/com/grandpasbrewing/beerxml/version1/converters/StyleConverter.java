@@ -59,6 +59,47 @@ public class StyleConverter implements IBeerXmlConverter<Style, com.grandpasbrew
     }
 
     public Style fromObjectModel(com.grandpasbrewing.objectmodel.Style objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Style style = new Style();
+
+        style.setABVMaximum(objectModelObject.getABVMaximum());
+        style.setABVMinimum(objectModelObject.getABVMinimum());
+        style.setABVRange(objectModelObject.getABVRange());
+        style.setCarbonationMaximum(objectModelObject.getCarbonationMaximum());
+        style.setCarbonationMinimum(objectModelObject.getCarbonationMinimum());
+        style.setCarbonationRange(objectModelObject.getCarbonationRange());
+        style.setCategory(objectModelObject.getCategory());
+        style.setCategoryNumber(objectModelObject.getCategoryNumber());
+        style.setColorMaximum(objectModelObject.getColorMaximum());
+        style.setColorMinimum(objectModelObject.getColorMinimum());
+        style.setColorRange(objectModelObject.getColorRange());
+        style.setDisplayColorMaximum(objectModelObject.getDisplayColorMaximum());
+        style.setDisplayColorMinimum(objectModelObject.getDisplayColorMinimum());
+        style.setDisplayFinalGravityMaximum(objectModelObject.getDisplayFinalGravityMaximum());
+        style.setDisplayFinalGravityMinimum(objectModelObject.getDisplayFinalGravityMinimum());
+        style.setDisplayOriginalGravityMaximum(objectModelObject.getDisplayOriginalGravityMaximum());
+        style.setDisplayOriginalGravityMinimum(objectModelObject.getDisplayOriginalGravityMinimum());
+        style.setExamples(objectModelObject.getExamples());
+        style.setFinalGravityMaximum(objectModelObject.getFinalGravityMaximum());
+        style.setFinalGravityMinimum(objectModelObject.getFinalGravityMinimum());
+        style.setFinalGravityRange(objectModelObject.getFinalGravityRange());
+        style.setIBUMaximum(objectModelObject.getIBUMaximum());
+        style.setIBUMinimum(objectModelObject.getIBUMinimum());
+        style.setIBURange(objectModelObject.getIBURange());
+        style.setIngredients(objectModelObject.getIngredients());
+        style.setName(objectModelObject.getName());
+        style.setNotes(objectModelObject.getNotes());
+        style.setOriginalGravityMaximum(objectModelObject.getOriginalGravityMaximum());
+        style.setOriginalGravityMinimum(objectModelObject.getOriginalGravityMinimum());
+        style.setOriginalGravityRange(objectModelObject.getOriginalGravityRange());
+        style.setProfile(objectModelObject.getProfile());
+        style.setStyleGuide(objectModelObject.getStyleGuide());
+        style.setStyleLetter(objectModelObject.getStyleLetter());
+        style.setType(_styleTypeEnumConverter.fromObjectModel(objectModelObject.getType()));
+        style.setVersion(objectModelObject.getVersion());
+
+        return style;
     }
 }
