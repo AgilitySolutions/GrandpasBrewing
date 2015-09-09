@@ -42,6 +42,24 @@ public class MiscellaneousItemConverter implements IBeerXmlConverter<Misc, com.g
     }
 
     public Misc fromObjectModel(MiscellaneousItem objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Misc misc = new Misc();
+
+        misc.setAmount(objectModelObject.getAmount());
+        misc.setAmountIsWeight(objectModelObject.getAmountIsWeight());
+        misc.setDisplayAmount(objectModelObject.getDisplayAmount());
+        misc.setDisplayTime(objectModelObject.getDisplayTime());
+        misc.setInventory(objectModelObject.getInventory());
+        misc.setName(objectModelObject.getName());
+        misc.setNotes(objectModelObject.getNotes());
+        misc.setTime(objectModelObject.getTime());
+        misc.setType(_miscellaneousItemTypeEnumConverter.fromObjectModel(objectModelObject.getType()));
+        misc.setUse(_miscellaneousItemUseEnumConverter.fromObjectModel(objectModelObject.getUse()));
+        misc.setUseFor(objectModelObject.getUseFor());
+        misc.setVersion(objectModelObject.getVersion());
+
+        return misc;
     }
 }
