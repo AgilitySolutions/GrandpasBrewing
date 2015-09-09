@@ -1,107 +1,107 @@
 package com.grandpasbrewing.objectmodel;
 
 public class EquipmentItem extends ObjectModelBase {
-    public double getBoilSize() {
+    public Double getBoilSize() {
         return _boilSize;
     }
 
-    public void setBoilSize(double boilSize) {
+    public void setBoilSize(Double boilSize) {
         _boilSize = boilSize;
     }
 
-    public double getBatchSize() {
+    public Double getBatchSize() {
         return _batchSize;
     }
 
-    public void setBatchSize(double batchSize) {
+    public void setBatchSize(Double batchSize) {
         _batchSize = batchSize;
     }
 
-    public double getTunVolume() {
+    public Double getTunVolume() {
         return _tunVolume;
     }
 
-    public void setTunVolume(double tunVolume) {
+    public void setTunVolume(Double tunVolume) {
         _tunVolume = tunVolume;
     }
 
-    public double getTunWeight() {
+    public Double getTunWeight() {
         return _tunWeight;
     }
 
-    public void setTunWeight(double tunWeight) {
+    public void setTunWeight(Double tunWeight) {
         _tunWeight = tunWeight;
     }
 
-    public double getTunSpecificHeat() {
+    public Double getTunSpecificHeat() {
         return _tunSpecificHeat;
     }
 
-    public void setTunSpecificHeat(double tunSpecificHeat) {
+    public void setTunSpecificHeat(Double tunSpecificHeat) {
         _tunSpecificHeat = tunSpecificHeat;
     }
 
-    public double getTopUpWater() {
+    public Double getTopUpWater() {
         return _topUpWater;
     }
 
-    public void setTopUpWater(double topUpWater) {
+    public void setTopUpWater(Double topUpWater) {
         _topUpWater = topUpWater;
     }
 
-    public double getTrubChillerLoss() {
+    public Double getTrubChillerLoss() {
         return _trubChillerLoss;
     }
 
-    public void setTrubChillerLoss(double trubChillerLoss) {
+    public void setTrubChillerLoss(Double trubChillerLoss) {
         _trubChillerLoss = trubChillerLoss;
     }
 
-    public double getEvaporationRate() {
+    public Double getEvaporationRate() {
         return _evaporationRate;
     }
 
-    public void setEvaporationRate(double evaporationRate) {
+    public void setEvaporationRate(Double evaporationRate) {
         _evaporationRate = evaporationRate;
     }
 
-    public double getBoilTime() {
+    public Double getBoilTime() {
         return _boilTime;
     }
 
-    public void setBoilTime(double boilTime) {
+    public void setBoilTime(Double boilTime) {
         _boilTime = boilTime;
     }
 
-    public boolean getCalculateBoilVolume() {
+    public Boolean getCalculateBoilVolume() {
         return _calculateBoilVolume;
     }
 
-    public void setCalculateBoilVolume(boolean calculateBoilVolume) {
+    public void setCalculateBoilVolume(Boolean calculateBoilVolume) {
         _calculateBoilVolume = calculateBoilVolume;
     }
 
-    public double getLauterDeadspace() {
+    public Double getLauterDeadspace() {
         return _lauterDeadspace;
     }
 
-    public void setLauterDeadspace(double lauterDeadspace) {
+    public void setLauterDeadspace(Double lauterDeadspace) {
         _lauterDeadspace = lauterDeadspace;
     }
 
-    public double getTopUpKettle() {
+    public Double getTopUpKettle() {
         return _topUpKettle;
     }
 
-    public void setTopUpKettle(double topUpKettle) {
+    public void setTopUpKettle(Double topUpKettle) {
         _topUpKettle = topUpKettle;
     }
 
-    public double getHopUtilization() {
+    public Double getHopUtilization() {
         return _hopUtilization;
     }
 
-    public void setHopUtilization(double hopUtilization) {
+    public void setHopUtilization(Double hopUtilization) {
         _hopUtilization = hopUtilization;
     }
 
@@ -177,19 +177,19 @@ public class EquipmentItem extends ObjectModelBase {
         _displayTopUpKettle = displayTopUpKettle;
     }
 
-    private double _boilSize;
-    private double _batchSize;
-    private double _tunVolume;
-    private double _tunWeight;
-    private double _tunSpecificHeat;
-    private double _topUpWater;
-    private double _trubChillerLoss;
-    private double _evaporationRate;
-    private double _boilTime;
-    private boolean _calculateBoilVolume;
-    private double _lauterDeadspace;
-    private double _topUpKettle;
-    private double _hopUtilization;
+    private Double _boilSize;
+    private Double _batchSize;
+    private Double _tunVolume;
+    private Double _tunWeight;
+    private Double _tunSpecificHeat;
+    private Double _topUpWater;
+    private Double _trubChillerLoss;
+    private Double _evaporationRate;
+    private Double _boilTime;
+    private Boolean _calculateBoilVolume;
+    private Double _lauterDeadspace;
+    private Double _topUpKettle;
+    private Double _hopUtilization;
     private String _notes;
     private String _displayBoilSize;
     private String _displayBatchSize;
