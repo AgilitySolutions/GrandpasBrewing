@@ -28,6 +28,7 @@ public class HopConverter implements IBeerXmlConverter<Hop, com.grandpasbrewing.
             return null;
 
         com.grandpasbrewing.objectmodel.Hop hop = new com.grandpasbrewing.objectmodel.Hop();
+
         hop.setAlphaPercentage(beerXmlObject.getAlphaPercentage());
         hop.setAmount(beerXmlObject.getAmount());
         hop.setBetaPercentage(beerXmlObject.getBetaPercentage());
@@ -53,6 +54,32 @@ public class HopConverter implements IBeerXmlConverter<Hop, com.grandpasbrewing.
     }
 
     public Hop fromObjectModel(com.grandpasbrewing.objectmodel.Hop objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Hop hop = new Hop();
+
+        hop.setAlphaPercentage(objectModelObject.getAlphaPercentage());
+        hop.setAmount(objectModelObject.getAmount());
+        hop.setBetaPercentage(objectModelObject.getBetaPercentage());
+        hop.setCaryophylleneLevel(objectModelObject.getCaryophylleneLevel());
+        hop.setCohumuloneLevel(objectModelObject.getCohumuloneLevel());
+        hop.setDisplayAmount(objectModelObject.getDisplayAmount());
+        hop.setDisplayTime(objectModelObject.getDisplayTime());
+        hop.setForm(_hopFormEnumConverter.fromObjectModel(objectModelObject.getForm()));
+        hop.setHopStabilityIndex(objectModelObject.getHopStabilityIndex());
+        hop.setHumuleneLevel(objectModelObject.getHumuleneLevel());
+        hop.setInventory(objectModelObject.getInventory());
+        hop.setMyrceneLevel(objectModelObject.getMyrceneLevel());
+        hop.setName(objectModelObject.getName());
+        hop.setNotes(objectModelObject.getNotes());
+        hop.setPlaceOfOrigin(objectModelObject.getPlaceOfOrigin());
+        hop.setSubstitutes(objectModelObject.getSubstitutes());
+        hop.setTime(objectModelObject.getTime());
+        hop.setType(_hopTypeEnumConverter.fromObjectModel(objectModelObject.getType()));
+        hop.setUse(_hopUseEnumConverter.fromObjectModel(objectModelObject.getUse()));
+        hop.setVersion(objectModelObject.getVersion());
+
+        return hop;
     }
 }
