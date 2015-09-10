@@ -27,6 +27,24 @@ public class WaterConverter implements IBeerXmlConverter<Water, com.grandpasbrew
     }
 
     public Water fromObjectModel(com.grandpasbrewing.objectmodel.Water objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Water water = new Water();
+
+        water.setAmount(objectModelObject.getAmount());
+        water.setBicarbonate(objectModelObject.getBicarbonate());
+        water.setCalcium(objectModelObject.getCalcium());
+        water.setChloride(objectModelObject.getChloride());
+        water.setDisplayAmount(objectModelObject.getDisplayAmount());
+        water.setMagnesium(objectModelObject.getMagnesium());
+        water.setName(objectModelObject.getName());
+        water.setNotes(objectModelObject.getNotes());
+        water.setPH(objectModelObject.getPH());
+        water.setSodium(objectModelObject.getSodium());
+        water.setSulfate(objectModelObject.getSulfate());
+        water.setVersion(objectModelObject.getVersion());
+
+        return water;
     }
 }
