@@ -43,51 +43,51 @@ public class Style extends ObjectModelBase {
         _type = type;
     }
 
-    public double getOriginalGravityMinimum() {
+    public Double getOriginalGravityMinimum() {
         return _originalGravityMinimum;
     }
 
-    public void setOriginalGravityMinimum(double originalGravityMinimum) {
+    public void setOriginalGravityMinimum(Double originalGravityMinimum) {
         _originalGravityMinimum = originalGravityMinimum;
     }
 
-    public double getOriginalGravityMaximum() {
+    public Double getOriginalGravityMaximum() {
         return _originalGravityMaximum;
     }
 
-    public void setOriginalGravityMaximum(double originalGravityMaximum) {
+    public void setOriginalGravityMaximum(Double originalGravityMaximum) {
         _originalGravityMaximum = originalGravityMaximum;
     }
 
-    public double getFinalGravityMinimum() {
+    public Double getFinalGravityMinimum() {
         return _finalGravityMinimum;
     }
 
-    public void setFinalGravityMinimum(double finalGravityMinimum) {
+    public void setFinalGravityMinimum(Double finalGravityMinimum) {
         _finalGravityMinimum = finalGravityMinimum;
     }
 
-    public double getFinalGravityMaximum() {
+    public Double getFinalGravityMaximum() {
         return _finalGravityMaximum;
     }
 
-    public void setFinalGravityMaximum(double finalGravityMaximum) {
+    public void setFinalGravityMaximum(Double finalGravityMaximum) {
         _finalGravityMaximum = finalGravityMaximum;
     }
 
-    public double getIBUMinimum() {
+    public Double getIBUMinimum() {
         return _ibuMinimum;
     }
 
-    public void setIBUMinimum(double ibuMinimum) {
+    public void setIBUMinimum(Double ibuMinimum) {
         _ibuMinimum = ibuMinimum;
     }
 
-    public double getIBUMaximum() {
+    public Double getIBUMaximum() {
         return _ibuMaximum;
     }
 
-    public void setIBUMaximum(double ibuMaximum) {
+    public void setIBUMaximum(Double ibuMaximum) {
         _ibuMaximum = ibuMaximum;
     }
 
@@ -107,35 +107,35 @@ public class Style extends ObjectModelBase {
         _colorMaximum = colorMaximum;
     }
 
-    public double getCarbonationMinimum() {
+    public Double getCarbonationMinimum() {
         return _carbonationMinimum;
     }
 
-    public void setCarbonationMinimum(double carbonationMinimum) {
+    public void setCarbonationMinimum(Double carbonationMinimum) {
         _carbonationMinimum = carbonationMinimum;
     }
 
-    public double getCarbonationMaximum() {
+    public Double getCarbonationMaximum() {
         return _carbonationMaximum;
     }
 
-    public void setCarbonationMaximum(double carbonationMaximum) {
+    public void setCarbonationMaximum(Double carbonationMaximum) {
         _carbonationMaximum = carbonationMaximum;
     }
 
-    public double getABVMinimum() {
+    public Double getABVMinimum() {
         return _abvMinimum;
     }
 
-    public void setABVMinimum(double abvMinimum) {
+    public void setABVMinimum(Double abvMinimum) {
         _abvMinimum = abvMinimum;
     }
 
-    public double getABVMaximum() {
+    public Double getABVMaximum() {
         return _abvMaximum;
     }
 
-    public void setABVMaximum(double abvMaximum) {
+    public void setABVMaximum(Double abvMaximum) {
         _abvMaximum = abvMaximum;
     }
 
@@ -272,18 +272,18 @@ public class Style extends ObjectModelBase {
     private String _styleLetter;
     private String _styleGuide;
     private StyleType _type;
-    private double _originalGravityMinimum;
-    private double _originalGravityMaximum;
-    private double _finalGravityMinimum;
-    private double _finalGravityMaximum;
-    private double _ibuMinimum;
-    private double _ibuMaximum;
+    private Double _originalGravityMinimum;
+    private Double _originalGravityMaximum;
+    private Double _finalGravityMinimum;
+    private Double _finalGravityMaximum;
+    private Double _ibuMinimum;
+    private Double _ibuMaximum;
     private String _colorMinimum;
     private String _colorMaximum;
-    private double _carbonationMinimum;
-    private double _carbonationMaximum;
-    private double _abvMinimum;
-    private double _abvMaximum;
+    private Double _carbonationMinimum;
+    private Double _carbonationMaximum;
+    private Double _abvMinimum;
+    private Double _abvMaximum;
     private String _notes;
     private String _profile;
     private String _ingredients;
