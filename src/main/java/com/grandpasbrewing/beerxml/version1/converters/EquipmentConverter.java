@@ -40,6 +40,36 @@ public class EquipmentConverter implements IBeerXmlConverter<Equipment, com.gran
     }
 
     public Equipment fromObjectModel(EquipmentItem objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Equipment equipment = new Equipment();
+
+        equipment.setBatchSize(objectModelObject.getBatchSize());
+        equipment.setBoilSize(objectModelObject.getBoilSize());
+        equipment.setBoilTime(objectModelObject.getBoilTime());
+        equipment.setCalculateBoilVolume(objectModelObject.getCalculateBoilVolume());
+        equipment.setDisplayBatchSize(objectModelObject.getDisplayBatchSize());
+        equipment.setDisplayBoilSize(objectModelObject.getDisplayBoilSize());
+        equipment.setDisplayLauterDeadspace(objectModelObject.getDisplayLauterDeadspace());
+        equipment.setDisplayTopUpKettle(objectModelObject.getDisplayTopUpKettle());
+        equipment.setDisplayTopUpWater(objectModelObject.getDisplayTopUpWater());
+        equipment.setDisplayTrubChillerLoss(objectModelObject.getDisplayTrubChillerLoss());
+        equipment.setDisplayTunVolume(objectModelObject.getDisplayTunVolume());
+        equipment.setDisplayTunWeight(objectModelObject.getDisplayTunWeight());
+        equipment.setEvaporationRate(objectModelObject.getEvaporationRate());
+        equipment.setHopUtilization(objectModelObject.getHopUtilization());
+        equipment.setLauterDeadspace(objectModelObject.getLauterDeadspace());
+        equipment.setName(objectModelObject.getName());
+        equipment.setNotes(objectModelObject.getNotes());
+        equipment.setTopUpKettle(objectModelObject.getTopUpKettle());
+        equipment.setTopUpWater(objectModelObject.getTopUpWater());
+        equipment.setTrubChillerLoss(objectModelObject.getTrubChillerLoss());
+        equipment.setTunSpecificHeat(objectModelObject.getTunSpecificHeat());
+        equipment.setTunVolume(objectModelObject.getTunVolume());
+        equipment.setTunWeight(objectModelObject.getTunWeight());
+        equipment.setVersion(objectModelObject.getVersion());
+
+        return equipment;
     }
 }
