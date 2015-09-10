@@ -38,6 +38,26 @@ public class MashStepConverter implements IBeerXmlConverter<MashStep, com.grandp
     }
 
     public MashStep fromObjectModel(com.grandpasbrewing.objectmodel.MashStep objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        MashStep mashStep = new MashStep();
+
+        mashStep.setDecoctionAmount(objectModelObject.getDecoctionAmount());
+        mashStep.setDescription(objectModelObject.getDescription());
+        mashStep.setDisplayInfuseAmount(objectModelObject.getDisplayInfuseAmount());
+        mashStep.setDisplayStepTemperature(objectModelObject.getDisplayStepTemperature());
+        mashStep.setEndTemperature(objectModelObject.getEndTemperature());
+        mashStep.setInfuseAmount(objectModelObject.getInfuseAmount());
+        mashStep.setInfuseTemperature(objectModelObject.getInfuseTemperature());
+        mashStep.setName(objectModelObject.getName());
+        mashStep.setRampTime(objectModelObject.getRampTime());
+        mashStep.setStepTemperature(objectModelObject.getStepTemperature());
+        mashStep.setStepTime(objectModelObject.getStepTime());
+        mashStep.setType(_mashStepTypeEnumConverter.fromObjectModel(objectModelObject.getType()));
+        mashStep.setVersion(objectModelObject.getVersion());
+        mashStep.setWaterGrainRatio(objectModelObject.getWaterGrainRatio());
+
+        return mashStep;
     }
 }
