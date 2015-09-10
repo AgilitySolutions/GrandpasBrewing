@@ -53,6 +53,37 @@ public class MashConverter implements IBeerXmlConverter<Mash, com.grandpasbrewin
     }
 
     public Mash fromObjectModel(com.grandpasbrewing.objectmodel.Mash objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Mash mash = new Mash();
+
+        mash.setDisplayGrainTemperature(objectModelObject.getDisplayGrainTemperature());
+        mash.setDisplaySpargeTemperature(objectModelObject.getDisplaySpargeTemperature());
+        mash.setDisplayTunTemperature(objectModelObject.getDisplayTunTemperature());
+        mash.setDisplayTunWeight(objectModelObject.getDisplayTunWeight());
+        mash.setEquipmentAdjust(objectModelObject.getEquipmentAdjust());
+        mash.setGrainTemperature(objectModelObject.getGrainTemperature());
+        mash.setName(objectModelObject.getName());
+        mash.setNotes(objectModelObject.getNotes());
+        mash.setPH(objectModelObject.getPH());
+        mash.setSpargeTemperature(objectModelObject.getSpargeTemperature());
+        mash.setTunSpecificHeat(objectModelObject.getTunSpecificHeat());
+        mash.setTunTemperature(objectModelObject.getTunTemperature());
+        mash.setTunWeight(objectModelObject.getTunWeight());
+        mash.setVersion(objectModelObject.getVersion());
+
+        ListIterator<com.grandpasbrewing.objectmodel.MashStep> iterator = objectModelObject.getMashSteps().listIterator();
+        ArrayList<MashStep> mashStepArrayList = new ArrayList<MashStep>();
+
+        while (iterator.hasNext())
+        {
+            com.grandpasbrewing.objectmodel.MashStep mashStep = iterator.next();
+            mashStepArrayList.add(_mashStepConverter.fromObjectModel(mashStep));
+        }
+
+        mash.setMashSteps(mashStepArrayList);
+
+        return mash;
     }
 }
