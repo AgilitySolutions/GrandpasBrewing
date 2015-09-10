@@ -47,6 +47,34 @@ public class FermentableConverter implements IBeerXmlConverter<Fermentable, com.
     }
 
     public Fermentable fromObjectModel(com.grandpasbrewing.objectmodel.Fermentable objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Fermentable fermentable = new Fermentable();
+
+        fermentable.setName(objectModelObject.getName());
+        fermentable.setVersion(objectModelObject.getVersion());
+        fermentable.setAddAfterBoil(objectModelObject.getAddAfterBoil());
+        fermentable.setAmount(objectModelObject.getAmount());
+        fermentable.setCoarseFineDiff(objectModelObject.getCoarseFineDiff());
+        fermentable.setColor(objectModelObject.getColor());
+        fermentable.setDiastaticPower(objectModelObject.getDiastaticPower());
+        fermentable.setDisplayAmount(objectModelObject.getDisplayAmount());
+        fermentable.setDisplayColor(objectModelObject.getDisplayColor());
+        fermentable.setIBUGallonsPerPound(objectModelObject.getIBUGallonsPerPound());
+        fermentable.setInventory(objectModelObject.getInventory());
+        fermentable.setMaximumInBatch(objectModelObject.getMaximumInBatch());
+        fermentable.setMoisture(objectModelObject.getMoisture());
+        fermentable.setName(objectModelObject.getName());
+        fermentable.setNotes(objectModelObject.getNotes());
+        fermentable.setPlaceOfOrigin(objectModelObject.getPlaceOfOrigin());
+        fermentable.setPotential(objectModelObject.getPotential());
+        fermentable.setProtein(objectModelObject.getProtein());
+        fermentable.setRecommendMash(objectModelObject.getRecommendMash());
+        fermentable.setSupplier(objectModelObject.getSupplier());
+        fermentable.setType(_fermentableTypeEnumConverter.fromObjectModel(objectModelObject.getType()));
+        fermentable.setYield(objectModelObject.getYield());
+
+        return fermentable;
     }
 }
