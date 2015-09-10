@@ -1,67 +1,67 @@
 package com.grandpasbrewing.objectmodel;
 
 public class Water extends ObjectModelBase {
-    public double getAmount() {
+    public Double getAmount() {
         return _amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         _amount = amount;
     }
 
-    public double getCalcium() {
+    public Double getCalcium() {
         return _calcium;
     }
 
-    public void setCalcium(double calcium) {
+    public void setCalcium(Double calcium) {
         _calcium = calcium;
     }
 
-    public double getBicarbonate() {
+    public Double getBicarbonate() {
         return _bicarbonate;
     }
 
-    public void setBicarbonate(double bicarbonate) {
+    public void setBicarbonate(Double bicarbonate) {
         _bicarbonate = bicarbonate;
     }
 
-    public double getSulfate() {
+    public Double getSulfate() {
         return _sulfate;
     }
 
-    public void setSulfate(double sulfate) {
+    public void setSulfate(Double sulfate) {
         _sulfate = sulfate;
     }
 
-    public double getChloride() {
+    public Double getChloride() {
         return _chloride;
     }
 
-    public void setChloride(double chloride) {
+    public void setChloride(Double chloride) {
         _chloride = chloride;
     }
 
-    public double getSodium() {
+    public Double getSodium() {
         return _sodium;
     }
 
-    public void setSodium(double sodium) {
+    public void setSodium(Double sodium) {
         _sodium = sodium;
     }
 
-    public double getMagnesium() {
+    public Double getMagnesium() {
         return _magnesium;
     }
 
-    public void setMagnesium(double magnesium) {
+    public void setMagnesium(Double magnesium) {
         _magnesium = magnesium;
     }
 
-    public double getPH() {
+    public Double getPH() {
         return _ph;
     }
 
-    public void setPH(double ph) {
+    public void setPH(Double ph) {
         _ph = ph;
     }
 
@@ -81,14 +81,14 @@ public class Water extends ObjectModelBase {
         _displayAmount = displayAmount;
     }
 
-    private double _amount;
-    private double _calcium;
-    private double _bicarbonate;
-    private double _sulfate;
-    private double _chloride;
-    private double _sodium;
-    private double _magnesium;
-    private double _ph;
+    private Double _amount;
+    private Double _calcium;
+    private Double _bicarbonate;
+    private Double _sulfate;
+    private Double _chloride;
+    private Double _sodium;
+    private Double _magnesium;
+    private Double _ph;
     private String _notes;
     private String _displayAmount;
 }
