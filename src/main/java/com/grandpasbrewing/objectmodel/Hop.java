@@ -5,19 +5,19 @@ import com.grandpasbrewing.objectmodel.enums.HopType;
 import com.grandpasbrewing.objectmodel.enums.HopUse;
 
 public class Hop extends ObjectModelBase {
-    public double getAlphaPercentage() {
+    public Double getAlphaPercentage() {
         return _alphaPercentage;
     }
 
-    public void setAlphaPercentage(double alphaPercentage) {
+    public void setAlphaPercentage(Double alphaPercentage) {
         _alphaPercentage = alphaPercentage;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return _amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         _amount = amount;
     }
 
@@ -29,11 +29,11 @@ public class Hop extends ObjectModelBase {
         _use = use;
     }
 
-    public double getTime() {
+    public Double getTime() {
         return _time;
     }
 
-    public void setTime(double time) {
+    public void setTime(Double time) {
         _time = time;
     }
 
@@ -61,19 +61,19 @@ public class Hop extends ObjectModelBase {
         _form = form;
     }
 
-    public double getBetaPercentage() {
+    public Double getBetaPercentage() {
         return _betaPercentage;
     }
 
-    public void setBetaPercentage(double betaPercentage) {
+    public void setBetaPercentage(Double betaPercentage) {
         _betaPercentage = betaPercentage;
     }
 
-    public double getHopStabilityIndex() {
+    public Double getHopStabilityIndex() {
         return _hopStabilityIndex;
     }
 
-    public void setHopStabilityIndex(double hopStabilityIndex) {
+    public void setHopStabilityIndex(Double hopStabilityIndex) {
         _hopStabilityIndex = hopStabilityIndex;
     }
 
@@ -93,35 +93,35 @@ public class Hop extends ObjectModelBase {
         _substitutes = substitutes;
     }
 
-    public double getHumuleneLevel() {
+    public Double getHumuleneLevel() {
         return _humuleneLevel;
     }
 
-    public void setHumuleneLevel(double humuleneLevel) {
+    public void setHumuleneLevel(Double humuleneLevel) {
         _humuleneLevel = humuleneLevel;
     }
 
-    public double getCaryophylleneLevel() {
+    public Double getCaryophylleneLevel() {
         return _caryophylleneLevel;
     }
 
-    public void setCaryophylleneLevel(double caryophylleneLevel) {
+    public void setCaryophylleneLevel(Double caryophylleneLevel) {
         _caryophylleneLevel = caryophylleneLevel;
     }
 
-    public double getCohumuloneLevel() {
+    public Double getCohumuloneLevel() {
         return _cohumuloneLevel;
     }
 
-    public void setCohumuloneLevel(double cohumuloneLevel) {
+    public void setCohumuloneLevel(Double cohumuloneLevel) {
         _cohumuloneLevel = cohumuloneLevel;
     }
 
-    public double getMyrceneLevel() {
+    public Double getMyrceneLevel() {
         return _myrceneLevel;
     }
 
-    public void setMyrceneLevel(double myrceneLevel) {
+    public void setMyrceneLevel(Double myrceneLevel) {
         _myrceneLevel = myrceneLevel;
     }
 
@@ -149,21 +149,21 @@ public class Hop extends ObjectModelBase {
         _displayTime = displayTime;
     }
 
-    private double _alphaPercentage;
-    private double _amount;
+    private Double _alphaPercentage;
+    private Double _amount;
     private HopUse _use;
-    private double _time;
+    private Double _time;
     private String _notes;
     private HopType _type;
     private HopForm _form;
-    private double _betaPercentage;
-    private double _hopStabilityIndex;
+    private Double _betaPercentage;
+    private Double _hopStabilityIndex;
     private String _placeOfOrigin;
     private String _substitutes;
-    private double _humuleneLevel;
-    private double _caryophylleneLevel;
-    private double _cohumuloneLevel;
-    private double _myrceneLevel;
+    private Double _humuleneLevel;
+    private Double _caryophylleneLevel;
+    private Double _cohumuloneLevel;
+    private Double _myrceneLevel;
     private String _displayAmount;
     private String _inventory;
     private String _displayTime;
