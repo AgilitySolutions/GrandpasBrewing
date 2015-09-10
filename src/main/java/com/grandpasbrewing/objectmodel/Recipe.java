@@ -45,35 +45,35 @@ public class Recipe extends ObjectModelBase {
         _assistantBrewer = assistantBrewer;
     }
 
-    public double getBatchSize() {
+    public Double getBatchSize() {
         return _batchSize;
     }
 
-    public void setBatchSize(double batchSize) {
+    public void setBatchSize(Double batchSize) {
         _batchSize = batchSize;
     }
 
-    public double getBoilSize() {
+    public Double getBoilSize() {
         return _boilSize;
     }
 
-    public void setBoilSize(double boilSize) {
+    public void setBoilSize(Double boilSize) {
         _boilSize = boilSize;
     }
 
-    public double getBoilTime() {
+    public Double getBoilTime() {
         return _boilTime;
     }
 
-    public void setBoilTime(double boilTime) {
+    public void setBoilTime(Double boilTime) {
         _boilTime = boilTime;
     }
 
-    public double getEfficiency() {
+    public Double getEfficiency() {
         return _efficiency;
     }
 
-    public void setEfficiency(double efficiency) {
+    public void setEfficiency(Double efficiency) {
         _efficiency = efficiency;
     }
 
@@ -141,99 +141,99 @@ public class Recipe extends ObjectModelBase {
         _tasteNotes = tasteNotes;
     }
 
-    public double getRating() {
+    public Double getRating() {
         return _rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(Double rating) {
         _rating = rating;
     }
 
-    public double getOriginalGravity() {
+    public Double getOriginalGravity() {
         return _originalGravity;
     }
 
-    public void setOriginalGravity(double originalGravity) {
+    public void setOriginalGravity(Double originalGravity) {
         _originalGravity = originalGravity;
     }
 
-    public double getFinalGravity() {
+    public Double getFinalGravity() {
         return _finalGravity;
     }
 
-    public void setFinalGravity(double finalGravity) {
+    public void setFinalGravity(Double finalGravity) {
         _finalGravity = finalGravity;
     }
 
-    public int getFermentationStages() {
+    public Integer getFermentationStages() {
         return _fermentationStages;
     }
 
-    public void setFermentationStages(int fermentationStages) {
+    public void setFermentationStages(Integer fermentationStages) {
         _fermentationStages = fermentationStages;
     }
 
-    public double getPrimaryAge() {
+    public Double getPrimaryAge() {
         return _primaryAge;
     }
 
-    public void setPrimaryAge(double primaryAge) {
+    public void setPrimaryAge(Double primaryAge) {
         _primaryAge = primaryAge;
     }
 
-    public double getPrimaryTemperature() {
+    public Double getPrimaryTemperature() {
         return _primaryTemperature;
     }
 
-    public void setPrimaryTemperature(double primaryTemperature) {
+    public void setPrimaryTemperature(Double primaryTemperature) {
         _primaryTemperature = primaryTemperature;
     }
 
-    public double getSecondaryAge() {
+    public Double getSecondaryAge() {
         return _secondaryAge;
     }
 
-    public void setSecondaryAge(double secondaryAge) {
+    public void setSecondaryAge(Double secondaryAge) {
         _secondaryAge = secondaryAge;
     }
 
-    public double getSecondaryTemperature() {
+    public Double getSecondaryTemperature() {
         return _secondaryTemperature;
     }
 
-    public void setSecondaryTemperature(double secondaryTemperature) {
+    public void setSecondaryTemperature(Double secondaryTemperature) {
         _secondaryTemperature = secondaryTemperature;
     }
 
-    public double getTertiaryAge() {
+    public Double getTertiaryAge() {
         return _tertiaryAge;
     }
 
-    public void setTertiaryAge(double tertiaryAge) {
+    public void setTertiaryAge(Double tertiaryAge) {
         _tertiaryAge = tertiaryAge;
     }
 
-    public double getTertiaryTemperature() {
+    public Double getTertiaryTemperature() {
         return _tertiaryTemperature;
     }
 
-    public void setTertiaryTemperature(double tertiaryTemperature) {
+    public void setTertiaryTemperature(Double tertiaryTemperature) {
         _tertiaryTemperature = tertiaryTemperature;
     }
 
-    public double getAge() {
+    public Double getAge() {
         return _age;
     }
 
-    public void setAge(double age) {
+    public void setAge(Double age) {
         _age = age;
     }
 
-    public double getAgeTemperature() {
+    public Double getAgeTemperature() {
         return _ageTemperature;
     }
 
-    public void setAgeTemperature(double ageTemperature) {
+    public void setAgeTemperature(Double ageTemperature) {
         _ageTemperature = ageTemperature;
     }
 
@@ -245,19 +245,19 @@ public class Recipe extends ObjectModelBase {
         _date = date;
     }
 
-    public double getCarbonation() {
+    public Double getCarbonation() {
         return _carbonation;
     }
 
-    public void setCarbonation(double carbonation) {
+    public void setCarbonation(Double carbonation) {
         _carbonation = carbonation;
     }
 
-    public boolean getForcedCarbonation() {
+    public Boolean getForcedCarbonation() {
         return _forcedCarbonation;
     }
 
-    public void setForcedCarbonation(boolean forcedCarbonation) {
+    public void setForcedCarbonation(Boolean forcedCarbonation) {
         _forcedCarbonation = forcedCarbonation;
     }
 
@@ -269,27 +269,27 @@ public class Recipe extends ObjectModelBase {
         _primingSugarName = primingSugarName;
     }
 
-    public double getCarbonationTemperature() {
+    public Double getCarbonationTemperature() {
         return _carbonationTemperature;
     }
 
-    public void setCarbonationTemperature(double carbonationTemperature) {
+    public void setCarbonationTemperature(Double carbonationTemperature) {
         _carbonationTemperature = carbonationTemperature;
     }
 
-    public double getPrimingSugarEquivalent() {
+    public Double getPrimingSugarEquivalent() {
         return _primingSugarEquivalent;
     }
 
-    public void setPrimingSugarEquivalent(double primingSugarEquivalent) {
+    public void setPrimingSugarEquivalent(Double primingSugarEquivalent) {
         _primingSugarEquivalent = primingSugarEquivalent;
     }
 
-    public double getKegPrimingFactor() {
+    public Double getKegPrimingFactor() {
         return _kegPrimingFactor;
     }
 
-    public void setKegPrimingFactor(double kegPrimingFactor) {
+    public void setKegPrimingFactor(Double kegPrimingFactor) {
         _kegPrimingFactor = kegPrimingFactor;
     }
 
@@ -317,11 +317,11 @@ public class Recipe extends ObjectModelBase {
         _estimatedColor = estimatedColor;
     }
 
-    public double getIBU() {
+    public Double getIBU() {
         return _ibu;
     }
 
-    public void setIBU(double ibu) {
+    public void setIBU(Double ibu) {
         _ibu = ibu;
     }
 
@@ -333,27 +333,27 @@ public class Recipe extends ObjectModelBase {
         _ibuMethod = ibuMethod;
     }
 
-    public double getEstimatedABV() {
+    public Double getEstimatedABV() {
         return _estimatedABV;
     }
 
-    public void setEstimatedABV(double estimatedABV) {
+    public void setEstimatedABV(Double estimatedABV) {
         _estimatedABV = estimatedABV;
     }
 
-    public double getABV() {
+    public Double getABV() {
         return _abv;
     }
 
-    public void setABV(double abv) {
+    public void setABV(Double abv) {
         _abv = abv;
     }
 
-    public double getActualEfficiency() {
+    public Double getActualEfficiency() {
         return _actualEfficiency;
     }
 
-    public void setActualEfficiency(double actualEfficiency) {
+    public void setActualEfficiency(Double actualEfficiency) {
         _actualEfficiency = actualEfficiency;
     }
 
@@ -450,10 +450,10 @@ public class Recipe extends ObjectModelBase {
     private EquipmentItem _equipment;
     private String _brewer;
     private String _assistantBrewer;
-    private double _batchSize;
-    private double _boilSize;
-    private double _boilTime;
-    private double _efficiency;
+    private Double _batchSize;
+    private Double _boilSize;
+    private Double _boilTime;
+    private Double _efficiency;
     private ArrayList<Hop> _hops;
     private ArrayList<Fermentable> _fermentables;
     private ArrayList<MiscellaneousItem> _miscs;
@@ -462,33 +462,33 @@ public class Recipe extends ObjectModelBase {
     private Mash _mash;
     private String _notes;
     private String _tasteNotes;
-    private double _rating;
-    private double _originalGravity;
-    private double _finalGravity;
-    private int _fermentationStages;
-    private double _primaryAge;
-    private double _primaryTemperature;
-    private double _secondaryAge;
-    private double _secondaryTemperature;
-    private double _tertiaryAge;
-    private double _tertiaryTemperature;
-    private double _age;
-    private double _ageTemperature;
+    private Double _rating;
+    private Double _originalGravity;
+    private Double _finalGravity;
+    private Integer _fermentationStages;
+    private Double _primaryAge;
+    private Double _primaryTemperature;
+    private Double _secondaryAge;
+    private Double _secondaryTemperature;
+    private Double _tertiaryAge;
+    private Double _tertiaryTemperature;
+    private Double _age;
+    private Double _ageTemperature;
     private String _date;
-    private double _carbonation;
-    private boolean _forcedCarbonation;
+    private Double _carbonation;
+    private Boolean _forcedCarbonation;
     private String _primingSugarName;
-    private double _carbonationTemperature;
-    private double _primingSugarEquivalent;
-    private double _kegPrimingFactor;
+    private Double _carbonationTemperature;
+    private Double _primingSugarEquivalent;
+    private Double _kegPrimingFactor;
     private String _estimatedOriginalGravity;
     private String _estimatedFinalGravity;
     private String _estimatedColor;
-    private double _ibu;
+    private Double _ibu;
     private String _ibuMethod;
-    private double _estimatedABV;
-    private double _abv;
-    private double _actualEfficiency;
+    private Double _estimatedABV;
+    private Double _abv;
+    private Double _actualEfficiency;
     private String _calories;
     private String _displayBatchSize;
     private String _displayBoilSize;
