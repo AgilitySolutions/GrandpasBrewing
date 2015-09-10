@@ -11,43 +11,43 @@ public class MashStep extends ObjectModelBase {
         _type = type;
     }
 
-    public double getInfuseAmount() {
+    public Double getInfuseAmount() {
         return _infuseAmount;
     }
 
-    public void setInfuseAmount(double infuseAmount) {
+    public void setInfuseAmount(Double infuseAmount) {
         _infuseAmount = infuseAmount;
     }
 
-    public double getStepTemperature() {
+    public Double getStepTemperature() {
         return _stepTemperature;
     }
 
-    public void setStepTemperature(double stepTemperature) {
+    public void setStepTemperature(Double stepTemperature) {
         _stepTemperature = stepTemperature;
     }
 
-    public double getStepTime() {
+    public Double getStepTime() {
         return _stepTime;
     }
 
-    public void setStepTime(double stepTime) {
+    public void setStepTime(Double stepTime) {
         _stepTime = stepTime;
     }
 
-    public double getRampTime() {
+    public Double getRampTime() {
         return _rampTime;
     }
 
-    public void setRampTime(double rampTime) {
+    public void setRampTime(Double rampTime) {
         _rampTime = rampTime;
     }
 
-    public double getEndTemperature() {
+    public Double getEndTemperature() {
         return _endTemperature;
     }
 
-    public void setEndTemperature(double endTemperature) {
+    public void setEndTemperature(Double endTemperature) {
         _endTemperature = endTemperature;
     }
 
@@ -100,11 +100,11 @@ public class MashStep extends ObjectModelBase {
     }
 
     private MashStepType _type;
-    private double _infuseAmount;
-    private double _stepTemperature;
-    private double _stepTime;
-    private double _rampTime;
-    private double _endTemperature;
+    private Double _infuseAmount;
+    private Double _stepTemperature;
+    private Double _stepTime;
+    private Double _rampTime;
+    private Double _endTemperature;
     private String _description;
     private String _waterGrainRatio;
     private String _decoctionAmount;
