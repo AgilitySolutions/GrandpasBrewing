@@ -56,6 +56,34 @@ public class YeastConverter implements IBeerXmlConverter<Yeast, com.grandpasbrew
     }
 
     public Yeast fromObjectModel(com.grandpasbrewing.objectmodel.Yeast objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Yeast yeast = new Yeast();
+
+        yeast.setAddToSecondary(objectModelObject.getAddToSecondary());
+        yeast.setAmount(objectModelObject.getAmount());
+        yeast.setAmountIsWeight(objectModelObject.getAmountIsWeight());
+        yeast.setAttenuation(objectModelObject.getAttenuation());
+        yeast.setBestFor(objectModelObject.getBestFor());
+        yeast.setCultureDate(objectModelObject.getCultureDate());
+        yeast.setDisplayAmount(objectModelObject.getDisplayAmount());
+        yeast.setDisplayMaximumTemperature(objectModelObject.getDisplayMaximumTemperature());
+        yeast.setDisplayMinimumTemperature(objectModelObject.getDisplayMinimumTemperature());
+        yeast.setFlocculation(_yeastFlocculationEnumConverter.fromObjectModel(objectModelObject.getFlocculation()));
+        yeast.setForm(_yeastFormEnumConverter.fromObjectModel(objectModelObject.getForm()));
+        yeast.setInventory(objectModelObject.getInventory());
+        yeast.setLaboratory(objectModelObject.getLaboratory());
+        yeast.setManufacturerProductId(objectModelObject.getManufacturerProductId());
+        yeast.setMaximumReuse(objectModelObject.getMaximumReuse());
+        yeast.setMaximumTemperature(objectModelObject.getMaximumTemperature());
+        yeast.setMinimumTemperature(objectModelObject.getMinimumTemperature());
+        yeast.setName(objectModelObject.getName());
+        yeast.setNotes(objectModelObject.getNotes());
+        yeast.setTimesCultured(objectModelObject.getTimesCultured());
+        yeast.setType(_yeastTypeEnumConverter.fromObjectModel(objectModelObject.getType()));
+        yeast.setVersion(objectModelObject.getVersion());
+
+        return yeast;
     }
 }
