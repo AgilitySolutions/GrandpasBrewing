@@ -110,4 +110,88 @@ class YeastConverterTest extends GroovyTestCase {
         assertNull(yeast.getInventory());
         assertNull(yeast.getCultureDate());
     }
+
+    void testFromObjectModelNull() {
+        Yeast yeast = _yeastConverter.fromObjectModel(null);
+
+        assertNull(yeast);
+    }
+
+    void testFromObjectModelYeastRequiredFieldsOnly() {
+        com.grandpasbrewing.objectmodel.Yeast objectModelYeast = new com.grandpasbrewing.objectmodel.Yeast();
+
+        objectModelYeast.setName("Ole English Ale Yeast");
+        objectModelYeast.setVersion(1);
+        objectModelYeast.setType(com.grandpasbrewing.objectmodel.enums.YeastType.Ale);
+        objectModelYeast.setForm(com.grandpasbrewing.objectmodel.enums.YeastForm.Liquid);
+        objectModelYeast.setAmount(0.100);
+
+        Yeast yeast = _yeastConverter.fromObjectModel(objectModelYeast);
+
+        assertEquals("Ole English Ale Yeast", yeast.getName());
+        assertEquals(1, yeast.getVersion());
+        assertEquals(YeastType.Ale, yeast.getType());
+        assertEquals(YeastForm.Liquid, yeast.getForm());
+        assertEquals(0.100, yeast.getAmount());
+        assertNull(yeast.getAmountIsWeight());
+        assertNull(yeast.getLaboratory());
+        assertNull(yeast.getManufacturerProductId());
+        assertNull(yeast.getMinimumTemperature());
+        assertNull(yeast.getMaximumTemperature());
+        assertNull(yeast.getFlocculation());
+        assertNull(yeast.getAttenuation());
+        assertNull(yeast.getNotes());
+        assertNull(yeast.getBestFor());
+        assertNull(yeast.getTimesCultured());
+        assertNull(yeast.getMaximumReuse());
+        assertNull(yeast.getAddToSecondary());
+        assertNull(yeast.getDisplayAmount());
+        assertNull(yeast.getDisplayMinimumTemperature());
+        assertNull(yeast.getDisplayMaximumTemperature());
+        assertNull(yeast.getInventory());
+        assertNull(yeast.getCultureDate());
+    }
+
+    void testFromObjectModelYeastMorePopularFields() {
+        com.grandpasbrewing.objectmodel.Yeast objectModelYeast = new  com.grandpasbrewing.objectmodel.Yeast();
+
+        objectModelYeast.setName("German Ale");
+        objectModelYeast.setType(com.grandpasbrewing.objectmodel.enums.YeastType.Ale);
+        objectModelYeast.setVersion(1);
+        objectModelYeast.setForm(com.grandpasbrewing.objectmodel.enums.YeastForm.Liquid);
+        objectModelYeast.setAmount(0.250);
+        objectModelYeast.setLaboratory("Wyeast Labs");
+        objectModelYeast.setManufacturerProductId("1007");
+        objectModelYeast.setMinimumTemperature(12.8);
+        objectModelYeast.setMaximumTemperature(20.0);
+        objectModelYeast.setAttenuation(75.0);
+        objectModelYeast.setNotes("Crisp dry flavor with a hint of mild flavor.  Great for many continental ales.");
+        objectModelYeast.setBestFor("German Ales, Alts, Kolsch, Dry Stouts ");
+        objectModelYeast.setFlocculation(com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Low);
+
+        Yeast yeast = _yeastConverter.fromObjectModel(objectModelYeast);
+
+        assertEquals("German Ale", yeast.getName());
+        assertEquals(1, yeast.getVersion());
+        assertEquals(YeastType.Ale, yeast.getType());
+        assertEquals(YeastForm.Liquid, yeast.getForm());
+        assertEquals(0.250, yeast.getAmount());
+        assertNull(yeast.getAmountIsWeight());
+        assertEquals("Wyeast Labs", yeast.getLaboratory());
+        assertEquals("1007", yeast.getManufacturerProductId());
+        assertEquals(12.8, yeast.getMinimumTemperature());
+        assertEquals(20.0, yeast.getMaximumTemperature());
+        assertEquals(YeastFlocculation.Low, yeast.getFlocculation());
+        assertEquals(75.0, yeast.getAttenuation());
+        assertEquals("Crisp dry flavor with a hint of mild flavor.  Great for many continental ales.", yeast.getNotes());
+        assertEquals("German Ales, Alts, Kolsch, Dry Stouts ", yeast.getBestFor());
+        assertNull(yeast.getTimesCultured());
+        assertNull(yeast.getMaximumReuse());
+        assertNull(yeast.getAddToSecondary());
+        assertNull(yeast.getDisplayAmount());
+        assertNull(yeast.getDisplayMinimumTemperature());
+        assertNull(yeast.getDisplayMaximumTemperature());
+        assertNull(yeast.getInventory());
+        assertNull(yeast.getCultureDate());
+    }
 }
