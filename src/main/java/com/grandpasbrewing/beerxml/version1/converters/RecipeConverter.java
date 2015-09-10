@@ -173,6 +173,119 @@ public class RecipeConverter implements IBeerXmlConverter<Recipe, com.grandpasbr
     }
 
     public Recipe fromObjectModel(com.grandpasbrewing.objectmodel.Recipe objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+        Recipe recipe = new Recipe();
+
+        recipe.setABV(objectModelObject.getABV());
+        recipe.setActualEfficiency(objectModelObject.getActualEfficiency());
+        recipe.setAge(objectModelObject.getAge());
+        recipe.setAgeTemperature(objectModelObject.getAgeTemperature());
+        recipe.setAssistantBrewer(objectModelObject.getAssistantBrewer());
+        recipe.setBatchSize(objectModelObject.getBatchSize());
+        recipe.setBoilSize(objectModelObject.getBoilSize());
+        recipe.setBoilTime(objectModelObject.getBoilTime());
+        recipe.setBrewer(objectModelObject.getBrewer());
+        recipe.setCalories(objectModelObject.getCalories());
+        recipe.setCarbonation(objectModelObject.getCarbonation());
+        recipe.setCarbonationTemperature(objectModelObject.getCarbonationTemperature());
+        recipe.setCarbonationUsed(objectModelObject.getCarbonationUsed());
+        recipe.setDate(objectModelObject.getDate());
+        recipe.setDisplayAgeTemperature(objectModelObject.getDisplayAgeTemperature());
+        recipe.setDisplayBatchSize(objectModelObject.getDisplayBatchSize());
+        recipe.setDisplayBoilSize(objectModelObject.getDisplayBoilSize());
+        recipe.setDisplayCarbTemperature(objectModelObject.getDisplayCarbTemperature());
+        recipe.setDisplayFinalGravity(objectModelObject.getDisplayFinalGravity());
+        recipe.setDisplayOriginalGravity(objectModelObject.getDisplayOriginalGravity());
+        recipe.setDisplayPrimaryTemperature(objectModelObject.getDisplayPrimaryTemperature());
+        recipe.setDisplaySecondaryTemperature(objectModelObject.getDisplaySecondaryTemperature());
+        recipe.setDisplayTertiaryTemperature(objectModelObject.getDisplayTertiaryTemperature());
+        recipe.setEfficiency(objectModelObject.getEfficiency());
+        recipe.setEquipment(_equipmentConverter.fromObjectModel(objectModelObject.getEquipment()));
+        recipe.setEstimatedABV(objectModelObject.getEstimatedABV());
+        recipe.setEstimatedColor(objectModelObject.getEstimatedColor());
+        recipe.setEstimatedFinalGravity(objectModelObject.getEstimatedFinalGravity());
+        recipe.setEstimatedOriginalGravity(objectModelObject.getEstimatedOriginalGravity());
+        recipe.setFermentationStages(objectModelObject.getFermentationStages());
+        recipe.setFinalGravity(objectModelObject.getFinalGravity());
+        recipe.setForcedCarbonation(objectModelObject.getForcedCarbonation());
+        recipe.setIBU(objectModelObject.getIBU());
+        recipe.setIBUMethod(objectModelObject.getIBUMethod());
+        recipe.setKegPrimingFactor(objectModelObject.getKegPrimingFactor());
+        recipe.setMash(_mashConverter.fromObjectModel(objectModelObject.getMash()));
+        recipe.setName(objectModelObject.getName());
+        recipe.setNotes(objectModelObject.getNotes());
+        recipe.setOriginalGravity(objectModelObject.getOriginalGravity());
+        recipe.setPrimaryAge(objectModelObject.getPrimaryAge());
+        recipe.setPrimaryTemperature(objectModelObject.getPrimaryTemperature());
+        recipe.setPrimingSugarEquivalent(objectModelObject.getPrimingSugarEquivalent());
+        recipe.setPrimingSugarName(objectModelObject.getPrimingSugarName());
+        recipe.setRating(objectModelObject.getRating());
+        recipe.setSecondaryAge(objectModelObject.getSecondaryAge());
+        recipe.setSecondaryTemperature(objectModelObject.getSecondaryTemperature());
+        recipe.setStyle(_styleConverter.fromObjectModel(objectModelObject.getStyle()));
+        recipe.setTasteNotes(objectModelObject.getTasteNotes());
+        recipe.setTertiaryAge(objectModelObject.getTertiaryAge());
+        recipe.setTertiaryTemperature(objectModelObject.getTertiaryTemperature());
+        recipe.setType(_recipeTypeEnumConverter.fromObjectModel(objectModelObject.getType()));
+        recipe.setVersion(objectModelObject.getVersion());
+
+        ListIterator<com.grandpasbrewing.objectmodel.Fermentable> fermentableIterator = objectModelObject.getFermentables().listIterator();
+        ArrayList<Fermentable> fermentableArrayList = new ArrayList<Fermentable>();
+
+        while (fermentableIterator.hasNext())
+        {
+            com.grandpasbrewing.objectmodel.Fermentable fermentable = fermentableIterator.next();
+            fermentableArrayList.add(_fermentableConverter.fromObjectModel(fermentable));
+        }
+
+        recipe.setFermentables(fermentableArrayList);
+
+        ListIterator<com.grandpasbrewing.objectmodel.Hop> hopIterator = objectModelObject.getHops().listIterator();
+        ArrayList<Hop> hopArrayList = new ArrayList<Hop>();
+
+        while (hopIterator.hasNext())
+        {
+            com.grandpasbrewing.objectmodel.Hop hop = hopIterator.next();
+            hopArrayList.add(_hopConverter.fromObjectModel(hop));
+        }
+
+        recipe.setHops(hopArrayList);
+
+        ListIterator<com.grandpasbrewing.objectmodel.MiscellaneousItem> miscIterator = objectModelObject.getMiscs().listIterator();
+        ArrayList<Misc> miscArrayList = new ArrayList<Misc>();
+
+        while (miscIterator.hasNext())
+        {
+            com.grandpasbrewing.objectmodel.MiscellaneousItem misc = miscIterator.next();
+            miscArrayList.add(_miscConverter.fromObjectModel(misc));
+        }
+
+        recipe.setMiscs(miscArrayList);
+
+        ListIterator<com.grandpasbrewing.objectmodel.Water> waterIterator = objectModelObject.getWaters().listIterator();
+        ArrayList<Water> waterArrayList = new ArrayList<Water>();
+
+        while (waterIterator.hasNext())
+        {
+            com.grandpasbrewing.objectmodel.Water water = waterIterator.next();
+            waterArrayList.add(_waterConverter.fromObjectModel(water));
+        }
+
+        recipe.setWaters(waterArrayList);
+
+        ListIterator<com.grandpasbrewing.objectmodel.Yeast> yeastIterator = objectModelObject.getYeasts().listIterator();
+        ArrayList<Yeast> yeastArrayList = new ArrayList<Yeast>();
+
+        while (yeastIterator.hasNext())
+        {
+            com.grandpasbrewing.objectmodel.Yeast yeast = yeastIterator.next();
+            yeastArrayList.add(_yeastConverter.fromObjectModel(yeast));
+        }
+
+        recipe.setYeasts(yeastArrayList);
+
+        return recipe;
     }
 }
