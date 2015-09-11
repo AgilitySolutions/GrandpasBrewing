@@ -114,60 +114,65 @@ public class RecipeConverter implements IBeerXmlConverter<Recipe, com.grandpasbr
         recipe.setType(_recipeTypeEnumConverter.toObjectModel(beerXmlObject.getType()));
         recipe.setVersion(beerXmlObject.getVersion());
 
-        ListIterator<Fermentable> fermentableIterator = beerXmlObject.getFermentables().listIterator();
-        ArrayList<com.grandpasbrewing.objectmodel.Fermentable> fermentableArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Fermentable>();
+        if (beerXmlObject.getFermentables() != null) {
+            ListIterator<Fermentable> fermentableIterator = beerXmlObject.getFermentables().listIterator();
+            ArrayList<com.grandpasbrewing.objectmodel.Fermentable> fermentableArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Fermentable>();
 
-        while (fermentableIterator.hasNext())
-        {
-            Fermentable fermentable = fermentableIterator.next();
-            fermentableArrayList.add(_fermentableConverter.toObjectModel(fermentable));
+            while (fermentableIterator.hasNext()) {
+                Fermentable fermentable = fermentableIterator.next();
+                fermentableArrayList.add(_fermentableConverter.toObjectModel(fermentable));
+            }
+
+            recipe.setFermentables(fermentableArrayList);
         }
 
-        recipe.setFermentables(fermentableArrayList);
+        if (beerXmlObject.getHops() != null) {
+            ListIterator<Hop> hopIterator = beerXmlObject.getHops().listIterator();
+            ArrayList<com.grandpasbrewing.objectmodel.Hop> hopArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Hop>();
 
-        ListIterator<Hop> hopIterator = beerXmlObject.getHops().listIterator();
-        ArrayList<com.grandpasbrewing.objectmodel.Hop> hopArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Hop>();
+            while (hopIterator.hasNext()) {
+                Hop hop = hopIterator.next();
+                hopArrayList.add(_hopConverter.toObjectModel(hop));
+            }
 
-        while (hopIterator.hasNext())
-        {
-            Hop hop = hopIterator.next();
-            hopArrayList.add(_hopConverter.toObjectModel(hop));
+            recipe.setHops(hopArrayList);
         }
 
-        recipe.setHops(hopArrayList);
+        if (beerXmlObject.getMiscs() != null) {
+            ListIterator<Misc> miscIterator = beerXmlObject.getMiscs().listIterator();
+            ArrayList<com.grandpasbrewing.objectmodel.MiscellaneousItem> miscArrayList = new ArrayList<MiscellaneousItem>();
 
-        ListIterator<Misc> miscIterator = beerXmlObject.getMiscs().listIterator();
-        ArrayList<com.grandpasbrewing.objectmodel.MiscellaneousItem> miscArrayList = new ArrayList<MiscellaneousItem>();
+            while (miscIterator.hasNext()) {
+                Misc misc = miscIterator.next();
+                miscArrayList.add(_miscConverter.toObjectModel(misc));
+            }
 
-        while (miscIterator.hasNext())
-        {
-            Misc misc = miscIterator.next();
-            miscArrayList.add(_miscConverter.toObjectModel(misc));
+            recipe.setMiscs(miscArrayList);
         }
 
-        recipe.setMiscs(miscArrayList);
+        if (beerXmlObject.getWaters() != null) {
+            ListIterator<Water> waterIterator = beerXmlObject.getWaters().listIterator();
+            ArrayList<com.grandpasbrewing.objectmodel.Water> waterArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Water>();
 
-        ListIterator<Water> waterIterator = beerXmlObject.getWaters().listIterator();
-        ArrayList<com.grandpasbrewing.objectmodel.Water> waterArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Water>();
+            while (waterIterator.hasNext()) {
+                Water water = waterIterator.next();
+                waterArrayList.add(_waterConverter.toObjectModel(water));
+            }
 
-        while (waterIterator.hasNext())
-        {
-            Water water = waterIterator.next();
-            waterArrayList.add(_waterConverter.toObjectModel(water));
+            recipe.setWaters(waterArrayList);
         }
 
-        recipe.setWaters(waterArrayList);
+        if (beerXmlObject.getYeasts() != null) {
+            ListIterator<Yeast> yeastIterator = beerXmlObject.getYeasts().listIterator();
+            ArrayList<com.grandpasbrewing.objectmodel.Yeast> yeastArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Yeast>();
 
-        ListIterator<Yeast> yeastIterator = beerXmlObject.getYeasts().listIterator();
-        ArrayList<com.grandpasbrewing.objectmodel.Yeast> yeastArrayList = new ArrayList<com.grandpasbrewing.objectmodel.Yeast>();
+            while (yeastIterator.hasNext()) {
+                Yeast yeast = yeastIterator.next();
+                yeastArrayList.add(_yeastConverter.toObjectModel(yeast));
+            }
 
-        while (yeastIterator.hasNext())
-        {
-            Yeast yeast = yeastIterator.next();
-            yeastArrayList.add(_yeastConverter.toObjectModel(yeast));
+            recipe.setYeasts(yeastArrayList);
         }
-
-        recipe.setYeasts(yeastArrayList);
 
         return recipe;
     }
