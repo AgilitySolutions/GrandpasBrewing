@@ -36,6 +36,22 @@ public class RecipeCollectionConverter {
     }
 
     public RecipeCollection fromObjectModel(com.grandpasbrewing.objectmodel.RecipeCollection objectModelObject) {
-        return null;
+        if (objectModelObject == null)
+            return null;
+
+       RecipeCollection recipeCollection = new RecipeCollection();
+
+        ListIterator<com.grandpasbrewing.objectmodel.Recipe> recipeIterator = objectModelObject.getRecipes().listIterator();
+        ArrayList<Recipe> recipeArrayList = new ArrayList<Recipe>();
+
+        while (recipeIterator.hasNext())
+        {
+            com.grandpasbrewing.objectmodel.Recipe recipe = recipeIterator.next();
+            recipeArrayList.add(_recipeConverter.fromObjectModel(recipe));
+        }
+
+        recipeCollection.setRecipes(recipeArrayList);
+
+        return recipeCollection;
     }
 }
