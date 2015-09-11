@@ -74,16 +74,17 @@ public class MashConverter implements IBeerXmlConverter<Mash, com.grandpasbrewin
         mash.setTunWeight(objectModelObject.getTunWeight());
         mash.setVersion(objectModelObject.getVersion());
 
-        ListIterator<com.grandpasbrewing.objectmodel.MashStep> iterator = objectModelObject.getMashSteps().listIterator();
-        ArrayList<MashStep> mashStepArrayList = new ArrayList<MashStep>();
+        if (objectModelObject.getMashSteps() != null) {
+            ListIterator<com.grandpasbrewing.objectmodel.MashStep> iterator = objectModelObject.getMashSteps().listIterator();
+            ArrayList<MashStep> mashStepArrayList = new ArrayList<MashStep>();
 
-        while (iterator.hasNext())
-        {
-            com.grandpasbrewing.objectmodel.MashStep mashStep = iterator.next();
-            mashStepArrayList.add(_mashStepConverter.fromObjectModel(mashStep));
+            while (iterator.hasNext()) {
+                com.grandpasbrewing.objectmodel.MashStep mashStep = iterator.next();
+                mashStepArrayList.add(_mashStepConverter.fromObjectModel(mashStep));
+            }
+
+            mash.setMashSteps(mashStepArrayList);
         }
-
-        mash.setMashSteps(mashStepArrayList);
 
         return mash;
     }
