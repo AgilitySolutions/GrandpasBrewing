@@ -1,6 +1,5 @@
 package com.agilitysolutions.data
 
-import com.agilitysolutions.testing.TestHelper
 import org.flywaydb.core.Flyway
 import static org.mockito.Mockito.*;
 
