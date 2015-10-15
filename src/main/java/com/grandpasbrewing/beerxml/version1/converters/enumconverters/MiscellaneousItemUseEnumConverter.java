@@ -1,10 +1,10 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.MiscUse;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 import com.grandpasbrewing.objectmodel.enums.MiscellaneousItemUse;
 
-public class MiscellaneousItemUseEnumConverter implements IEnumConverter<MiscUse, MiscellaneousItemUse> {
+public class MiscellaneousItemUseEnumConverter implements EnumConverter<MiscUse, MiscellaneousItemUse> {
     public MiscellaneousItemUse toObjectModel(MiscUse enumValue) {
         if (enumValue == MiscUse.Boil) {
             return MiscellaneousItemUse.Boil;

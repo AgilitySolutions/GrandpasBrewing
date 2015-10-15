@@ -2,11 +2,11 @@ package com.grandpasbrewing.beerxml.version1.converters;
 
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.MiscellaneousItemTypeEnumConverter;
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.MiscellaneousItemUseEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.Misc;
 import com.grandpasbrewing.objectmodel.MiscellaneousItem;
 
-public class MiscellaneousItemConverter implements IBeerXmlConverter<Misc, com.grandpasbrewing.objectmodel.MiscellaneousItem> {
+public class MiscellaneousItemConverter implements BeerXmlConverter<Misc, MiscellaneousItem> {
     private MiscellaneousItemTypeEnumConverter _miscellaneousItemTypeEnumConverter;
     private MiscellaneousItemUseEnumConverter _miscellaneousItemUseEnumConverter;
 

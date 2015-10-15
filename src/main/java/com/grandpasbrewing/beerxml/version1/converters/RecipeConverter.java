@@ -1,7 +1,7 @@
 package com.grandpasbrewing.beerxml.version1.converters;
 
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.RecipeTypeEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.*;
 import com.grandpasbrewing.beerxml.version1.objects.Fermentable;
 import com.grandpasbrewing.beerxml.version1.objects.Hop;
@@ -13,7 +13,7 @@ import com.grandpasbrewing.objectmodel.*;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-public class RecipeConverter implements IBeerXmlConverter<Recipe, com.grandpasbrewing.objectmodel.Recipe> {
+public class RecipeConverter implements BeerXmlConverter<Recipe, com.grandpasbrewing.objectmodel.Recipe> {
     private EquipmentConverter _equipmentConverter;
     private StyleConverter _styleConverter;
     private MashConverter _mashConverter;

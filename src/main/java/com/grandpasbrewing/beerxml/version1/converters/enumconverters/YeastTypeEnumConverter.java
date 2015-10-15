@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.YeastType;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
-public class YeastTypeEnumConverter implements IEnumConverter<YeastType, com.grandpasbrewing.objectmodel.enums.YeastType> {
+public class YeastTypeEnumConverter implements EnumConverter<YeastType, com.grandpasbrewing.objectmodel.enums.YeastType> {
     public com.grandpasbrewing.objectmodel.enums.YeastType toObjectModel(YeastType enumValue) {
         if (enumValue == YeastType.Ale) {
             return com.grandpasbrewing.objectmodel.enums.YeastType.Ale;

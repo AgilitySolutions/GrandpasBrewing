@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.HopUse;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
-public class HopUseEnumConverter implements IEnumConverter<HopUse, com.grandpasbrewing.objectmodel.enums.HopUse> {
+public class HopUseEnumConverter implements EnumConverter<HopUse, com.grandpasbrewing.objectmodel.enums.HopUse> {
     public com.grandpasbrewing.objectmodel.enums.HopUse toObjectModel(HopUse enumValue) {
         if (enumValue == HopUse.Boil) {
             return com.grandpasbrewing.objectmodel.enums.HopUse.Boil;

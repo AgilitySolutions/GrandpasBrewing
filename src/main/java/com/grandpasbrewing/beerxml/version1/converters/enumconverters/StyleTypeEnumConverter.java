@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.StyleType;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
-public class StyleTypeEnumConverter implements IEnumConverter<StyleType, com.grandpasbrewing.objectmodel.enums.StyleType> {
+public class StyleTypeEnumConverter implements EnumConverter<StyleType, com.grandpasbrewing.objectmodel.enums.StyleType> {
     public com.grandpasbrewing.objectmodel.enums.StyleType toObjectModel(StyleType enumValue) {
         if (enumValue == StyleType.Lager) {
             return com.grandpasbrewing.objectmodel.enums.StyleType.Lager;

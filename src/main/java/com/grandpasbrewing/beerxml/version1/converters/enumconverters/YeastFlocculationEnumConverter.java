@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.YeastFlocculation;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
-public class YeastFlocculationEnumConverter implements IEnumConverter<YeastFlocculation, com.grandpasbrewing.objectmodel.enums.YeastFlocculation> {
+public class YeastFlocculationEnumConverter implements EnumConverter<YeastFlocculation, com.grandpasbrewing.objectmodel.enums.YeastFlocculation> {
     public com.grandpasbrewing.objectmodel.enums.YeastFlocculation toObjectModel(YeastFlocculation enumValue) {
         if (enumValue == YeastFlocculation.Low) {
             return com.grandpasbrewing.objectmodel.enums.YeastFlocculation.Low;

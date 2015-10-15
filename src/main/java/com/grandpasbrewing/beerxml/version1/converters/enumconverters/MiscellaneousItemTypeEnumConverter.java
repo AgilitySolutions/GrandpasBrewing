@@ -1,10 +1,10 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.MiscType;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 import com.grandpasbrewing.objectmodel.enums.MiscellaneousItemType;
 
-public class MiscellaneousItemTypeEnumConverter implements IEnumConverter<MiscType, MiscellaneousItemType> {
+public class MiscellaneousItemTypeEnumConverter implements EnumConverter<MiscType, MiscellaneousItemType> {
     public MiscellaneousItemType toObjectModel(MiscType enumValue) {
         if (enumValue == MiscType.Spice) {
             return MiscellaneousItemType.Spice;

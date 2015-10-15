@@ -1,10 +1,10 @@
 package com.grandpasbrewing.beerxml.version1.converters;
 
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.FermentableTypeEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.Fermentable;
 
-public class FermentableConverter implements IBeerXmlConverter<Fermentable, com.grandpasbrewing.objectmodel.Fermentable> {
+public class FermentableConverter implements BeerXmlConverter<Fermentable, com.grandpasbrewing.objectmodel.Fermentable> {
     private FermentableTypeEnumConverter _fermentableTypeEnumConverter;
 
     public FermentableConverter(FermentableTypeEnumConverter fermentableTypeEnumConverter)

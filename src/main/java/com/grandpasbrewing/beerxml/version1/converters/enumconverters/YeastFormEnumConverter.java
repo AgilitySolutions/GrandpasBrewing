@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.YeastForm;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
-public class YeastFormEnumConverter implements IEnumConverter<YeastForm, com.grandpasbrewing.objectmodel.enums.YeastForm> {
+public class YeastFormEnumConverter implements EnumConverter<YeastForm, com.grandpasbrewing.objectmodel.enums.YeastForm> {
     public com.grandpasbrewing.objectmodel.enums.YeastForm toObjectModel(YeastForm enumValue) {
         if (enumValue == YeastForm.Liquid) {
             return com.grandpasbrewing.objectmodel.enums.YeastForm.Liquid;
