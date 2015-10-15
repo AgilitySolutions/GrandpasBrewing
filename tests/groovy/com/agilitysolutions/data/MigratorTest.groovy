@@ -6,25 +6,25 @@ import static org.mockito.Mockito.*;
 
 class MigratorTest extends GroovyTestCase {
     private Flyway mockedFlyway;
-    private Migrator _migrator;
+    private DatabaseMigrator _databaseMigrator;
 
     void setUp() {
         super.setUp()
 
         mockedFlyway = mock(Flyway.class);
-        _migrator = new Migrator(mockedFlyway);
+        _databaseMigrator = new DatabaseMigrator(mockedFlyway);
     }
 
     void testConstructor() {
         def exception = TestHelper.expectThrown(IllegalArgumentException) {
-            new Migrator(null);
+            new DatabaseMigrator(null);
         }
 
         assert exception;
     }
 
     void testMigrate() {
-        _migrator.Migrate("url", "user", "password");
+        _databaseMigrator.Migrate("url", "user", "password");
 
         verify(mockedFlyway).setDataSource("url", "user", "password");
         verify(mockedFlyway).migrate();

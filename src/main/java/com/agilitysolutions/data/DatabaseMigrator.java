@@ -1,12 +1,12 @@
 package com.agilitysolutions.data;
 
-import com.agilitysolutions.data.interfaces.IMigrator;
+import com.agilitysolutions.data.interfaces.Migrator;
 import org.flywaydb.core.Flyway;
 
-public class Migrator implements IMigrator {
+public class DatabaseMigrator implements Migrator {
     private Flyway _flyway;
 
-    public Migrator(Flyway flyway) {
+    public DatabaseMigrator(Flyway flyway) {
         if (flyway == null) throw new IllegalArgumentException();
 
         _flyway = flyway;

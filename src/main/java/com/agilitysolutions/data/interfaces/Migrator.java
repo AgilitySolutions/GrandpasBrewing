@@ -1,5 +1,5 @@
 package com.agilitysolutions.data.interfaces;
 
-public interface IMigrator {
+public interface Migrator {
     void Migrate(String url, String user, String password);
 }
