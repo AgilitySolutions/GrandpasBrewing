@@ -5,13 +5,13 @@ import com.grandpasbrewing.beerxml.version1.enums.YeastForm
 import com.grandpasbrewing.beerxml.version1.enums.YeastType
 import com.grandpasbrewing.beerxml.version1.objects.Yeast
 
-class YeastDeserializerTest  extends GroovyTestCase {
-    private Deserializer _deserializer;
+class YeastBeerXmlDeserializerTest extends GroovyTestCase {
+    private BeerXmlDeserializer _deserializer;
 
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Yeast>();
+        _deserializer = new BeerXmlDeserializer<Yeast>();
     }
 
     void testToBeerXmlYeastRequiredFieldsOnly() {

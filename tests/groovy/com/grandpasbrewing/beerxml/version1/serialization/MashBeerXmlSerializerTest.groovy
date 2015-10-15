@@ -10,13 +10,13 @@ import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathConstants
 import javax.xml.xpath.XPathFactory
 
-class MashSerializerTest extends GroovyTestCase {
-    private Serializer _serializer;
+class MashBeerXmlSerializerTest extends GroovyTestCase {
+    private BeerXmlSerializer _serializer;
 
     void setUp() {
         super.setUp()
 
-        _serializer = new Serializer<Mash>();
+        _serializer = new BeerXmlSerializer<Mash>();
     }
 
     void testMashSingleStepInfusionMash() {

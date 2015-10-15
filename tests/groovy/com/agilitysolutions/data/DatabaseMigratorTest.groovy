@@ -3,7 +3,7 @@ package com.agilitysolutions.data
 import org.flywaydb.core.Flyway
 import static org.mockito.Mockito.*;
 
-class MigratorTest extends GroovyTestCase {
+class DatabaseMigratorTest extends GroovyTestCase {
     private Flyway mockedFlyway;
     private DatabaseMigrator _databaseMigrator;
 

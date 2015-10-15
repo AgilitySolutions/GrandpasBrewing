@@ -2,14 +2,14 @@ package com.grandpasbrewing.beerxml.version1.serialization
 
 import com.grandpasbrewing.beerxml.version1.objects.Equipment
 
-class EquipmentDeserializerTest extends GroovyTestCase {
-    private Deserializer _deserializer;
+class EquipmentBeerXmlDeserializerTest extends GroovyTestCase {
+    private BeerXmlDeserializer _deserializer;
     private String _equipmentXml;
 
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Equipment>();
+        _deserializer = new BeerXmlDeserializer<Equipment>();
 
         _equipmentXml = "<EQUIPMENT>" +
                 "<NAME>8 Gal pot with 5 gal Igloo Cooler</NAME>" +

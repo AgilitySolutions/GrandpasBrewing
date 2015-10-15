@@ -2,19 +2,19 @@ package com.grandpasbrewing.beerxml.version1.serialization.adapters
 
 import com.grandpasbrewing.beerxml.version1.enums.FermentableType
 import com.grandpasbrewing.beerxml.version1.objects.Fermentable
-import com.grandpasbrewing.beerxml.version1.serialization.Serializer
+import com.grandpasbrewing.beerxml.version1.serialization.BeerXmlSerializer
 
 import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathFactory
 
-class FermentableSerializerTest extends GroovyTestCase {
-    private Serializer _serializer;
+class FermentableBeerXmlSerializerTest extends GroovyTestCase {
+    private BeerXmlSerializer _serializer;
 
     void setUp() {
         super.setUp()
 
-        _serializer = new Serializer<Fermentable>();
+        _serializer = new BeerXmlSerializer<Fermentable>();
     }
 
     void testFermentableRequiredFieldsOnly() {

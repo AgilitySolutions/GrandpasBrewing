@@ -7,13 +7,13 @@ import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathFactory
 
-class StyleSerializerTest extends GroovyTestCase {
-    private Serializer _serializer;
+class StyleBeerXmlSerializerTest extends GroovyTestCase {
+    private BeerXmlSerializer _serializer;
 
     void setUp() {
         super.setUp()
 
-        _serializer = new Serializer<Style>();
+        _serializer = new BeerXmlSerializer<Style>();
     }
 
     void testStyleFromBeerXml() {

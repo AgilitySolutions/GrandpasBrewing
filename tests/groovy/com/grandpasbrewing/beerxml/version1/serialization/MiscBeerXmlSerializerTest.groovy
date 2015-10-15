@@ -8,13 +8,13 @@ import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathFactory
 
-class MiscSerializerTest extends GroovyTestCase {
-    private Serializer _serializer;
+class MiscBeerXmlSerializerTest extends GroovyTestCase {
+    private BeerXmlSerializer _serializer;
 
     void setUp() {
         super.setUp()
 
-        _serializer = new Serializer<Misc>();
+        _serializer = new BeerXmlSerializer<Misc>();
     }
 
     void testMiscIrishMossWithMinimalFields() {

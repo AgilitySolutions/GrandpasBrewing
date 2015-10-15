@@ -21,13 +21,13 @@ import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathConstants
 import javax.xml.xpath.XPathFactory
 
-class RecipeCollectionSerializerTest extends GroovyTestCase {
-    private Serializer _serializer;
+class RecipeCollectionBeerXmlSerializerTest extends GroovyTestCase {
+    private BeerXmlSerializer _serializer;
 
     void setUp() {
         super.setUp()
 
-        _serializer = new Serializer<RecipeCollection>();
+        _serializer = new BeerXmlSerializer<RecipeCollection>();
     }
 
     void testRecipeCollectionFromBeerXml() {

@@ -4,13 +4,13 @@ import com.grandpasbrewing.beerxml.version1.enums.MiscType
 import com.grandpasbrewing.beerxml.version1.enums.MiscUse
 import com.grandpasbrewing.beerxml.version1.objects.Misc
 
-class MiscDeserializerTest extends GroovyTestCase {
-    private Deserializer _deserializer;
+class MiscBeerXmlDeserializerTest extends GroovyTestCase {
+    private BeerXmlDeserializer _deserializer;
 
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Misc>();
+        _deserializer = new BeerXmlDeserializer<Misc>();
     }
 
     void testToBeerXmlMiscIrishMossWithMinimalFields() {

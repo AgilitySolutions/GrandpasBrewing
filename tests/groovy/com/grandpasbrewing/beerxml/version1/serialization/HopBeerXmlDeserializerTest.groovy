@@ -5,13 +5,13 @@ import com.grandpasbrewing.beerxml.version1.enums.HopType
 import com.grandpasbrewing.beerxml.version1.enums.HopUse
 import com.grandpasbrewing.beerxml.version1.objects.Hop
 
-class HopDeserializerTest extends GroovyTestCase {
-    private Deserializer _deserializer;
+class HopBeerXmlDeserializerTest extends GroovyTestCase {
+    private BeerXmlDeserializer _deserializer;
 
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Hop>();
+        _deserializer = new BeerXmlDeserializer<Hop>();
     }
 
     void testToBeerHopRequiredFieldsOnly() {

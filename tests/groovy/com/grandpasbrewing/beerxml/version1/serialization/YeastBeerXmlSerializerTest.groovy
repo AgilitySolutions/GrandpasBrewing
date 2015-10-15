@@ -9,13 +9,13 @@ import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.xpath.XPathFactory
 
-class YeastSerializerTest extends GroovyTestCase {
-    private Serializer _serializer;
+class YeastBeerXmlSerializerTest extends GroovyTestCase {
+    private BeerXmlSerializer _serializer;
 
     void setUp() {
         super.setUp()
 
-        _serializer = new Serializer<Yeast>();
+        _serializer = new BeerXmlSerializer<Yeast>();
     }
 
     void testYeastRequiredFieldsOnly() {

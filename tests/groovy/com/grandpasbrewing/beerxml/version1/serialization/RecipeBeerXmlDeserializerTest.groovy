@@ -12,14 +12,14 @@ import com.grandpasbrewing.beerxml.version1.enums.YeastForm
 import com.grandpasbrewing.beerxml.version1.enums.YeastType
 import com.grandpasbrewing.beerxml.version1.objects.Recipe
 
-class RecipeDeserializerTest extends GroovyTestCase {
-    private Deserializer _deserializer;
+class RecipeBeerXmlDeserializerTest extends GroovyTestCase {
+    private BeerXmlDeserializer _deserializer;
     private String _equipmentXml;
 
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Recipe>();
+        _deserializer = new BeerXmlDeserializer<Recipe>();
 
         _equipmentXml = "<RECIPE>" +
                 "<NAME>Dry Stout</NAME>" +

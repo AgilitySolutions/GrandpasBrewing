@@ -2,13 +2,13 @@ package com.grandpasbrewing.beerxml.version1.serialization
 import com.grandpasbrewing.beerxml.version1.enums.FermentableType
 import com.grandpasbrewing.beerxml.version1.objects.Fermentable
 
-class FermentableDeserializeTest extends GroovyTestCase {
-    private Deserializer _deserializer;
+class FermentableBeerXmlDeserializerTest extends GroovyTestCase {
+    private BeerXmlDeserializer _deserializer;
 
     void setUp() {
         super.setUp()
 
-        _deserializer = new Deserializer<Fermentable>();
+        _deserializer = new BeerXmlDeserializer<Fermentable>();
     }
 
     void testToBeerFermentableRequiredFieldsOnly() {
