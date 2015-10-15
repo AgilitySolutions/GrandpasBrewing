@@ -7,8 +7,6 @@ public class DatabaseMigrator implements Migrator {
     private Flyway _flyway;
 
     public DatabaseMigrator(Flyway flyway) {
-        if (flyway == null) throw new IllegalArgumentException();
-
         _flyway = flyway;
     }
 

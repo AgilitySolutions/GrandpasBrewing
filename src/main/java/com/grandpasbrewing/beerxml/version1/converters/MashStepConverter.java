@@ -8,9 +8,7 @@ public class MashStepConverter implements IBeerXmlConverter<MashStep, com.grandp
     private MashStepTypeEnumConverter _mashStepTypeEnumConverter;
 
     public MashStepConverter(MashStepTypeEnumConverter mashStepTypeEnumConverter) {
-        if (mashStepTypeEnumConverter == null) throw new IllegalArgumentException("mashStepTypeEnumConverter");
-
-        _mashStepTypeEnumConverter = mashStepTypeEnumConverter;
+         _mashStepTypeEnumConverter = mashStepTypeEnumConverter;
     }
 
     public com.grandpasbrewing.objectmodel.MashStep toObjectModel(MashStep beerXmlObject) {

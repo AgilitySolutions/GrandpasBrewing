@@ -9,8 +9,6 @@ public class FermentableConverter implements IBeerXmlConverter<Fermentable, com.
 
     public FermentableConverter(FermentableTypeEnumConverter fermentableTypeEnumConverter)
     {
-        if (fermentableTypeEnumConverter == null) throw new IllegalArgumentException("fermentableTypeEnumConverter");
-
         _fermentableTypeEnumConverter = fermentableTypeEnumConverter;
     }
 

@@ -15,14 +15,6 @@ class MigratorTest extends GroovyTestCase {
         _databaseMigrator = new DatabaseMigrator(mockedFlyway);
     }
 
-    void testConstructor() {
-        def exception = TestHelper.expectThrown(IllegalArgumentException) {
-            new DatabaseMigrator(null);
-        }
-
-        assert exception;
-    }
-
     void testMigrate() {
         _databaseMigrator.Migrate("url", "user", "password");
 

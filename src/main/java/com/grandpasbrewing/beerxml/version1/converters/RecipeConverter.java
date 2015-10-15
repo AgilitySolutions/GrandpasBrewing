@@ -34,16 +34,6 @@ public class RecipeConverter implements IBeerXmlConverter<Recipe, com.grandpasbr
                            YeastConverter yeastConverter,
                            RecipeTypeEnumConverter recipeTypeEnumConverter)
     {
-        if (equipmentConverter == null) throw new IllegalArgumentException("equipmentConverter");
-        if (styleConverter == null) throw new IllegalArgumentException("styleConverter");
-        if (mashConverter == null) throw new IllegalArgumentException("mashConverter");
-        if (fermentableConverter == null) throw new IllegalArgumentException("fermentableConverter");
-        if (hopConverter == null) throw new IllegalArgumentException("hopConverter");
-        if (miscConverter == null) throw new IllegalArgumentException("miscConverter");
-        if (waterConverter == null) throw new IllegalArgumentException("waterConverter");
-        if (yeastConverter == null) throw new IllegalArgumentException("yeastConverter");
-        if (recipeTypeEnumConverter == null) throw new IllegalArgumentException("recipeTypeEnumConverter");
-
         _equipmentConverter = equipmentConverter;
         _styleConverter = styleConverter;
         _mashConverter = mashConverter;

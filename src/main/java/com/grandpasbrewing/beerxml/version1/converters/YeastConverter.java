@@ -14,10 +14,6 @@ public class YeastConverter implements IBeerXmlConverter<Yeast, com.grandpasbrew
     public YeastConverter(YeastFlocculationEnumConverter yeastFlocculationEnumConverter,
                           YeastFormEnumConverter yeastFormEnumConverter,
                           YeastTypeEnumConverter yeastTypeEnumConverter) {
-        if (yeastFlocculationEnumConverter == null) throw new IllegalArgumentException("yeastFlocculationEnumConverter");
-        if (yeastFormEnumConverter == null) throw new IllegalArgumentException("yeastFormEnumConverter");
-        if (yeastTypeEnumConverter == null) throw new IllegalArgumentException("yeastTypeEnumConverter");
-
         _yeastFlocculationEnumConverter = yeastFlocculationEnumConverter;
         _yeastFormEnumConverter = yeastFormEnumConverter;
         _yeastTypeEnumConverter = yeastTypeEnumConverter;

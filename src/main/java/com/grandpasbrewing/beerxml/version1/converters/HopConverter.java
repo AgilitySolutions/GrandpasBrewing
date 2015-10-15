@@ -14,10 +14,6 @@ public class HopConverter implements IBeerXmlConverter<Hop, com.grandpasbrewing.
     public HopConverter(HopFormEnumConverter hopFormEnumConverter,
                         HopTypeEnumConverter hopTypeEnumConverter,
                         HopUseEnumConverter hopUseEnumConverter) {
-        if (hopFormEnumConverter == null) throw new IllegalArgumentException("hopFormEnumConverter");
-        if (hopTypeEnumConverter == null) throw new IllegalArgumentException("hopTypeEnumConverter");
-        if (hopUseEnumConverter == null) throw new IllegalArgumentException("hopUseEnumConverter");
-
         _hopFormEnumConverter = hopFormEnumConverter;
         _hopTypeEnumConverter = hopTypeEnumConverter;
         _hopUseEnumConverter = hopUseEnumConverter;

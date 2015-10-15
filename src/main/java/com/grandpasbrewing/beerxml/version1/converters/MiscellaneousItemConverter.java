@@ -12,9 +12,6 @@ public class MiscellaneousItemConverter implements IBeerXmlConverter<Misc, com.g
 
     public MiscellaneousItemConverter(MiscellaneousItemTypeEnumConverter miscellaneousItemTypeEnumConverter,
                                       MiscellaneousItemUseEnumConverter miscellaneousItemUseEnumConverter) {
-        if (miscellaneousItemTypeEnumConverter == null) throw new IllegalArgumentException("miscellaneousItemTypeEnumConverter");
-        if (miscellaneousItemUseEnumConverter == null) throw new IllegalArgumentException("miscellaneousItemUseEnumConverter");
-
         _miscellaneousItemTypeEnumConverter = miscellaneousItemTypeEnumConverter;
         _miscellaneousItemUseEnumConverter = miscellaneousItemUseEnumConverter;
     }

@@ -12,8 +12,6 @@ public class MashConverter implements IBeerXmlConverter<Mash, com.grandpasbrewin
     private MashStepConverter _mashStepConverter;
 
     public MashConverter(MashStepConverter mashStepConverter) {
-        if (mashStepConverter == null) throw new IllegalArgumentException("mashStepConverter");
-
         _mashStepConverter = mashStepConverter;
     }
 

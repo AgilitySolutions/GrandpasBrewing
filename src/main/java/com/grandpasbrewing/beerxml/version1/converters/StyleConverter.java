@@ -8,9 +8,7 @@ public class StyleConverter implements IBeerXmlConverter<Style, com.grandpasbrew
     private StyleTypeEnumConverter _styleTypeEnumConverter;
 
     public StyleConverter(StyleTypeEnumConverter styleTypeEnumConverter) {
-        if (styleTypeEnumConverter == null) throw new IllegalArgumentException("styleTypeEnumConverter");
-
-        _styleTypeEnumConverter = styleTypeEnumConverter;
+         _styleTypeEnumConverter = styleTypeEnumConverter;
     }
 
     public com.grandpasbrewing.objectmodel.Style toObjectModel(Style beerXmlObject) {
