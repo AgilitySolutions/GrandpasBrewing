@@ -1,5 +1,5 @@
 package com.grandpasbrewing.logic.interfaces;
 
-public interface IAlcoholByVolumeCalculator {
+public interface AlcoholByVolumeCalculator {
     double Calculate(int originalGravity, int finalGravity);
 }
