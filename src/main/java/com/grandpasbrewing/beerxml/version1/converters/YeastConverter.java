@@ -3,10 +3,10 @@ package com.grandpasbrewing.beerxml.version1.converters;
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.YeastFlocculationEnumConverter;
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.YeastFormEnumConverter;
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.YeastTypeEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.Yeast;
 
-public class YeastConverter implements IBeerXmlConverter<Yeast, com.grandpasbrewing.objectmodel.Yeast> {
+public class YeastConverter implements BeerXmlConverter<Yeast, com.grandpasbrewing.objectmodel.Yeast> {
     private YeastFlocculationEnumConverter _yeastFlocculationEnumConverter;
     private YeastFormEnumConverter _yeastFormEnumConverter;
     private YeastTypeEnumConverter _yeastTypeEnumConverter;
@@ -14,10 +14,6 @@ public class YeastConverter implements IBeerXmlConverter<Yeast, com.grandpasbrew
     public YeastConverter(YeastFlocculationEnumConverter yeastFlocculationEnumConverter,
                           YeastFormEnumConverter yeastFormEnumConverter,
                           YeastTypeEnumConverter yeastTypeEnumConverter) {
-        if (yeastFlocculationEnumConverter == null) throw new IllegalArgumentException("yeastFlocculationEnumConverter");
-        if (yeastFormEnumConverter == null) throw new IllegalArgumentException("yeastFormEnumConverter");
-        if (yeastTypeEnumConverter == null) throw new IllegalArgumentException("yeastTypeEnumConverter");
-
         _yeastFlocculationEnumConverter = yeastFlocculationEnumConverter;
         _yeastFormEnumConverter = yeastFormEnumConverter;
         _yeastTypeEnumConverter = yeastTypeEnumConverter;

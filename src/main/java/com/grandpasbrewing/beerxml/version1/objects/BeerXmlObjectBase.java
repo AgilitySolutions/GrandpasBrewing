@@ -1,10 +1,10 @@
 package com.grandpasbrewing.beerxml.version1.objects;
 
-import com.grandpasbrewing.beerxml.version1.interfaces.serialization.IBeerXmlSerialization;
+import com.grandpasbrewing.beerxml.version1.interfaces.serialization.BeerXmlSerialization;
 
 import javax.xml.bind.annotation.XmlElement;
 
-public abstract class BeerXmlObjectBase implements IBeerXmlSerialization {
+public abstract class BeerXmlObjectBase implements BeerXmlSerialization {
 
     public String getName() {
         return _name;

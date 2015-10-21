@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.HopForm;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
-public class HopFormEnumConverter implements IEnumConverter<HopForm, com.grandpasbrewing.objectmodel.enums.HopForm> {
+public class HopFormEnumConverter implements EnumConverter<HopForm, com.grandpasbrewing.objectmodel.enums.HopForm> {
     public com.grandpasbrewing.objectmodel.enums.HopForm toObjectModel(HopForm enumValue) {
         if (enumValue == HopForm.Pellet) {
             return com.grandpasbrewing.objectmodel.enums.HopForm.Pellet;

@@ -3,10 +3,10 @@ package com.grandpasbrewing.beerxml.version1.converters;
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.HopFormEnumConverter;
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.HopTypeEnumConverter;
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.HopUseEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.Hop;
 
-public class HopConverter implements IBeerXmlConverter<Hop, com.grandpasbrewing.objectmodel.Hop> {
+public class HopConverter implements BeerXmlConverter<Hop, com.grandpasbrewing.objectmodel.Hop> {
     private HopFormEnumConverter _hopFormEnumConverter;
     private HopTypeEnumConverter _hopTypeEnumConverter;
     private HopUseEnumConverter _hopUseEnumConverter;
@@ -14,10 +14,6 @@ public class HopConverter implements IBeerXmlConverter<Hop, com.grandpasbrewing.
     public HopConverter(HopFormEnumConverter hopFormEnumConverter,
                         HopTypeEnumConverter hopTypeEnumConverter,
                         HopUseEnumConverter hopUseEnumConverter) {
-        if (hopFormEnumConverter == null) throw new IllegalArgumentException("hopFormEnumConverter");
-        if (hopTypeEnumConverter == null) throw new IllegalArgumentException("hopTypeEnumConverter");
-        if (hopUseEnumConverter == null) throw new IllegalArgumentException("hopUseEnumConverter");
-
         _hopFormEnumConverter = hopFormEnumConverter;
         _hopTypeEnumConverter = hopTypeEnumConverter;
         _hopUseEnumConverter = hopUseEnumConverter;

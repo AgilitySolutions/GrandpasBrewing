@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.MashStepType;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
-public class MashStepTypeEnumConverter implements IEnumConverter<MashStepType, com.grandpasbrewing.objectmodel.enums.MashStepType> {
+public class MashStepTypeEnumConverter implements EnumConverter<MashStepType, com.grandpasbrewing.objectmodel.enums.MashStepType> {
     public com.grandpasbrewing.objectmodel.enums.MashStepType toObjectModel(MashStepType enumValue) {
         if (enumValue == MashStepType.Infusion) {
             return com.grandpasbrewing.objectmodel.enums.MashStepType.Infusion;

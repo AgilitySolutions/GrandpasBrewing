@@ -1,19 +1,17 @@
 package com.grandpasbrewing.beerxml.version1.converters;
 
 
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.Mash;
 import com.grandpasbrewing.beerxml.version1.objects.MashStep;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-public class MashConverter implements IBeerXmlConverter<Mash, com.grandpasbrewing.objectmodel.Mash> {
+public class MashConverter implements BeerXmlConverter<Mash, com.grandpasbrewing.objectmodel.Mash> {
     private MashStepConverter _mashStepConverter;
 
     public MashConverter(MashStepConverter mashStepConverter) {
-        if (mashStepConverter == null) throw new IllegalArgumentException("mashStepConverter");
-
         _mashStepConverter = mashStepConverter;
     }
 

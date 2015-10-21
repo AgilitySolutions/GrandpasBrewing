@@ -1,11 +1,11 @@
 package com.grandpasbrewing.beerxml.version1.converters.enumconverters;
 
 import com.grandpasbrewing.beerxml.version1.enums.FermentableType;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.IEnumConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.enumconverters.EnumConverter;
 
 import static com.grandpasbrewing.objectmodel.enums.FermentableType.*;
 
-public class FermentableTypeEnumConverter implements IEnumConverter<FermentableType, com.grandpasbrewing.objectmodel.enums.FermentableType> {
+public class FermentableTypeEnumConverter implements EnumConverter<FermentableType, com.grandpasbrewing.objectmodel.enums.FermentableType> {
      public com.grandpasbrewing.objectmodel.enums.FermentableType toObjectModel(FermentableType enumValue) {
          if (enumValue == FermentableType.Grain) {
              return Grain;

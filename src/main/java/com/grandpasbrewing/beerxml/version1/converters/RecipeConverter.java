@@ -1,7 +1,7 @@
 package com.grandpasbrewing.beerxml.version1.converters;
 
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.RecipeTypeEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.*;
 import com.grandpasbrewing.beerxml.version1.objects.Fermentable;
 import com.grandpasbrewing.beerxml.version1.objects.Hop;
@@ -13,7 +13,7 @@ import com.grandpasbrewing.objectmodel.*;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-public class RecipeConverter implements IBeerXmlConverter<Recipe, com.grandpasbrewing.objectmodel.Recipe> {
+public class RecipeConverter implements BeerXmlConverter<Recipe, com.grandpasbrewing.objectmodel.Recipe> {
     private EquipmentConverter _equipmentConverter;
     private StyleConverter _styleConverter;
     private MashConverter _mashConverter;
@@ -34,16 +34,6 @@ public class RecipeConverter implements IBeerXmlConverter<Recipe, com.grandpasbr
                            YeastConverter yeastConverter,
                            RecipeTypeEnumConverter recipeTypeEnumConverter)
     {
-        if (equipmentConverter == null) throw new IllegalArgumentException("equipmentConverter");
-        if (styleConverter == null) throw new IllegalArgumentException("styleConverter");
-        if (mashConverter == null) throw new IllegalArgumentException("mashConverter");
-        if (fermentableConverter == null) throw new IllegalArgumentException("fermentableConverter");
-        if (hopConverter == null) throw new IllegalArgumentException("hopConverter");
-        if (miscConverter == null) throw new IllegalArgumentException("miscConverter");
-        if (waterConverter == null) throw new IllegalArgumentException("waterConverter");
-        if (yeastConverter == null) throw new IllegalArgumentException("yeastConverter");
-        if (recipeTypeEnumConverter == null) throw new IllegalArgumentException("recipeTypeEnumConverter");
-
         _equipmentConverter = equipmentConverter;
         _styleConverter = styleConverter;
         _mashConverter = mashConverter;

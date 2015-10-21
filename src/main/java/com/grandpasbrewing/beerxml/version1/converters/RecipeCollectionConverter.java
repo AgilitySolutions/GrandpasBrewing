@@ -10,8 +10,6 @@ public class RecipeCollectionConverter {
     private RecipeConverter _recipeConverter;
 
     public RecipeCollectionConverter(RecipeConverter recipeConverter) {
-        if (recipeConverter == null) throw new IllegalArgumentException("recipeConverter");
-
         _recipeConverter = recipeConverter;
     }
 

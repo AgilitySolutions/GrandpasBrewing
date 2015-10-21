@@ -1,16 +1,14 @@
 package com.grandpasbrewing.beerxml.version1.converters;
 
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.MashStepTypeEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.MashStep;
 
-public class MashStepConverter implements IBeerXmlConverter<MashStep, com.grandpasbrewing.objectmodel.MashStep> {
+public class MashStepConverter implements BeerXmlConverter<MashStep, com.grandpasbrewing.objectmodel.MashStep> {
     private MashStepTypeEnumConverter _mashStepTypeEnumConverter;
 
     public MashStepConverter(MashStepTypeEnumConverter mashStepTypeEnumConverter) {
-        if (mashStepTypeEnumConverter == null) throw new IllegalArgumentException("mashStepTypeEnumConverter");
-
-        _mashStepTypeEnumConverter = mashStepTypeEnumConverter;
+         _mashStepTypeEnumConverter = mashStepTypeEnumConverter;
     }
 
     public com.grandpasbrewing.objectmodel.MashStep toObjectModel(MashStep beerXmlObject) {

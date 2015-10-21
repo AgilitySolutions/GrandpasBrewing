@@ -1,16 +1,14 @@
 package com.grandpasbrewing.beerxml.version1.converters;
 
 import com.grandpasbrewing.beerxml.version1.converters.enumconverters.StyleTypeEnumConverter;
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.Style;
 
-public class StyleConverter implements IBeerXmlConverter<Style, com.grandpasbrewing.objectmodel.Style> {
+public class StyleConverter implements BeerXmlConverter<Style, com.grandpasbrewing.objectmodel.Style> {
     private StyleTypeEnumConverter _styleTypeEnumConverter;
 
     public StyleConverter(StyleTypeEnumConverter styleTypeEnumConverter) {
-        if (styleTypeEnumConverter == null) throw new IllegalArgumentException("styleTypeEnumConverter");
-
-        _styleTypeEnumConverter = styleTypeEnumConverter;
+         _styleTypeEnumConverter = styleTypeEnumConverter;
     }
 
     public com.grandpasbrewing.objectmodel.Style toObjectModel(Style beerXmlObject) {

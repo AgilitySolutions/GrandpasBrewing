@@ -1,9 +1,9 @@
 package com.grandpasbrewing.beerxml.version1.converters;
 
-import com.grandpasbrewing.beerxml.version1.interfaces.converters.IBeerXmlConverter;
+import com.grandpasbrewing.beerxml.version1.interfaces.converters.BeerXmlConverter;
 import com.grandpasbrewing.beerxml.version1.objects.Water;
 
-public class WaterConverter implements IBeerXmlConverter<Water, com.grandpasbrewing.objectmodel.Water> {
+public class WaterConverter implements BeerXmlConverter<Water, com.grandpasbrewing.objectmodel.Water> {
     public com.grandpasbrewing.objectmodel.Water toObjectModel(Water beerXmlObject) {
         if (beerXmlObject == null)
             return null;
