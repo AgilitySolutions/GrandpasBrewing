@@ -43,7 +43,7 @@
     </dependencies>
 
     <build>
-        <testSourceDirectory>src/test/groovy</testSourceDirectory>
+        <testSourceDirectory>test/groovy</testSourceDirectory>
 
         <plugins>
             <plugin>
